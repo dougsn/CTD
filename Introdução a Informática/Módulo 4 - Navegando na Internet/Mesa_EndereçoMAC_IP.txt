@@ -1,0 +1,3 @@
+1 - 186.242.218.224 (IP Público)
+2 - 192.168.0.111 (IP Privado)
+3 -  0A-E0-AF-B2-05-70 (Endereço MAC)
