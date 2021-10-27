@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+  background-color: #131313;
+}
+
+h1 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.media-picture {
+  width: 100%;
+  height: 400px;
+  background-image: url('https://img.elo7.com.br/product/zoom/2168CA6/banner-painel-guerra-infinita-3x2m-festa-banner.jpg');
+  object-fit: cover;
+  background-position: center;
+}
+
+.review-score {
+  color: white;
+  background-color: #e6bd09;
+  padding: 12px;
+}
+
+h2 {
+  color: steelblue;
+}
+
+p {
+  color: #bdbdbd;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: yellow;
+}

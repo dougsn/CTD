@@ -63,3 +63,24 @@ function calculadoraIMC(altura, peso) {
   return `O seu IMC é: ${IMC}`
 }
 console.log(calculadoraIMC(1.7, 87.7))
+
+// 7 
+
+function conversaoMaiuscula(texto) {
+    return `A conversão para maiúscula do seu texto é: ${texto}`.toUpperCase();
+};
+console.log(conversaoMaiuscula('olá, meu nome é douglas'));
+
+// 8 
+
+function tipoDeDados(texto) {
+    return `O tipo de dado do seu input é: ${typeof texto}`;
+}
+console.log(tipoDeDados("4"));
+
+function circuferencia(raio){
+    return `A circuferência é: ${parseFloat(2 * Math.PI * raio).toFixed(2)}`
+}
+console.log(circuferencia(2))
+
+
