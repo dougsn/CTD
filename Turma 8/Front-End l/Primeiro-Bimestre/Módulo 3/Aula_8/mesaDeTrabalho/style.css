@@ -2,19 +2,31 @@
 
 body {
   background-color: #131313;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 
 h1 {
   color: white;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
 .media-picture {
-  width: 100%;
+  width: 100vw;
   height: 400px;
   background-image: url('https://img.elo7.com.br/product/zoom/2168CA6/banner-painel-guerra-infinita-3x2m-festa-banner.jpg');
   object-fit: cover;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 25px;
+  transition: 0.5s ease;
+}
+
+.media-picture:hover {
+  transform: scale(1.05);
+  transition: 0.8s ease;
 }
 
 .review-score {
@@ -29,9 +41,19 @@ h2 {
 
 p {
   color: #bdbdbd;
-  font-family: 'Roboto', sans-serif;
 }
 
 a {
+  color: #131313;
+  text-decoration: none;
+  padding: 15px;
+  background-color: yellow;
+  border-radius: 10px;
+  transition: 0.8s ease;
+}
+
+a:hover {
+  transition: 0.8s ease;
+  background-color: #303030;
   color: yellow;
 }

@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./hortela.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  position: relative;
+}
+
+article::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.521);
+  z-index: 2;
+  position: absolute;
+}
+
+article h1 {
+}
