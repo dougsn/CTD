@@ -28,6 +28,7 @@ h1 {
   margin-bottom: 20px;
   font-size: 50px;
   font-weight: 600;
+  text-align: center;
 }
 
 h2 {
@@ -48,11 +49,16 @@ span {
 span:hover {
   background-color: #333333;
   transition: 0.8s ease;
-  transform: scale(1.5);
 }
 
 a {
   margin: 40px 0px;
   color: #fefefe;
   text-decoration: none;
+  transition: 0.7s ease;
+}
+
+a:hover {
+  transition: 0.7s ease;
+  transform: scale(1.1);
 }
