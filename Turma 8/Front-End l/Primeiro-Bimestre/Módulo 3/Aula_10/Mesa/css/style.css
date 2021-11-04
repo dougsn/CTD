@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap');
 
+/*O box-sizing:border-box 'equaliza' o tamanho do padding com o tamanho definido do elemento, fazendo com que o padding não some no tamanho  do elemento.*/
+
 * {
-  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-}
-
-html,
-body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  background-image: url('/img/mesa.jpg');
+.principal {
+  background-image: url('/Mesa/img/mesa.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -38,12 +37,14 @@ h2 {
 }
 
 span {
-  padding: 20px;
+  padding: 11px;
+  font-size: 10px;
   background-color: #333333c9;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 50px;
   transition: 0.8s ease;
   transform: scale(1.5);
+  display: block;
 }
 
 span:hover {
@@ -52,7 +53,6 @@ span:hover {
 }
 
 a {
-  margin: 40px 0px;
   color: #fefefe;
   text-decoration: none;
   transition: 0.7s ease;
