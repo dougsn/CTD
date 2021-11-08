@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: #eee;
+    height: 1250px;
+
+}
+
+
+.caixa1 {
+    border: 1px solid black;
+    height: 250px;
+    width: 250px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.caixa1 .caixa-interna {
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px; 
+}
+
+.caixa2 {
+    border: 1px solid black;
+    height: 250px;
+    width: 250px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.caixa2 .caixa-interna{
+    display: inline-block;
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+
+}
+
+.caixa3 {
+    border: 1px solid black;
+    height: 250px;
+    width: 250px;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left: 45%;
+}
+
+.caixa3 .caixa-interna {
+    display: inline-block;
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.caixa3 .caixa-interna p {
+    text-align: center;
+}

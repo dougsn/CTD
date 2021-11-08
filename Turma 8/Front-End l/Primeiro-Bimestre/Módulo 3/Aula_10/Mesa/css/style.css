@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-.principal {
+main {
   background-image: url('/Mesa/img/mesa.jpg');
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Roboto:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /*Navegação suave no navbar*/
+}
+
+body {
+  background-color: black;
+}
+
+.main-menu {
+  padding: 24px 0px;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+}
+
+.main-menu ul {
+  /*O gap da um espaçamento entre os itens que está dentro do seu 'pai'*/
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-menu ul a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  transition: 0.5s ease;
+}
+
+.main-menu ul a:hover {
+  color: white;
+  transition: 0.5s ease;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.introduction h1 {
+  color: white;
+  font-size: 72px;
+  margin-top: 100px;
+  letter-spacing: 5px;
+}
+
+.socials {
+  margin-top: 32px;
+}
+
+.socials a {
+  text-decoration: none;
+}
+
+.socials a img {
+  width: 72px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.socials a img:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.introduction article {
+
+  margin-top: 32px;
+  display: flex;
+  gap: 200px;
+
+}
+
+.introduction article p {
+
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  line-height: 30px;
+
+}
+
+.introduction article p a {
+
+  color: white;
+  text-decoration: none;
+
+}
+
+.introduction article p a:hover {
+
+  color: rgb(253, 32, 142);
+
+}
+
+.introduction article img {
+
+  width: 400px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 32px;
+
+}
+
+.section-title {
+  color: white;
+  font-size: 48px;
+  margin-top: 200px;
+}
+
+.works article {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.works article h1 {
+  color: white;
+  font-size: 32px;
+}
+
+.works article p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  line-height: 30px;
+  margin: 18px 0 24px;
+}
+
+.works article a {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.works .infos {
+  width: 500px;
+}
+
+.works .images {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-left: 200px;
+}
+
+.works .images img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
