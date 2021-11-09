@@ -1,0 +1,38 @@
+/*calc(50% -  100)*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 2000px;
+}
+header {
+  background-color: wheat;
+  position: fixed;
+  width: 100%;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+}
+
+.first-square {
+  background-color: slateblue;
+}
+
+.second-square {
+  background-color: tomato;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+  right: 0;
+}
+
+.third-square {
+  background-color: violet;
+}

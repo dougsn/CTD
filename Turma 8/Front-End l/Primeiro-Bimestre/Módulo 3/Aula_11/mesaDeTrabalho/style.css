@@ -1,80 +1,54 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    position: relative;
-    background-color: #eee;
-    height: 1250px;
-
+  background-color: #eee;
+  height: 1250px;
 }
-
 
 .caixa1 {
-    border: 1px solid black;
-    height: 250px;
-    width: 250px;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+  background-color: #ffffff4f;
+  box-shadow: 0px 10px 13px -7px #0000002c, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  height: 250px;
+  width: 250px;
+  display: inline-block;
 }
 
-.caixa1 .caixa-interna {
-    border: 1px solid black;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px; 
+.caixa-interna {
+  box-shadow: 0px 10px 13px -7px #0000002c, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
 }
 
 .caixa2 {
-    border: 1px solid black;
-    height: 250px;
-    width: 250px;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-}
-.caixa2 .caixa-interna{
-    display: inline-block;
-    border: 1px solid black;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px;
-
+  background-color: #ffffff4f;
+  box-shadow: 0px 10px 13px -7px #0000002c, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  height: 250px;
+  width: 250px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .caixa3 {
-    border: 1px solid black;
-    height: 250px;
-    width: 250px;
-    display: inline-block;
-    position: fixed;
-    bottom: 0;
-    left: 45%;
-}
-
-.caixa3 .caixa-interna {
-    display: inline-block;
-    border: 1px solid black;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px;
+  background-color: #ffffff4f;
+  box-shadow: 0px 10px 13px -7px #0000007a, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  height: 250px;
+  width: 250px;
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  left: 42%;
 }
 
 .caixa3 .caixa-interna p {
-    text-align: center;
+  text-align: center;
 }
