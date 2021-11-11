@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulários</title>
+  </head>
+  <body>
+    <main>
+      <img
+        class="imagem"
+        src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2018/08/Best-REALLY-FREE-Logo-Makers-Logo-Design-Generators-image39.png"
+        alt=""
+      />
+      <form>
+        <h1>Cadastro de Usuário</h1>
+        <div>
+          <label for="userName">Nome</label>
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            placeholder="Digite seu nome aqui"
+          />
+        </div>
+        <div>
+          <label for="userPassword">Senha</label>
+          <input
+            type="password"
+            name="userPassword"
+            id="userPassword"
+            placeholder="Digite sua senha aqui"
+          />
+        </div>
+        <div>
+          <label for="userEmail">E-mail</label>
+          <input
+            type="email"
+            name="userEmail"
+            id="userEmail"
+            placeholder="Digite seu e-mail aqui"
+          />
+        </div>
+        <div>
+          <label for="userDescription">Depoimentos</label>
+          <textarea name="userDescription" id="userDescription"></textarea>
+        </div>
+        <div>
+          <label for="userPlan">Plano</label>
+          <select name="userPlan" id="userPlan">
+            <option value="1">Básico</option>
+            <option value="2">Médio</option>
+            <option value="3">Premium</option>
+          </select>
+        </div>
+
+        <button class="enviar" type="submit">Cadastrar</button>
+        <button class="resetar" type="reset">Resetar</button>
+      </form>
+    </main>
+  </body>
+</html>
