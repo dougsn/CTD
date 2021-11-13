@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Roboto:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url('./São-Gonçalo-RJ.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #114797;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+}
+
+nav h1 a {
+  color: #fefefe;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #fefefe;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: white;
+  transition: 0.5s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.video {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+}
+
+.curiosidades {
+  width: 80%;
+  margin: auto;
+  margin-top: 135px;
+}
+
+.sobre {
+  width: 100%;
+  margin-top: 135px;
+  backdrop-filter: blur(3px);
+  background: #1147976b;
+}
+
+.sobre ul {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.sobre ul li {
+  list-style: none;
+  margin: 50px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.sobre ul li a {
+  color: #fefefe;
+  margin: 0px 100px;
+  transition: 0.5s ease;
+}
+
+.sobre ul li a:hover {
+  color: #97b6fa;
+  transition: 0.5s ease;
+}
+
+.sobre p {
+  font-family: 'Roboto', sans-serif;
+  color: #fefefe;
+  width: 80%;
+  margin: auto;
+  font-weight: 400;
+  padding: 20px;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+.sobre p b {
+  font-weight: 600;
+  color: #69dadb;
+}
+
+.sobre h1 {
+  padding-top: 50px;
+  text-align: center;
+  color: #69dadb;
+}
+
+.contato {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+
+.contato i {
+  font-size: 40px;
+  color: white;
+  transition: 0.5s ease;
+}
+
+.contato i:hover {
+  transition: 0.5s ease;
+  transform: scale(1.1);
+}
+
+.contato a:last-child {
+  margin-left: 50px;
+}
+
+.contato .instagram:hover {
+  color: wheat;
+}
+
+.contato .youtube:hover {
+  color: red;
+}
