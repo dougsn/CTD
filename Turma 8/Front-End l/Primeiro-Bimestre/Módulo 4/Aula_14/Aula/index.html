@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form>
+        <h1>Cadastro de Usuário</h1>
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <div>
+            <label for="username">Nome Completo</label>
+            <input type="text" name="username" id="username" />
+          </div>
+          <div>
+            <label for="birhDate">Data de Nascimento</label>
+            <input type="date" name="birhDate" id="birhDate" />
+          </div>
+          <div>
+            <label for="userEmail">E-mail</label>
+            <input type="email" name="userEmail" id="userEmail" />
+          </div>
+
+          <div>
+            <label for="userPassword">Senha</label>
+            <input type="password" name="userPassword" id="userPassword" />
+          </div>
+
+          <div>
+            <label for="userDescription">Depoimento</label>
+            <textarea name="userDescription" id="userDescription"></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Pagamentos</legend>
+          <div>
+            <input type="radio" name="payment" id="credit" checked />
+            <label for="credit">Crédito</label>
+
+            <input type="radio" name="payment" id="debit" />
+            <label for="debit">Débito</label>
+
+            <input type="radio" name="payment" id="bill" />
+            <label for="bill">Boleto</label>
+          </div>
+          <div>
+            <label for="userPlan">Plano</label>
+            <select name="userPlan" id="userPlan">
+              <option value="1">Básico</option>
+              <option value="2">Médio</option>
+              <option value="3">Premium</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Entrega</legend>
+          <div>
+            <input type="radio" name="delivery" id="empresaX" />
+            <label for="empresaX">Empresa X</label>
+
+            <input type="radio" name="delivery" id="empresaY" checked />
+            <label for="empresaY">Empresa Y</label>
+
+            <input type="radio" name="delivery" id="empresaZ" />
+            <label for="empresaZ">Empresa Z</label>
+
+            <div>
+              <label for="scheduleDelivery">Agendar Entrega</label>
+              <input
+                type="date"
+                name="scheduleDelivery"
+                id="scheduleDelivery"
+                min="2021-11-16"
+                max="2021-12-16"
+              />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Recomendados</legend>
+          <div>
+            <input type="checkbox" name="recommended" id="firstProduct" />
+            <label for="firstProduct">Carregador</label>
+
+            <input type="checkbox" name="recommended" id="secondProduct" />
+            <label for="secondProduct">Fone</label>
+
+            <input type="checkbox" name="recommended" id="thirdProduct" />
+            <label for="thirdProduct">Capa</label>
+          </div>
+        </fieldset>
+        <button type="reset">Limpar</button>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </main>
+  </body>
+</html>

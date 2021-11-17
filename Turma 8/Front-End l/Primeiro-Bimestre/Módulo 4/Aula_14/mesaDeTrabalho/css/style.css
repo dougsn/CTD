@@ -25,8 +25,12 @@ form {
   background-color: #3333334d;
   padding: 30px;
   border-radius: 5px;
-  margin-top: 300px;
+  margin-top: 100px;
   width: 400px;
+}
+
+fieldset {
+  border: none;
 }
 
 legend {
@@ -43,6 +47,7 @@ label {
 }
 
 input {
+  color: white;
   width: 100%;
   margin: 10px 0px;
   border: none;
@@ -74,6 +79,23 @@ select:hover {
   background-color: #333333;
 }
 
+.payment,
+.delivery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment legend,
+.delivery legend {
+  padding-top: 40px;
+}
+
+.btn {
+  display: flex;
+  gap: 30px;
+}
+
 button {
   border: none;
   padding: 10px;
@@ -89,4 +111,9 @@ button {
 button:hover {
   transition: 0.5s;
   background-color: #333333;
+}
+
+.entrega {
+  margin: 20px 0px;
+  text-align: center;
 }
