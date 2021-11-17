@@ -3,44 +3,48 @@ let filme2 = ["toy story", "finding Nemo", "kung-fu panda", "wally", "fortnite"]
 
 // 1
 
-// let peliculas = [
-//   'star wars',
-//   'totora',
-//   'rocky',
-//   'pulp fiction',
-//   'la vida es bella'
-// ]
+let peliculas = [
+  'star wars',
+  'totora',
+  'rocky',
+  'pulp fiction',
+  'la vida es bella'
+]
 
-// let nomes = ['Douglas', 'Rafaella', 'Diane', 'Rodrigo', 'Bruno']
+let nomes = ['Douglas', 'Rafaella', 'Diane', 'Rodrigo', 'Bruno']
 
-// function converterEmMaiuscula(array) {
-//   for (let i = 0; i < array.length; i++) {
-//     console.log(array[i].toUpperCase())
-//   }
-// }
+function converterEmMaiuscula(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i].toUpperCase())
+  }
+}
 
-// converterEmMaiuscula(peliculas)
-// console.log('-------------------')
-// converterEmMaiuscula(nomes)
+converterEmMaiuscula(peliculas)
+console.log('-------------------')
+converterEmMaiuscula(nomes)
 
 //  2  Agora precisamos modificar afunçãode passagemde elemento() que nos permite
 // adicionar o conteúdo de nossa matriz de filme animado à matriz de filme
 // original. Jogando de um para outro.
 
-// let filmeOriginal = []
-// let filmeAnimado = [
-//   'FilmeAnimado1',
-//   'FilmeAnimado2',
-//   'FilmeAnimado3',
-//   'FilmeAnimado4',
-//   'FilmeIntruso'
-// ]
-// function passagemDeElemento(array1, array2) {
-//   for (let i = 0; i < array1.length; i++) {
-//     // console.log(array1[i].push(array2[i].pop().toUpperCase()))
-//   }
-// }
-// passagemDeElemento(filmeAnimado, filmeOriginal)
+
+
+
+
+let filmeOriginal = []
+let filmeAnimado = [
+  'FilmeAnimado1',
+  'FilmeAnimado2',
+  'FilmeAnimado3',
+  'FilmeAnimado4',
+  'FilmeIntruso'
+]
+function passagemDeElemento(array1, array2) {
+  for (let i = 0; i < array1.length; i++) {
+    // console.log(array1[i].push(array2[i].pop().toUpperCase()))
+  }
+}
+passagemDeElemento(filmeAnimado, filmeOriginal)
 
 function trocaElementos(filme, array2){
   while(array2.length > 0){
