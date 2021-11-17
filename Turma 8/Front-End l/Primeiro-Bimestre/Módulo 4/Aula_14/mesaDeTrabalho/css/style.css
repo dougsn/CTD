@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  height: 100%;
+  background-image: url('../mesa.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  backdrop-filter: blur(8px);
+  background-color: #3333334d;
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 300px;
+  width: 400px;
+}
+
+legend {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+label {
+  display: inline-block;
+  margin: 5px 0px;
+  color: #fff;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0px;
+  border: none;
+  background-color: #33333363;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+input:hover {
+  background-color: #333333c4;
+  transition: 0.5s;
+}
+
+input::placeholder {
+  text-align: center;
+  color: #fff;
+}
+
+select {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background-color: #333333c4;
+  transition: 0.5s;
+}
+
+select:hover {
+  transition: 0.5s;
+  background-color: #333333;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 7px;
+  width: 100%;
+  background-color: #333333c4;
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 0.5s;
+  background-color: #333333;
+}
