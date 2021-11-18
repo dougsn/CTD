@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  height: 100%;
+  background-image: url('../mesa/mesa.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  backdrop-filter: blur(8px);
+  background-color: #3333334d;
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 100px;
+  width: 400px;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+legend::first-letter {
+  text-transform: uppercase;
+}
+
+label {
+  display: inline-block;
+  margin: 5px 0px;
+  color: #fff;
+}
+
+.name:focus {
+  background-color: #333;
+}
+
+input:disabled {
+  background-color: #b3b3b3;
+  color: #333;
+}
+
+input:enabled {
+  color: #d894ff;
+}
+
+input {
+  color: white;
+  width: 100%;
+  margin: 10px 0px;
+  border: none;
+  background-color: #33333363;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+input:hover {
+  background-color: #333333c4;
+  transition: 0.5s;
+}
+
+input::placeholder {
+  text-align: center;
+  color: #fff;
+}
+
+select {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background-color: #333333c4;
+  transition: 0.5s;
+}
+
+select:hover {
+  transition: 0.5s;
+  background-color: #333333;
+}
+
+.payment,
+.delivery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment legend,
+.delivery legend {
+  padding-top: 40px;
+}
+
+.chk:checked {
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: flex;
+  gap: 30px;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 7px;
+  width: 100%;
+  background-color: #333333c4;
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button:nth-child(2) {
+  color: #d894ff;
+}
+
+button:hover {
+  transition: 0.5s;
+  background-color: #333333;
+}
+
+.entrega {
+  margin: 20px 0px;
+  text-align: center;
+}

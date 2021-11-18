@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+}
+
+.main-header {
+  padding: 32px;
+}
+
+.main-header ul {
+  list-style: none;
+}
+
+.main-header ul li {
+  width: 100px;
+  background-color: gray;
+  text-align: center;
+  padding: 24px;
+  margin-bottom: 6px;
+  color: white;
+  border-radius: 12px;
+}
+
+.main-header ul li:nth-child(odd) {
+  background-color: tomato;
+}
+
+main {
+  padding: 32px;
+}
+
+.main-text {
+  margin-bottom: 12px;
+}
+
+.main-text::first-line {
+  color: tomato;
+}
+
+.main-text::first-letter {
+  font-size: 32px;
+}
+
+.custom-input {
+  width: 200px;
+  border: 0;
+  background-color: #dddddd;
+  padding: 6px 12px;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.custom-input:hover {
+  width: 300px;
+  background-color: #f3f3f3;
+}
+
+.custom-input:focus {
+  /*O FOCUS funciona para quando clicarmos no input*/
+  background-color: #f8f8f8;
+  width: 300px;
+}
+
+.custom-checkbox {
+  width: 15px;
+  height: 15px;
+  transition: 0.5s;
+}
+
+.custom-checkbox:checked {
+  /*O checked é utilizado apenas em type=checkebox e radio, quando ele estiver ''checado''.*/
+  width: 25px;
+  height: 20px;
+}
+
+.sucess-button {
+  color: white;
+  border: 0;
+  padding: 12px 24px;
+  background-color: #3ebb3e;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.sucess-button:hover {
+  background-color: #66d86c;
+}
