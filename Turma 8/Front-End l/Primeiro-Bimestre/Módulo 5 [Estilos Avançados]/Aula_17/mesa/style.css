@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+}
+
+main {
+  width: 100%;
+}
+
+.bola {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(61, 161, 255);
+  border-radius: 50%;
+  animation-name: bool;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bool {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translate(800px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0);
+  }
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.ghost {
+  font-size: 200px;
+}
+
+.ghost:hover {
+  display: block;
+}

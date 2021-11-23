@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #131313;
+}
+
+main {
+  padding: 24px;
+}
+
+.main-button {
+  color: white;
+  border: none;
+  padding: 24px;
+  font-size: 24px;
+  border-radius: 12px;
+  background-color: #62d6f3;
+  transition: 0.5s ease;
+
+  /*transform-origin: bottom right 60px; */
+  /*transform-origin -> tem que ser usado no elemento principal e muda a direção das transformações*/
+
+  /* transition-duration: 2s; */
+  /* transition-delay: 1s; */
+  /*Faz um delay entre o estado do elemento e o hover*/
+  /* transition-property: background, padding; */
+  /*Muda apenas as propriedades com especificadas no property*/
+  /* transition-timing-function: ease-in; */
+}
+
+.main-button:hover {
+  color: black;
+  background-color: #81e6ff;
+  transform: rotate(120deg);
+  /* scale(1.1)skew(12deg) rotate(20deg)*/
+  /*skew -> Entorta o elemento*/
+  /*rotate -> Rotaciona o elemento*/
+  /*translate -> 'Joga' o elemento para um local diferente*/
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, -50px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(0, 50px);
+    font-size: 250px;
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, -50px);
+    opacity: 0.5;
+  }
+}
+
+.ghost {
+  display: block;
+  font-size: 200px;
+  text-align: center;
+  margin-bottom: 32px;
+  animation-name: float;
+  /*Local onde vincula a classe (elemento), com a animação feita*/
+  animation-iteration-count: infinite;
+  /*Deixa a animação infinita*/
+  animation-duration: 2s;
+  /*Duração da animação por padrão*/
+}
