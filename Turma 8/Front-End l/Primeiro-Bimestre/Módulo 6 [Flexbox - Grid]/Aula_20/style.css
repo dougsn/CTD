@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr; /*Criando a coluna no elemento pai (2 colunas de 200px). o FR ocupa o tamanho que sobra*/
+  grid-template-areas:/*Organização das colunas com os elementos filhos*/
+    'main-header main-header'
+    'main-aside main-content'
+    'main-footer main-footer';
+}
+
+header {
+  background-color: #727272;
+  height: 70px;
+  grid-area: main-header;
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  justify-content: center;
+  padding: 15px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-header img {
+  width: 150px;
+  height: auto;
+}
+
+aside {
+  background-color: #3a3a3a;
+  grid-area: main-aside;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-aside ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+main {
+  background-color: #1f1f1f;
+  height: 1000px;
+  grid-area: main-content;
+  display: flex;
+  align-items: center;
+  padding: 50px 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+main h1 {
+  padding: 20px 0px;
+  color: white;
+}
+
+main p {
+  padding: 20px;
+
+  color: white;
+}
+
+footer {
+  background-color: #757575;
+  height: 60px;
+  grid-area: main-footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: white;
+}

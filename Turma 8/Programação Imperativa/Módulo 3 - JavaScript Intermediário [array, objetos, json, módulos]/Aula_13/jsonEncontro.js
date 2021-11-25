@@ -48,11 +48,11 @@ let conta10 = new Conta('2138105881','Conta Poupança',33196,'Bendite Huggett');
 
 let lista = [conta1,conta2,conta3,conta4,conta5,conta6,conta7,conta8,conta9,conta10]
 
-// console.log(lista)
+console.log(lista)
 
 let banco = {
     cliente: lista,
-    consultarCliente: function(nome){
+    consultarCliente: (nome) => {
          for (let i = 0; i < lista.length; i++) {
                 if(nome == lista[i].titular){
                     console.log(lista[i])
@@ -60,7 +60,7 @@ let banco = {
              
          }
     },
-    deposito: function(titular,deposito){
+    deposito: (titular,deposito) => {
         for (let i = 0; i < lista.length; i++) {
             
             if(titular == lista[i].titular){
@@ -70,18 +70,38 @@ let banco = {
             
         }
     },
+    extrato: (titular,valorExtraido) => {
+        for (let i = 0; i < lista.length; i++) {
+            let extrato = lista[i].saldo - valorExtraido;
+            if(titular == lista[i].titular){
+                if(extrato < 0){
+                    console.log('Fundos insuficientes')
+                } else {
+                    console.log(`Extração feita com sucesso, seu novo saldo é: ${extrato}`)
+                }
+            } 
+        }
+    }
 }
 
 console.log();
- banco.consultarCliente("Jobi Mawtus");
+banco.consultarCliente("Jobi Mawtus");
 
 console.log();
- banco.deposito("Jobi Mawtus",4)
+banco.deposito("Jobi Mawtus",4)
+console.log();
+
+console.log();
+banco.extrato("Jobi Mawtus",4)
+console.log();
+
+console.log();
+banco.extrato("Jobi Mawtus",28779)
 console.log();
 
 
 module.exports = banco;
-// module.exports = lista;
+module.exports = lista;
 
 
 // cheguei até o número 7. terminar o número 8
