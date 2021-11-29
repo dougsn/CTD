@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,p {
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    background-color: #777;
+}
+
+
+.navbar ul{
+    padding: 18px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+}
+
+.navbar li:last-child {
+    padding-right: 20px;
+}
+
+.navbar li a{
+    color: #ffffff;
+}
+
+/****************************************
+***************** Vídeo *****************
+****************************************/
+
+main {
+    width: 100%;
+}
+
+
+.video_principal {
+    padding: 35px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 150px;
+}
+
+.video iframe {
+    width: 1100px;
+    height: 700px;
+}
+
+.video h1 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.video p {
+    font-size: 14px;
+}
+
+.video_lateral{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+}
+
+.info_principal {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.info_nome p, .info_estatisticas p{
+   margin-top: 5px;
+   font-size: 12px;
+}
+
+.info_nome h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container-lateral{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.container-lateral:not(:first-child){
+    margin-top: 25px;
+}
+
+
+/****************************************
+***************** Media Querie *****************
+****************************************/
+
+
+@media screen and (max-width: 1810px) {
+    .video {
+        margin: auto;
+    }
+    .video_lateral {
+        width: 100%;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    .navbar ul{
+        padding: 18px;
+        justify-content: center;
+    }
+    .video iframe {
+        width: 800px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 820px){
+    
+    .video iframe {
+        width: 500px;
+        height: 300px;
+    }
+
+    .video_lateral {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .video iframe {
+        width: 400px;
+        height: 200px;
+    }
+    .info_principal {
+        padding: 0px 10px;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    .video iframe {
+        width: 300px;
+        height: 200px;
+    }
+    .container-lateral iframe {
+        width: 200px;
+        height: 200px;
+    }
+}

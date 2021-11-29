@@ -1,39 +1,33 @@
-
-
 const somar = () => {
-    console.log("Estou em uma arrow function")
+  console.log('Estou em uma arrow function')
 }
 
-console.log();
-somar();
-
-
-
+console.log()
+somar()
 
 const horaAtual = () => {
-    let data = new Date();
+  let data = new Date()
 
-    return 'A hora atual é: ' + data.getHours() + ':' + data.getMinutes();
+  return 'A hora atual é: ' + data.getHours() + ':' + data.getMinutes()
 }
 
 console.log()
 console.log(horaAtual())
 
+// A arrow function tem que ser 'armazenada' em uma variavel.
 
 // Micro Desafio
 
-
-let print = (mensagem) => {
-    console.log(mensagem)
+let print = mensagem => {
+  console.log(mensagem)
 }
 
 console.log()
 print('Olá, bom dia')
 
-
-let soma = (n1,n2) => {
-    console.log(n1 + n2);
+let soma = (n1, n2) => {
+  console.log(n1 + n2)
 }
 
 console.log()
-soma(10,10);
+soma(10, 10)
