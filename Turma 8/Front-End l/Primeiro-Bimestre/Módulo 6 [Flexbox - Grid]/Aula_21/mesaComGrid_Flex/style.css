@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2,
+p {
+  color: white;
+}
+
+body {
+  background-color: #333;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*Criando a coluna no elemento pai (2 colunas de 200px). o FR ocupa o tamanho que sobra*/
+  grid-template-areas:/*Organização das colunas com os elementos filhos*/
+    'main-header main-header'
+    'main-video main-aside';
+}
+
+header {
+  background-color: #727272;
+  grid-area: main-header;
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  justify-content: center;
+  padding: 15px 20px;
+}
+
+main {
+  padding: 24px;
+}
+
+.descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-video {
+  grid-area: main-video;
+  margin: auto;
+}
+
+aside {
+  grid-area: main-aside;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container-lateral {
+  display: flex;
+  padding: 24px;
+}
+
+.info_principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.info_principal div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
