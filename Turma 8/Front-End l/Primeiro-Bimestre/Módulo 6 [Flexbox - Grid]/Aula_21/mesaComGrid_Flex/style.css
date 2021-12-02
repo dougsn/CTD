@@ -56,6 +56,8 @@ main {
 .main-video {
   grid-area: main-video;
   margin: auto;
+  width: 100%;
+  height: 600px;
 }
 
 aside {
@@ -81,4 +83,69 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+@media (max-width: 1600px) {
+  body {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'main-header'
+      'main-video'
+      'main-aside';
+  }
+
+  aside {
+    align-items: center;
+  }
+
+  .container-lateral iframe {
+    width: 800px;
+    height: 400px;
+  }
+
+  .main-video iframe {
+    width: 100%;
+    height: 700px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-video iframe {
+    width: 100%;
+    height: 500px;
+  }
+
+  .container-lateral iframe {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 682px) {
+  .main-video iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .container-lateral iframe {
+    width: 300px;
+    height: 200px;
+  }
+
+  .info_nome h1 {
+    font-size: 20px;
+  }
+  .info_nome p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .info_principal {
+    margin-left: 0px;
+  }
+  .container-lateral {
+    flex-direction: column;
+    padding: 0px;
+  }
 }
