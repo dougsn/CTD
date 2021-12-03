@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #eee;
+}
+
+header {
+  height: 50px;
+  background: rgb(120, 214, 245);
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  height: calc(100vh - 50px);
+  background-image: url('./mesa.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  color: #333;
+  transition: 0.5s;
+}
+
+.menu li a:hover {
+  color: #ffffff;
+}
+
+.descricao {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  height: 500px;
+  gap: 50px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  .descricao {
+    flex-direction: column;
+  }
+}
