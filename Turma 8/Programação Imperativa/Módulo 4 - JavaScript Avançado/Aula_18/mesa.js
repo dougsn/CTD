@@ -4,15 +4,16 @@
 // faça loops de 0 a 100 mostrando cada número do loop no console.
 // Caso o número da iteração somado com o número passado pelo parâmetro seja par,
 // aparecerá no console: "O número x é par"
+
 let loopDePares = num => {
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 0; i <= 100; i++) {
     if ((num + i) % 2 == 0) {
       console.log(`O número ${i} é par`)
     }
   }
 }
 
-// loopDePares(10);
+ loopDePares(10);
 
 // Loop ímpares com palavra
 // Você deve criar uma função chamada loopDeImpares que
@@ -23,7 +24,7 @@ let loopDePares = num => {
 // mostre a palavra passada por parâmetro no console.
 
 let loopDeImpares = (num, palavra) => {
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 0; i <= 100; i++) {
     if ((num + i) % 2 == 1) {
       console.log(`${palavra}`)
     } else {
@@ -164,7 +165,7 @@ console.log(arrayObjects(5))
 let arrayObjectsTwo = (num, palavra) => {
   let array = []
   for (let i = 1; i <= num; i++) {
-    array.push(`${palavra}: ${i}`)
+    array.push({[palavra]: i})
   }
   return array
 }
