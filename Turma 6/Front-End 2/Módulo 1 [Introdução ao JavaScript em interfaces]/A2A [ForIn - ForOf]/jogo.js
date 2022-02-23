@@ -20,7 +20,7 @@ while (contadorRobo < 2 && contadorPessoa < 2) {
   switch (escolhaPessoa) {
     
     case 1:
-      if (maquina == 2) contadorRobo++;
+      if (maquina == 2) contadorRobo++; 
       else if (maquina == 3) contadorRobo++;
       break;
     case 2:
