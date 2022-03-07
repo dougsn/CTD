@@ -28,6 +28,7 @@ button {
   padding: 25px;
   border-radius: 12px;
   transition: .2s;
+  cursor: pointer;
 }
 
 button:hover {
