@@ -31,11 +31,6 @@ let Felinos = [{ // @@ Array de objetos, contento as informações para inserir 
   descricao: " O guepardo, ou chita (Acinonyx jubatus) é um membro atípico da família felina. É o único representante vivo do gênero Acinonyx. Ele caça graças à sua visão e grande velocidade. É o animal terrestre mais rápido do mundo, atingindo uma velocidade máxima de 115 km/h em corridas de até quinhentos metros."
 }]
 
-<<<<<<< HEAD
-// Criar um objeto com as infgi ormações dos card's e ir criando dinamicamente, de forma que reaproveite o código. Como acima, porém tem que criar os outros objetos, dos outros cards
-=======
->>>>>>> 10e4c4b12f35b2cd0b2ae261567239fa0a13c242
-
 
 Felinos.forEach(f => { // @@ Criando o loop no array de objetos, para poder manipular as informações que tem neles.
   
@@ -44,6 +39,7 @@ Felinos.forEach(f => { // @@ Criando o loop no array de objetos, para poder mani
   let img = document.createElement('img');    // @@ Criando os elementos para colocar na página
   let h2 = document.createElement('h2');
   let p = document.createElement('p');
+  
 
   container2.appendChild(div1)
   div1.appendChild(img)
@@ -54,6 +50,9 @@ Felinos.forEach(f => { // @@ Criando o loop no array de objetos, para poder mani
   img.setAttribute("src", `${f.src}`)   // @@ Colocando os atributos e textos dinâmicamento, conforme solicitado.
   h2.innerText = `${f.nome}`
   p.innerText = `${f.descricao}`
+
+  
+
 })
 
 
@@ -82,4 +81,39 @@ function toggleDark(){ // @@ Criando a função toggle do atributo que está no 
 }
 
 
+/* 
+Passo a passo para executar o desafio - Aula 7
+1 - Criar a opção de escolha do felino 
+2 - Verificar qual foi a escolha
+3 - Definir uma url da internet
+4 - Alteram o atributo "src"
+*/
+
+function escolhaFelino() { 
+
+  let escolhaFelino = parseInt(prompt('Escolha umas das opções: \n 1 - Tigre\n 2 - Leão \n 3 - Leopardo\n 4 - Pantera Negra\n 5 - Jaguar\n 6 - Guepardo'))
+   console.log(escolhaFelino);
+
+  let url = prompt('Agora defina a URL que deseja substituir a imagem: ')
+   console.log(url);  
+
+  let img = document.querySelectorAll('img')
+  
+  if(escolhaFelino === 1) { // @@ Refatorar para um forEach
+    img[0].setAttribute("src", `${url}`)
+  } else if(escolhaFelino === 2){
+    img[1].setAttribute("src", `${url}`)
+  } else if(escolhaFelino === 3){
+    img[2].setAttribute("src", `${url}`)
+  } else if(escolhaFelino === 4){
+    img[3].setAttribute("src", `${url}`)
+  } else if(escolhaFelino === 5){
+    img[4].setAttribute("src", `${url}`)
+  } else if(escolhaFelino === 6){
+    img[5].setAttribute("src", `${url}`)
+  }
+ 
+}
+
+// https://veja.abril.com.br/wp-content/uploads/2018/02/blogib_pantera-negra_feat.jpg?quality=70&strip=info&resize=680,453
 
