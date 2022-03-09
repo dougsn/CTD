@@ -32,6 +32,40 @@
 
 // let nomeFelino = "Tigre 123"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // novaDiv.innerHTML = `
 // <div class="item">
 // <img src="./imagens/tiger.jpg">

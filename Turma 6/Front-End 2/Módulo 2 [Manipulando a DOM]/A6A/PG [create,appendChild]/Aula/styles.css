@@ -39,9 +39,10 @@ button:hover {
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 80%;
   margin: 2em 10%;
+  gap: 40px;
 }
 
 .item {
@@ -92,7 +93,7 @@ você terá que modificar os seletores a fim de poder resolver o exercício. /*
 */
 
 .dark {
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(39, 39, 39);
 }
 
 .title {
@@ -111,6 +112,11 @@ você terá que modificar os seletores a fim de poder resolver o exercício. /*
 }
 
 .btn-dark {
-  background-color: rgb(19, 19, 19);
   color: rgb(230, 230, 230);
+  background-color: #333;
+}
+
+.white {
+  color: rgb(19, 19, 19);
+  background-color: rgb(230, 230, 230);
 }

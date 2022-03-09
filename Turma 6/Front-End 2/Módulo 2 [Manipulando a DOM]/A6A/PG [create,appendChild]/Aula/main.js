@@ -1,80 +1,6 @@
-/* Os seguintes estilos são os que usaremos para aplicar o modo escuro, 
-você terá que modificar os seletores a fim de poder resolver o exercício. /* 
-
-// A cor de fundo 
-{
-  background-color: rgb(39, 39, 39);
-}
-
-// Modificações no titulo 'A família dos felinos'
-{ 
-  background-color: rgb(19, 19, 19);
-  color: rgb(170, 170, 170);
-  border-color: black;
-}
-// Modificações nos items
-{
-  background-color: rgb(19, 19, 19);
-  border-color: black;
-}
-// Modificações nos textos dos itens e cabeçalhos dos itens
-{
-  color: rgb(230, 230, 230);
-}
-*/
 
 
-
-let body = document.querySelector('body');
-
-
-let h1 = document.querySelector('h1');
-
-
-
-let item = document.querySelectorAll('.item')
-
-
-
-let itemCabecalho = document.querySelector('.item h2')
-
-
-
-let itemDescricao = document.querySelector('.item p')
-
-let btn = document.querySelector('button')
-
-
-// console.log(body, h1, item, itemCabecalho, itemDescricao);
-
-
- function toggleDark(){
-
-
-    body.classList.toggle('dark');
-    h1.classList.toggle('title');
-    itemCabecalho.classList.toggle('itemTitle');
-    itemDescricao.classList.toggle('itemDescription');
-    btn.classList.toggle('btn-dark')
-    item.forEach(div => {
-        div.classList.toggle('itemTitle');
-    })
-    item.forEach(card => {
-        card.classList.toggle('card')
-    })
-    
-}
-
-
-
-let container2 = document.querySelector('#container2')
-// // console.log(container2);
-
-// // container2.firstElementChild.remove() // Removendo o primeiro elemento
-
-// // container2.removeChild(listaFelinos[1]) // Removendo um filho eespecifico do elemento
-
-let Felinos = [{
+let Felinos = [{ // @@ Array de objetos, contento as informações para inserir dinâmicamento no DOM
   nome: "Tigre",
   src: "./imagens/tiger.jpg",
   descricao: "O tigre (Panthera tigris) é uma das espécies da subfamília Pantherinae (família Felidae) pertencente ao gênero Panthera. É encontrado de forma nativa apenas no continente asiático; é um predador carnívoro e é a maior espécie de felino do mundo junto com o leão."
@@ -88,69 +14,72 @@ let Felinos = [{
   nome: "Leopardo",
   src: "./imagens/leopardo.jpg",
   descricao: " O leopardo (Panthera pardus) é um mamífero carnívoro da família dos felinos. Como três dos outros felinos do gênero Panthera: o leão, o tigre e a onça-pintada, são caracterizados por uma modificação do osso  hióide que lhes permite rugir. É também conhecido como pantera marrom e, quando tem a pelagem completamente escura, como pantera negra (melanista)."
+},
+{
+  nome: "Pantera Negra",
+  src: "./imagens/pantera-negra.jpg",
+  descricao: " A pantera negra é uma variação escura (melanismo) de várias espécies de felinos grandes, especialmente o leopardo (Panthera pardus) e a onça-pintada (Panthera onca).  Mas deve-se ressaltar que não se trata de uma espécie nova, nem mesmo de uma subespécie, é simplesmente uma variação negra destes animais."
+},
+{
+  nome: "Jaguar",
+  src: "./imagens/jaguar.jpg",
+  descricao: " O jaguar, ou jaguarete (Panthera onca) é um carnívoro felídeo da sub-família Panthera e do gênero Panthera. É a única das cinco espécies existentes deste gênero encontradas nas Américas. Também é o maior felino das Américas e o terceiro maior do mundo, depois do tigre (Panthera tigris) e do leão (Panthera leo)."
+},
+{
+  nome: "Guepardo",
+  src: "./imagens/chita.jpg",
+  descricao: " O guepardo, ou chita (Acinonyx jubatus) é um membro atípico da família felina. É o único representante vivo do gênero Acinonyx. Ele caça graças à sua visão e grande velocidade. É o animal terrestre mais rápido do mundo, atingindo uma velocidade máxima de 115 km/h em corridas de até quinhentos metros."
 }]
 
+<<<<<<< HEAD
 // Criar um objeto com as infgi ormações dos card's e ir criando dinamicamente, de forma que reaproveite o código. Como acima, porém tem que criar os outros objetos, dos outros cards
+=======
+>>>>>>> 10e4c4b12f35b2cd0b2ae261567239fa0a13c242
 
 
-let Tigre = document.createElement('div')
+Felinos.forEach(f => { // @@ Criando o loop no array de objetos, para poder manipular as informações que tem neles.
+  
+  let container2 = document.querySelector('#container2')
+  let div1 = document.createElement('div');
+  let img = document.createElement('img');    // @@ Criando os elementos para colocar na página
+  let h2 = document.createElement('h2');
+  let p = document.createElement('p');
 
-container2.appendChild(Tigre);
+  container2.appendChild(div1)
+  div1.appendChild(img)
+  div1.appendChild(h2)        // @@ Fazendo a estrutura de nó, div dentro do container, dps tudo dentro da div.
+  div1.appendChild(p)
 
-let leao = document.createElement('div');
+  div1.setAttribute("class","item")
+  img.setAttribute("src", `${f.src}`)   // @@ Colocando os atributos e textos dinâmicamento, conforme solicitado.
+  h2.innerText = `${f.nome}`
+  p.innerText = `${f.descricao}`
+})
 
-container2.appendChild(leao)
 
-let leopardo = document.createElement('div');
+let body = document.querySelector('body');
+let h1 = document.querySelector('h1');
+let item = document.querySelectorAll('.item')
+let itemCabecalho = document.querySelector('.item h2')    // @@ Selecionando os elementos do HTML para manipular o DOM
+let itemDescricao = document.querySelector('.item p')
+let btn = document.querySelector('button')
 
-container2.appendChild(leopardo)
+function toggleDark(){ // @@ Criando a função toggle do atributo que está no HTML (onclick())
 
-let pantera = document.createElement('div');
 
-pantera.innerHTML = `
-  <div class="item">
-      <img src="./imagens/pantera-negra.jpg">
-      <h2>A pantera negra</h2>
-      <p>
-        A pantera negra é uma variação escura (melanismo) de várias espécies de felinos grandes, especialmente o
-        leopardo (Panthera pardus) e a onça-pintada (Panthera onca).
-        Mas deve-se ressaltar que não se trata de uma espécie nova, nem mesmo de uma subespécie, é simplesmente uma
-        variação negra destes animais.
-      </p>
-    </div>
-`;
+  body.classList.toggle('dark');
+  h1.classList.toggle('title');
+  itemCabecalho.classList.toggle('itemTitle');
+  itemDescricao.classList.toggle('itemDescription');    //@@ Modificando os elementos dinâmicamente, quando clicarem no botão.
+  btn.classList.toggle('btn-dark')
+  item.forEach(div => {
+      div.classList.toggle('itemTitle');
+  })
+  item.forEach(card => {
+      card.classList.toggle('card')
+  })
+  
+}
 
-container2.appendChild(pantera)
 
-let jaguar = document.createElement('div');
 
-jaguar.innerHTML = `
-  <div class="item">
-      <img src="./imagens/jaguar.jpg">
-      <h2>O jaguar</h2>
-      <p>
-        O jaguar, ou jaguarete (Panthera onca) é um carnívoro felídeo da sub-família Panthera e do
-        gênero Panthera. É a única das cinco espécies existentes deste gênero encontradas nas Américas. Também
-        é o maior felino das Américas e o terceiro maior do mundo, depois do tigre (Panthera tigris) e do leão (Panthera
-        leo).
-      </p>
-    </div>
-`
-
-container2.appendChild(jaguar)
-
-let guepardo = document.createElement('div')
-
-guepardo.innerHTML = `
-  <div class="item">
-      <img src="./imagens/chita.jpg">
-      <h2>O guepardo</h2>
-      <p>
-        O guepardo, ou chita (Acinonyx jubatus) é um membro atípico da família felina. É o único
-        representante vivo do gênero Acinonyx. Ele caça graças à sua visão e grande velocidade. É o animal terrestre
-        mais rápido
-        do mundo, atingindo uma velocidade máxima de 115 km/h em corridas de até quinhentos metros.
-      </p>
-    </div>
-`
-container2.appendChild(guepardo)
