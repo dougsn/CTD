@@ -90,7 +90,7 @@ let Felinos = [{
   descricao: " O leopardo (Panthera pardus) é um mamífero carnívoro da família dos felinos. Como três dos outros felinos do gênero Panthera: o leão, o tigre e a onça-pintada, são caracterizados por uma modificação do osso  hióide que lhes permite rugir. É também conhecido como pantera marrom e, quando tem a pelagem completamente escura, como pantera negra (melanista)."
 }]
 
-// Criar um objeto com as informações dos card's e ir criando dinamicamente, de forma que reaproveite o código. Como acima, porém tem que criar os outros objetos, dos outros cards
+// Criar um objeto com as infgi ormações dos card's e ir criando dinamicamente, de forma que reaproveite o código. Como acima, porém tem que criar os outros objetos, dos outros cards
 
 
 let Tigre = document.createElement('div')
