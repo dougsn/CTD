@@ -92,10 +92,14 @@ Passo a passo para executar o desafio - Aula 7
 function escolhaFelino() { 
 
   let escolhaFelino = parseInt(prompt('Escolha umas das opções: \n 1 - Tigre\n 2 - Leão \n 3 - Leopardo\n 4 - Pantera Negra\n 5 - Jaguar\n 6 - Guepardo'))
-   console.log(escolhaFelino);
+  
+
+  
+  console.log(escolhaFelino);
 
   let url = prompt('Agora defina a URL que deseja substituir a imagem: ')
-   console.log(url);  
+  console.log(url);  
+  
 
   let img = document.querySelectorAll('img')
   
@@ -112,8 +116,13 @@ function escolhaFelino() {
   } else if(escolhaFelino === 6){
     img[5].setAttribute("src", `${url}`)
   }
- 
+    
 }
+
+
 
 // https://veja.abril.com.br/wp-content/uploads/2018/02/blogib_pantera-negra_feat.jpg?quality=70&strip=info&resize=680,453
 
+/*
+
+*/
