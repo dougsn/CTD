@@ -1,7 +1,13 @@
 Vagrant.configure("2") do |config|
-config.vm.define "server" do |server|
-config.vm.box = "debian/buster64"
-server.vm.hostname = "server"
-server.vm.network "public_network"
-end
+    config.vm.define "server" do |server|
+    config.vm.box = "debian/buster64"
+    server.vm.hostname = "server"
+    server.vm.network "public_network"
+    server.vm.provision "shell", inline: <<-SHELL
+        apt update
+        apt install -y apache2
+      SHELL
+    server.vm.provision "file", source: "index.html", destination: "index.html"
+    server.vm.provision "shell", inline: "mv index.html /var/www/html/index.html"
+  end  
 end
