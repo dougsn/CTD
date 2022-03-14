@@ -1,5 +1,18 @@
 let body = document.querySelector('body')
 
+let h1 = document.createElement('h1')
+h1.innerText = "Formulário"
+
+h1.onmouseover = () => {
+    h1.style.color = "red"
+}
+
+h1.onmouseout = () => {
+    h1.style.color = "blue"
+}
+
+let p = document.createElement('p')
+
 let section = document.createElement('section');
 section.setAttribute("class", "container")
 let form = document.createElement('form');
@@ -35,6 +48,11 @@ label2.setAttribute("for", "sobrenome")
 let btnSubmite = document.createElement('input')
 btnSubmite.setAttribute("type", "submit")
 btnSubmite.setAttribute("value", "Enviar")
+btnSubmite.setAttribute("class", "btnEnviar")
+
+btnSubmite.addEventListener('click', (evento) => {
+    evento.preventDefault()
+} )
 
 let btnReset = document.createElement('input')
 btnReset.setAttribute("type", "reset")
@@ -42,6 +60,7 @@ btnReset.setAttribute("value", "Limpar")
 
 
 body.appendChild(section)
+section.appendChild(h1)
 section.appendChild(form)
 form.appendChild(divNome)
 divNome.appendChild(label1)
@@ -52,3 +71,17 @@ divSobrenome.appendChild(input2)
 form.appendChild(divBtn)
 divBtn.appendChild(btnSubmite)
 divBtn.appendChild(btnReset)
+section.appendChild(p)
+
+window.onload = () => {
+    alert("A página foi carregada !")
+} 
+
+input1.addEventListener('keydown', (evento) => {
+let valorNome = input1.value.length;
+})
+      
+    
+
+
+
