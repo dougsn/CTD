@@ -127,7 +127,6 @@ btnReset.addEventListener('click', () => {
     form.style.backgroundImage = `url(${valorInput})`
     form.style.backgroundRepeat = 'no-repeat'
     form.style.backgroundSize = 'cover'
-    form.style.boxShadow = '2px 2px 55px 6px rgba(0,0,0,0.24);'
 
 
 })
