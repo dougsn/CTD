@@ -68,7 +68,6 @@ btnReset.setAttribute("value", "Limpar")
 
 
 body.appendChild(section)
-// section.appendChild(h1)
 section.appendChild(form)
 form.appendChild(legend)
 form.appendChild(divNome)
@@ -117,16 +116,5 @@ btnSubmite.addEventListener('click', () => {
     if(body.style.backgroundImage != 'none'){
         container.style.color = 'white';
     }
-
-})
-
-btnReset.addEventListener('click', () => {
-
-    let valorInput = input2.value
-
-    form.style.backgroundImage = `url(${valorInput})`
-    form.style.backgroundRepeat = 'no-repeat'
-    form.style.backgroundSize = 'cover'
-
 
 })
