@@ -5,6 +5,10 @@ let dividir = require('./dividir')
 
 
 
+
+
+
+
 console.log(somar(2,2));
 console.log(subtrair(12,2));
 console.log(multiplicar(10,2));
