@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/51/31/Z2TR4q.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    
+    justify-content: center;
+}
+
+.container {
+    background-color: #33333373;
+    padding: 40px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    width: 400px;
+}
+
+legend {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #FFF;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+input:focus {
+    outline: 0;
+}
+
+input[type=submit]{
+    width: 100px;
+    height: 50px;
+
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn div:first-child {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn div:last-child {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+
+#input {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;;
+}
+
+#input input {
+    
+    padding-left: 10px;
+}

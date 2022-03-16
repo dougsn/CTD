@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
     <title>Calculadora</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <h1>Calculadora</h1>
+      <form>
+        <section class="container">
+          <legend>Calculadora</legend>
+
+          <div id="input">
+            <label for="firstNumber">Digite o primeiro número:</label>
+            <input type="number" name="firstNumber" id="firstNumber" />
+          </div>
+          <div id="input">
+            <label for="secondNumber">Digite o segundo número:</label>
+            <input type="number" name="secondNumber" id="secondNumber" />
+          </div>
+          <div id="input">
+            <label for="result">Resultado:</label>
+            <input type="text" name="result" id="result" readonly />
+          </div>
+          <div class="btn">
+            <div>
+              <input id="somar" type="submit" value="Somar" />
+              <input id="subtrair" type="submit" value="Subtrair" />
+            </div>
+            <div>
+              <input id="multiplicar" type="submit" value="Multiplicar" />
+              <input id="dividir" type="submit" value="Dividir" />
+            </div>
+          </div>
+        </section>
+      </form>
     </main>
-    
-    <script src="./somar.js"></script>
-    <script src="./subtrair.js"></script>
-    <script src="./multiplicar.js"></script>
-    <script src="./dividir.js"></script>
+
     <script src="./calculadora.js"></script>
-</body>
+  </body>
 </html>

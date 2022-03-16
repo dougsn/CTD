@@ -1,32 +1,85 @@
-import '';
+let firstNumber = document.querySelector("#firstNumber");
+let secondNumber = document.querySelector("#secondNumber");
+let result = document.querySelector("#result");
+
+let somar = document.getElementById("somar");
+let subtrair = document.getElementById("subtrair");
+let multiplicar = document.getElementById("multiplicar");
+let dividir = document.getElementById("dividir");
+
+
+// Adição
+
+somar.addEventListener("click", (e) => {
+  e.preventDefault();
+  let resultado = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+  result.setAttribute("value", resultado);
+});
+
+somar.addEventListener("mouseover", () => {
+    somar.setAttribute("value", "+")
+})
+
+somar.addEventListener("mouseout", () => {
+    somar.setAttribute("value", "Somar")
+})
+
+// Subtração
+
+subtrair.addEventListener("click", (e) => {
+  e.preventDefault();
+  let resultado = parseInt(firstNumber.value) - parseInt(secondNumber.value);
+  result.setAttribute("value", resultado);
+});
+
+subtrair.addEventListener("mouseover", () => {
+    subtrair.setAttribute("value", "-")
+
+})
+
+subtrair.addEventListener("mouseout", () => {
+    subtrair.setAttribute("value", "Subtrair")
+})
+
+
+// Multiplicação
+
+multiplicar.addEventListener("click", (e) => {
+  e.preventDefault();
+  let resultado = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+  result.setAttribute("value", resultado);
+});
+
+multiplicar.addEventListener("mouseover", () => {
+    multiplicar.setAttribute("value", "X")
+
+})
+
+multiplicar.addEventListener("mouseout", () => {
+    multiplicar.setAttribute("value", "Multiplicar")
+})
 
 
 
-let escolhaUsuario = parseInt(prompt("Escolha a opção da operação matemática: \n 1 - somar \n 2 - subtrair \n 3 - multiplicar \n 4 - dividir"))
+// Divisão
 
-console.log(escolhaUsuario);
+dividir.addEventListener("click", (e) => {
+  e.preventDefault();
+  let resultado = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+  if (parseInt(firstNumber.value) === 0 || parseInt(secondNumber.value) === 0) {
+    result.setAttribute("value", "Não se pode dividir por zero");
+  } else {
+    result.setAttribute("value", resultado);
+  }
+});
 
-let num1 = parseInt(prompt("Escolha um número: "))
-let num2 = parseInt(prompt("Escolha outro número: "))
+dividir.addEventListener("mouseover", () => {
+    dividir.setAttribute("value", "/")
 
-console.log(num1);
-console.log(num2);
+})
 
-if(escolhaUsuario === 1) { // soma2
-    console.log(num1 + num2);
-} else if(escolhaUsuario === 2) { // subtração
-    console.log(num1 - num2);
-} else if(escolhaUsuario === 3){ // multiplicação
-    if(num1 === 0 || num2 === 0){
-        console.log(0);
-    } else {
-        console.log(num1 * num2);
-    }
-} else if(escolhaUsuario === 4){ // divisão
-    if(num1 === 0 || num2 === 0){
-        console.log("Não se pode dividir por zero");
-    } else {
-        console.log(num1 / num2)
-    }
-}
+dividir.addEventListener("mouseout", () => {
+    dividir.setAttribute("value", "Dividir")
+})
+
 
