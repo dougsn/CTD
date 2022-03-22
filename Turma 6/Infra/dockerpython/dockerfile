@@ -1,7 +1,21 @@
 #qual imagem vai ser usada, puxada do DockerHub
 #FROM é mesma coisa que docker pull
 
-FROM python:alpine3.14
+FROM python:alpine3.14 
+# Versão do linux que sera baixado (alpine3.4)
+
 WORKDIR /pedrapapeltesoura/
+# Diretório padrão que será iniciado o 'cmd'
+
 COPY pedrapapeltesoura.py /pedrapapeltesoura/
+# copia o arquivo .py para o diretório que foi destinado como padrão iniciado acima
+
 ENTRYPOINT [ "python", "pedrapapeltesoura.py" ]
+# Ponto de entrada fixado, significa que será iniciado esse arquivo ao subir o container
+
+
+#  docker image build . -t pyimage -> builda a imagem que foi instanciado acima.
+
+# docker container run -it --name pycon pyimage bash -> sobe o container com um terminal interativo (-it) com o nome pycon (--name) e no final o terminal escolhido (bash)
+
+# docker start -t pycon -> iniciar o container com o terminal integrado

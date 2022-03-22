@@ -27,6 +27,7 @@ btn.addEventListener("click", (e) => {
   divSaidaForm.appendChild(pLowerCase);
   divSaidaForm.appendChild(pConcat);
   divSaidaForm.appendChild(pReplace);
+  divSaidaForm.style.backgroundColor = '#CCC'
   pTrim.innerText = `Método trim: ${nome.value.trim()}`;
   pUpperCase.innerText = `Método toUpperCase: ${nome.value.toUpperCase()}`;
   pLowerCase.innerText = `Método toLowerCase: ${nome.value.toLowerCase()}`;
