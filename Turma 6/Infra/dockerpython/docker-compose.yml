@@ -1,0 +1,11 @@
+version: "3.7" #versão 
+services:
+  py_service:
+    image: pyimage # imagem que foi buildada
+    build: .
+    container_name: pyserver
+
+#  docker image build . -t pyimage -> builda a imagem que foi instanciado acima.
+
+# docker container run -it --name pycon pyimage bash -> sobe o container com um terminal interativo (-it) com o nome pycon (--name) e no final o terminal escolhido (bash)
+

@@ -1,0 +1,7 @@
+#qual imagem vai ser usada, puxada do DockerHub
+#FROM é mesma coisa que docker pull
+
+FROM python:alpine3.14
+WORKDIR /pedrapapeltesoura/
+COPY pedrapapeltesoura.py /pedrapapeltesoura/
+ENTRYPOINT [ "python", "pedrapapeltesoura.py" ]
