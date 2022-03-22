@@ -38,29 +38,25 @@ const jsonData = `
 }
 `;
 
+let newJsonData = JSON.parse(jsonData);
 
-let newJsonData = JSON.parse(jsonData)
+let arrayData = newJsonData.members;
 
 function select(id) {
-  return document.getElementById(id)
+  return document.getElementById(id);
 }
 
-let ul = select('membros');
+let ul = select("membros");
 
 function liMessage(msg) {
-  return ul.innerHTML += `<li>${msg}</li>`
+  return (ul.innerHTML += `<li>${msg}</li>`);
 }
-
 
 //Percorra o JSON e insera os nomes dos membros na lista html
 function percorrerMembros() {
-
-  let arrayData = newJsonData.members;
-  
-  arrayData.forEach(e => {
-    liMessage(e.name)
+  arrayData.forEach((e) => {
+    liMessage(e.name);
   });
-  
 }
 
 percorrerMembros();
