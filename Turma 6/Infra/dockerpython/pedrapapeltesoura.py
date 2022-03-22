@@ -37,7 +37,7 @@ while True:
         print("Ganhou, papel cobre pedra")
     elif escolhaPc == "papel" and escolhaUsuario == "tesoura":
         print("Ganhou, tesoura corta papel")
-    elif escolhaPc == "tesoura" and escolhaUsuario == "piedra":
+    elif escolhaPc == "tesoura" and escolhaUsuario == "pedra":
         print("Ganhou, pedra amassa tesoura")
         
     if escolhaUsuario == "pedra" and escolhaPc == "papel":
