@@ -3,25 +3,45 @@ let submit = document.getElementById("contato-form");
 let saidaForm = document.querySelector(".saidaForm");
 let arr = [];
 
+
+let nomeUsuario = {
+  nome: "",
+}
+
+onload = () => { // Foi necessário colocar no onload pois é 'buscado e renderizado no carregamento da página
+  let objetoCapturado = localStorage.getItem(1)
+
+  let usuarioJs = JSON.parse(objetoCapturado);
+  // console.log(usuarioJs.nome);
+
+  let p = document.createElement('p')
+
+   saidaForm.appendChild(p)
+
+   p.innerText = usuarioJs.nome
+}
+
 submit.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-
-  let p = document.createElement("p");
-
-  if (nome.value) {
-    arr.push(nome.value);
-    p.innerText += arr;
-    saidaForm.appendChild(p);
-
-  }
-  localStorage.setItem('nome', p.innerText = arr)
-
+  // e.preventDefault(); -> Foi retirado para que fosse possível validar a ação no localStorage
   
-  console.log(arr);
+  nomeUsuario.nome = nome.value;
 
+  let usuarioJson = JSON.stringify(nomeUsuario);
+  localStorage.setItem(1, usuarioJson)
+
+  let objetoCapturado = localStorage.getItem(1)
+
+  let usuarioJs = JSON.parse(objetoCapturado);
+  // console.log(usuarioJs.nome);
+
+  let p = document.createElement('p')
+
+  // saidaForm.appendChild(p)
+
+  p.innerText = usuarioJs.nome
  
 });
+
 
 /*
 REQUISITOS

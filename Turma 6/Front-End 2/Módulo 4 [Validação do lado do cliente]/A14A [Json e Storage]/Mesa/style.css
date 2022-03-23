@@ -36,7 +36,7 @@ legend {
   font-weight: 600;
 }
 
-input {
+input, #btn {
   width: 300px;
   border: none;
   padding: 10px;
