@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  background-color: #333;
+}
+
+main {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  background: #ccc;
+  border-radius: 5px;
+  width: 400px;
+}
+
+legend {
+  text-align: center;
+  width: 100%;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+input {
+  width: 300px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 16px;
+  padding: 10px;
+  color: #111;
+  text-align: center;
+}
+
+.space {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#btn {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.saidaForm {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 7px;
+  background-color: #dd7676;
+}
+
+.saidaForm li {
+  padding: 20px 0px;
+  list-style: none;
+}
