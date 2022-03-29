@@ -99,7 +99,7 @@ inputSenha.addEventListener("change", (event) => {
   if (
     inputSenha.value != "" &&
     inputSenha.value.length >= 6 &&
-    inputSenha.value.length <= 10
+    inputSenha.value.length <= 10 
   ) {
     smallSenha.innerText = "";
     inputSenha.style.border = "1px solid #45dd45a1";
