@@ -2,12 +2,14 @@
 import random
 
 while True: 
-    aleatorio = random.randrange(0, 3)
+    aleatorio = random.randrange(0, 5)
     escolhaPc = ""
     print("1)Pedra")
     print("2)Papel")
     print("3)Tesoura")
-    print("4)Sair do Programa")
+    print("4)Lagarto")
+    print("5)Spock")
+    print("6)Sair do Programa")
     opcao = int(input("O que você escolhe: "))
     
     if opcao == 1:
@@ -17,6 +19,10 @@ while True:
     elif opcao == 3:
         escolhaUsuario = "tesoura"
     elif opcao == 4:
+        escolhaUsuario = "lagarto"
+    elif opcao == 5:
+        escolhaUsuario = "spock"
+    elif opcao == 6:
         print ("Nos vemos!")
         break
     else:
@@ -30,6 +36,10 @@ while True:
         escolhaPc = "papel"
     elif aleatorio == 2:
         escolhaPc = "tesoura"
+    elif aleatorio == 3:
+        escolhaPc = "lagarto"
+    elif aleatorio == 4:
+        escolhaPc = "spock"
     print("PC escolheu: ", escolhaPc)
     print("...")
     
@@ -39,7 +49,8 @@ while True:
         print("Ganhou, tesoura corta papel")
     elif escolhaPc == "tesoura" and escolhaUsuario == "pedra":
         print("Ganhou, pedra amassa tesoura")
-        
+
+
     if escolhaUsuario == "pedra" and escolhaPc == "papel":
         print("Perdeu, papel cobre pedra")
     elif escolhaUsuario == "papel" and escolhaPc == "tesoura":
