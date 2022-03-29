@@ -5,4 +5,4 @@ function retiraEspacosDeUmValor(valorRecebido){
 
 function conventerValorRecebidoParaMinusculo(valorRecebido){
     return valorRecebido.toLowerCase();
-}
+} // Transforma o em minusculo

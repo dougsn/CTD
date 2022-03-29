@@ -5,17 +5,17 @@ let botaoAcessar = document.getElementById("botaoAcessar");
 let campoEmailLoginNormalizado;
 let campoSenhaLoginNormalizado;
 
-let emailEValido = false;
+let emailEValido = false; // Variavel de controle, para saber se o email e valido ou não
 
-const usuarioObjeto = {
+const usuarioObjeto = { // Objeto criado para salvar os input's de e-mail e senha
   email: "",
   senha: "",
 };
 
 botaoAcessar.addEventListener("click", (event) => {
   if (validacaoTelaDeLogin()) {
-    event.preventDefault();
-    // se os campos nnão forem vazios, faça isso
+    event.preventDefault(); // só para visualizar o log no console.
+    // se os campos não forem vazios, faça isso
 
     // Tirando os espaços em brancos dos valores
     campoEmailLoginNormalizado = retiraEspacosDeUmValor(campoEmailLogin.value);
@@ -45,8 +45,8 @@ campoEmailLogin.addEventListener("blur", (event) => {
   let inputEmailValidacao = document.getElementById("inputEmailValidacao");
 
   if (
-    campoEmailLogin.value != "" &&
-    /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(campoEmailLogin.value) // Validação do e-mail
+    campoEmailLogin.value != "" && // Se o campo não for vazio
+    /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(campoEmailLogin.value) // Validação do e-mail com regex
   ) {
     inputEmailValidacao.innerText = "";
     campoEmailLogin.style.border = "1px solid green";
@@ -70,8 +70,8 @@ campoEmailLogin.addEventListener("blur", (event) => {
 campoSenhaLogin.addEventListener("change", (event) => {
   // O change valida em tempo real
   let inputSenhaValidacao = document.getElementById("inputSenhaValidacao");
-
-  if (campoSenhaLogin.value != "") {
+ // campoSenhaLogin.value != ""
+  if ( campoSenhaLogin.value != "" && (campoSenhaLogin.value.length >= 6 && campoSenhaLogin.value.length <= 10)) {
     inputSenhaValidacao.innerText = "";
     campoSenhaLogin.style.border = "1px solid green";
     emailEValido = true;
@@ -87,12 +87,16 @@ campoSenhaLogin.addEventListener("change", (event) => {
   }
 });
 
-function validacaoTelaDeLogin() {
+function validacaoTelaDeLogin() { // Função criada para haiblitar o botão ou não.
   if (emailEValido) {
+    // Se o e-mail for válido (true), ele habilita o botão e troca o texto para acessar
+
     botaoAcessar.removeAttribute("disabled");
     botaoAcessar.innerText = "Acessar";
     return true; // A função retorna true, pois ela pode ser utilizada como uma condicional
   } else {
+    // Se o e-mail for falso (false), ele desabilita o botão e troca o texto para bloqueado.
+
     botaoAcessar.setAttribute("disabled", true);
     botaoAcessar.innerText = "Bloqueado";
     return false; // A função retorna false, pois ela pode ser utilizada como uma condicional
