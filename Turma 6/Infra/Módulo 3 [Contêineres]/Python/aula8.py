@@ -30,11 +30,18 @@
 #     print("Pode entrar no bar")
 
 
-for i in range (1,11):
-    print(i)
+# for i in range (1,11):
+#     print(i)
 
 
-lista_alunos = ["Kened", "Thaisa", "Juliana"]
+# lista_alunos = ["Kened", "Thaisa", "Juliana"]
 
-for aluno in lista_alunos:
-    print(f"Nome do alino é {aluno} da turma 6")
+# for aluno in lista_alunos:
+#     print(f"Nome do alino é {aluno} da turma 6")
+
+
+def hello(meu_nome):
+    print("Olá",meu_nome)
+
+hello("Douglas")
+
