@@ -139,7 +139,7 @@ while True:
         pcScore += 1
     elif escolhaPc == escolhaUsuario:
         print("Empate")
-        
+
     totalScore = userScore + pcScore
 
     while again == "":
@@ -154,3 +154,5 @@ while True:
             again = ""
             continue 
 
+
+# Douglas Nascimento, Fernando Bade, Thiago R. Silva, Juliane Alves de Lima, luizsouza, Thiago Vilela.
