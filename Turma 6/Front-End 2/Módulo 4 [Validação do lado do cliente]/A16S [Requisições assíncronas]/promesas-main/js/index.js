@@ -77,14 +77,14 @@ let consultandoBaseDeDados = new Promise((resolve, reject) => {
 // Aqui realizamos uma consulta da promessa, aguardando sua resposta assíncrona
 consultandoBaseDeDados
     .then((resposta) => {
-        console.log(resposta.resultado);
+        // console.log(resposta.resultado);
         // return resposta.resultado[0].imagem
         return resposta.resultado[0]
 
     }).then((resposta) => {
-        console.log(resposta.imagem.media)
-        console.log(`${resposta.nome.titulo} ${resposta.nome.primeiro} ${resposta.nome.utlimo}` )
-        console.log(resposta.email)
+        // console.log(resposta.imagem.media)
+        // console.log(`${resposta.nome.titulo} ${resposta.nome.primeiro} ${resposta.nome.utlimo}` )
+        // console.log(resposta.email)
         renderizarDadosUsuario(resposta)
     }
     )
