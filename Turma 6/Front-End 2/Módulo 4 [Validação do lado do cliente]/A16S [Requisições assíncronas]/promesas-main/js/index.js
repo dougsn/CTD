@@ -114,3 +114,7 @@ function renderizarDadosUsuario(dados) {
   email.innerText = dados.email;
   tarjeta.appendChild(email);
 }
+
+
+
+// O .then() é utilizado para tratar as informações (como informações de um formulário)
