@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cliente {
 
     private String nome;
@@ -35,7 +38,12 @@ public class Cliente {
     }
 
     public void fazerPedido(Pedido pedido){
-        pedido = pedido;
+        List<Pedido> pedidos = new ArrayList<>();
+        pedidos.add(pedido);
+
+
+
     }
+//    private List<Item> itens = new ArrayList<>();
 
 }

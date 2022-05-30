@@ -7,7 +7,7 @@ public class Pedido {
     private Integer codigo;
     private Date data;
     private Cliente cliente;
-    private List<Item> itens = new ArrayList<>();
+    private List<Pedido> itens = new ArrayList<>();
 
 
     public Pedido(Integer codigo, Date data, Cliente cliente) {
