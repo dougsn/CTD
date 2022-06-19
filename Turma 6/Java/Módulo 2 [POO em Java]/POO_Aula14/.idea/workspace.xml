@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88114c73-8cdf-4058-b165-8fb0475832df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../POO_Aula14/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula14/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula14/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula14/POO_Aula14.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula14/src/Comparavel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula14/src/Equipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula14/src/Jogador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula14/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7cd29f12-84bf-4413-86f5-e7c15aacae8e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO_Aula14.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Equipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Jogador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POO_Aula12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_Aula12/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Testing l/Módulo 6 [Teste Unitário]/A15S [Teste Unitário]/js-testing-introduction" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -34,7 +34,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2AJSY7HOPDWURTzxALJCIyC6X41" />
+  <component name="ProjectId" id="2Ancan4HKlTKIr9PhLkmBNis0ou" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -42,37 +42,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Douglas/Desktop/newCheckpoint&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="POO_Aula12" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="88114c73-8cdf-4058-b165-8fb0475832df" name="Changes" comment="" />
-      <created>1654726240728</created>
+      <changelist id="7cd29f12-84bf-4413-86f5-e7c15aacae8e" name="Changes" comment="" />
+      <created>1655648856396</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1654726240728</updated>
+      <updated>1655648856396</updated>
     </task>
     <servers />
   </component>
