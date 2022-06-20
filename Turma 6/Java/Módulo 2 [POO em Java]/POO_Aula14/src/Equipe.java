@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Equipe {
     private String nome;
-    private List<Jogador> jogadores;
+    private List<Jogador> jogadores = new ArrayList<>();
 
     public List<Jogador> getJogadores() {
         return jogadores;
@@ -28,10 +27,8 @@ public class Equipe {
     }
 
 
-    public void addJogador(Objects jogador){
-        List jogadores = new ArrayList<>();
-
-        jogadores.add(jogador);
+    public void addJogador(Jogador jogador){
+        jogadores.add(jogador); // Adicionando jogadores a lista de jogadores.
 
     }
 
@@ -44,6 +41,8 @@ public class Equipe {
 /*    public int getQuantidadeJogadoresLesionados(){
         return ;
     }*/
+
+
 
 
 }
