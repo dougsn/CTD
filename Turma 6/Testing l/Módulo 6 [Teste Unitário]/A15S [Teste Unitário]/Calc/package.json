@@ -4,8 +4,7 @@
   "description": "Douglas Silva",
   "main": "calc.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "test:coverage":"jest --coverage"
+    "test": "jest --watchAll --coverage"
   },
   "keywords": [],
   "author": "",
