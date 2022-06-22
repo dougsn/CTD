@@ -7,7 +7,7 @@ exports.createElement = (type, text, className) => {
   // Creates a new HTML element and returns it
   const newElement = document.createElement(type);
   newElement.classList.add(className);
-  newElement.textContent = text.split(' ',1);
+  newElement.textContent = text;
   return newElement;
 };
 
@@ -19,7 +19,7 @@ exports.validateInput = (text, notEmpty, isNumber) => {
   if (notEmpty && text.trim().length === 0) {
     return false;
   }
-  if (isNumber && +text === isNumber) {
+  if (isNumber && +text === NaN) {
     return false;
   }
   return true;

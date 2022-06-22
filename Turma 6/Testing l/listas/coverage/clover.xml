@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655860933705" clover="3.2.0">
-  <project timestamp="1655860933705" name="All files">
-    <metrics statements="15" coveredstatements="11" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="3" elements="28" coveredelements="22" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1"/>
-    <file name="util.js" path="C:\Users\Douglas\Desktop\listas\util.js">
-      <metrics statements="15" coveredstatements="11" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="3"/>
+<coverage generated="1655862640405" clover="3.2.0">
+  <project timestamp="1655862640405" name="All files">
+    <metrics statements="15" coveredstatements="14" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="3" elements="28" coveredelements="25" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1"/>
+    <file name="util.js" path="C:\Users\Douglas\Desktop\CTD\Turma 6\Testing l\listas\util.js">
+      <metrics statements="15" coveredstatements="14" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="3"/>
       <line num="1" count="3" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="6" count="3" type="stmt"/>
       <line num="8" count="2" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
-      <line num="10" count="0" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
       <line num="14" count="3" type="stmt"/>
       <line num="16" count="5" type="cond" truecount="2" falsecount="0"/>
       <line num="17" count="3" type="stmt"/>

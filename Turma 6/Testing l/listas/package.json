@@ -5,6 +5,9 @@
   "scripts": {
     "test": "jest --watchAll --collect-coverage"
   },
+  "jest":{
+    "testEnvironment": "jsdom"
+},
   "keywords": [],
   "author": "Douglas Silva",
   "license": "ISC",
