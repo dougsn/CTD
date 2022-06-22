@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class InternacaoException {
+public class InternacaoException extends Exception{
+
+    public InternacaoException(){
+        super("Data de internação inferior ao dia atual.");
+    }
+
 }

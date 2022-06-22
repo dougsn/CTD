@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class DividaExpection {
+public class DividaExpection extends Exception{
+
+    public DividaExpection(){
+        super("Você não tem dívidas a serem pagas.");
+    }
+
 }

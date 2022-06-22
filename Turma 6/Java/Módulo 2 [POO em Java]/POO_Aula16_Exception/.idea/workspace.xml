@@ -1,23 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5a91cca-2724-4084-8d19-feac9859bd43" name="Changes" comment="" />
+    <list default="true" id="b5a91cca-2724-4084-8d19-feac9859bd43" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO_Aula16_Exception.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/POO_Aula16_Exception/Cliente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/POO_Aula16_Exception/ClienteException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/POO_Aula16_Exception/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClienteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DividaExpection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LimiteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/Paciente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/POO_Aula16_Mesa.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/InternacaoException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/Paciente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/DataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/InternacaoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/Paciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POO_Aula14/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_Aula14/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Testing l/Módulo 6 [Teste Unitário]/A15S [Teste Unitário]/js-testing-introduction" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing l/Módulo 6 [Teste Unitário]/A15S [Teste Unitário]/js-testing-introduction" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2AuEglM9dYFYskYQaSMpyEVBhLE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="POO_Aula16_Exception" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -28,5 +96,19 @@
       <updated>1655851183706</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -1,0 +1,15 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "description": "Douglas Silva",
+  "main": "calc.js",
+  "scripts": {
+    "test": "jest --watchAll --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}

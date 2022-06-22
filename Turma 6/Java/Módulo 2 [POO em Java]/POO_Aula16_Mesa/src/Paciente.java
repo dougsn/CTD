@@ -1,40 +1,39 @@
-package com.company;
-
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Paciente {
     String nome;
     String sobrenome;
     String historiaClinica;
-    Date dataInternacao;
-    Date dataAlta;
+    LocalDate dataInternacao;
+    LocalDate dataAlta;
 
 
-    Paciente(String nome, String sobrenome, String historiaClinica, Date dataInternacao)
-    {   Date hoje= new Date();
+    Paciente(String nome, String sobrenome, String historiaClinica, LocalDate dataInternacao) throws InternacaoException {   LocalDate hoje=  LocalDate.now();
         this.nome=nome;
         this.sobrenome=sobrenome;
         dataAlta=null;
-        if (dataInternacao.before(hoje))
+        if (dataInternacao.isBefore(hoje)){
+            throw new IllegalStateException("Data de internação inferior ao dia atual.");
+        } else {
             this.dataInternacao=dataInternacao;
+        }
+
     }
 
-    public Date getDataInternacao() {
+    public LocalDate getDataInternacao() {
         return dataInternacao;
     }
 
-    public Date getDataAlta() {
+    public LocalDate getDataAlta() {
         return dataAlta;
     }
 
-    public void darAlta(Date dataAlta)
-    {
-        if (dataAlta.after(dataInternacao))
+    public void darAlta(LocalDate dataAlta) throws DataException {
+        if (dataAlta.isAfter(dataInternacao))
             System.out.println("Ok");
         else
-            System.out.println("Não pode");
+            throw new DataException();
     }
-
 
 
 }

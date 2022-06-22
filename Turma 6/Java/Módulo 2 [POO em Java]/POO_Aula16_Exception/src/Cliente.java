@@ -15,16 +15,18 @@ public class Cliente {
         dividaEmConta=0;
 
     }
-    public void comprar(double valor)
-    {
+    public void comprar(double valor) throws LimiteException {
+        if(valor > limite) {
+            throw new LimiteException();
+        }
         dividaEmConta+=valor;
     }
 
 
 
-    public void pagarDivida(double valor) throws ClienteException {
+    public void pagarDivida(double valor) throws DividaExpection {
         if(dividaEmConta <= 0){
-            throw new ClienteException("Não tem dívida");
+            throw new DividaExpection();
         }
         dividaEmConta-=valor;
     }
