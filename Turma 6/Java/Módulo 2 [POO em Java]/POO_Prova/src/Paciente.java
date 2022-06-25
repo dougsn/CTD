@@ -46,5 +46,14 @@ public abstract class Paciente{
 
     public abstract String avaliacaoInicial();
 
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "dataNascimento='" + dataNascimento + '\'' +
+                ", nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", primeiraConsulta=" + primeiraConsulta +
+                '}';
+    }
 }
 

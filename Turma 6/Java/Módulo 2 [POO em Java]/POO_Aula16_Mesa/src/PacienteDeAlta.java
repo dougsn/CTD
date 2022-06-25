@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class PacienteDeAlta {
+public class PacienteDeAlta {
+
+
+
 }

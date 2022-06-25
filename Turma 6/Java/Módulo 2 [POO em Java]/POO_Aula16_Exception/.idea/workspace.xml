@@ -5,39 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5a91cca-2724-4084-8d19-feac9859bd43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/POO_Aula16_Exception.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/POO_Aula16_Exception/Cliente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/POO_Aula16_Exception/ClienteException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/POO_Aula16_Exception/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClienteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DividaExpection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LimiteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/Paciente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/POO_Aula16_Mesa.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/InternacaoException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/Paciente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/DataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/InternacaoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/Paciente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO_Aula14/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_Aula14/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Testing l/Módulo 6 [Teste Unitário]/A15S [Teste Unitário]/js-testing-introduction" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Testing l/Módulo 6 [Teste Unitário]/A15S [Teste Unitário]/js-testing-introduction" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/POO_Revisao.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/src/Escalacao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/src/Jogador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Revisao/src/Selecao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +43,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />

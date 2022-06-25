@@ -1,27 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="936fb1b2-3d30-4e45-bac4-5bf3c5bf6720" name="Changes" comment="" />
+    <list default="true" id="936fb1b2-3d30-4e45-bac4-5bf3c5bf6720" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/PacienteDeAlta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO_Revisao.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Escalacao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Jogador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QtdjogadorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Selecao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../revisaoProva/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POO_Aula16_Exception/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_Aula16_Exception/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/InternacaoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/InternacaoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/out/production/POO_Aula16_Mesa/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/InternacaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/InternacaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_Aula16_Mesa/src/Paciente.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2Ax0tTRNkeJxjt33wrXFY1Tgiev" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -32,5 +73,19 @@
       <updated>1655936144179</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

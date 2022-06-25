@@ -20,7 +20,7 @@ public class PacientePublico extends Paciente implements Comparable<PacientePubl
         if(this.isPrimeiraConsulta()){
             return "Como essa é a sua primeira consulta, você deverá passar por uma avaliação inicial, com base no seu histórico clínico.";
         }
-        return "Obrigado por nós visitar novamente, seja bem-vindo(a)";
+        return "Obrigado por nós visitar novamente, seja bem-vindo(a).";
     }
 
 
@@ -30,4 +30,16 @@ public class PacientePublico extends Paciente implements Comparable<PacientePubl
         if(this.numCarteirinha < o.numCarteirinha) return -1;
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "PacientePublico {" +
+                "dataNascimento='" + this.getDataNascimento() + '\'' +
+                ", nome='" + this.getNome() + '\'' +
+                ", sobrenome='" + this.getSobrenome() + '\'' +
+                ", primeiraConsulta=" + this.isPrimeiraConsulta() +
+                ", numCarteirinha=" + numCarteirinha +
+                '}';
+    }
+
 }
