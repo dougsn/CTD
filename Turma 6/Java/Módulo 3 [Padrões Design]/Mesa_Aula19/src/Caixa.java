@@ -42,6 +42,6 @@ public class Caixa extends Produto{
 
     @Override
     public double calcularEspaco() {
-        return getLargura() * getComprimento();
+        return getAltura() * getComprimento() * getLargura();
     }
 }
