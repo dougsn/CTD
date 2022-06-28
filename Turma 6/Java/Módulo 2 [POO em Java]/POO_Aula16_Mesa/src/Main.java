@@ -15,7 +15,7 @@ public class Main {
 
 
         try {
-        paciente.darAlta(LocalDate.of(2023, 5, 11));
+        paciente.darAlta(LocalDate.of(2022, 5, 11));
         } catch(DataException e){
             System.out.println(e.getMessage());
         } finally {
