@@ -1,11 +1,11 @@
 import java.time.LocalDate;
 
 public class Paciente {
-    String nome;
-    String sobrenome;
-    String historiaClinica;
-    LocalDate dataInternacao;
-    LocalDate dataAlta;
+    private String nome;
+    private String sobrenome;
+    private String historiaClinica;
+    private LocalDate dataInternacao;
+    private LocalDate dataAlta;
 
 
     Paciente(String nome, String sobrenome, String historiaClinica, LocalDate dataInternacao) throws InternacaoException {   LocalDate hoje=  LocalDate.now();
@@ -34,6 +34,25 @@ public class Paciente {
         else
             throw new DataException();
     }
+
+//    public void pacienteDeAlta(String nomePaciente {
+//
+//        for(int i = 0; i < listaPaciente.size(); i++)
+//        {
+//            Paciente p = listaPaciente.get(i);
+//
+//            if(p.getNome().equals(nomePaciente)
+//            {
+//                // Encontrou um paciente com a variável nomePaciente do parâmetro.
+//
+//                // Remove.
+//                listaPaciente.remove(p);
+//
+//                // Sai do loop.
+//                break;
+//            }
+//        }
+//        System.out.print("\nLista após remoç);
 
 
 }
