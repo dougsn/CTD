@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ea76653f-a2b6-464a-826a-5346b7890326" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mesao2_POO.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Envio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Estado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Finalizado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Orcamento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PecaReposicao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reparacao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reparo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mesao_Carro/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mesao_Carro/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mesao_Carro/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mesao_Carro/Mesao_Carro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mesao_Carro/src/Carro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mesao_Carro/src/Desligado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mesao_Carro/src/Estado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/POO_Aula20.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/src/Estado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/src/Feliz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/src/Fome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/src/Sede.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/src/Tamagochi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20/src/Triste.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/POO_Aula20_Mesa.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/src/Carregando.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/src/Carrinho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/src/Estado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/src/Fechado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/src/Pagando.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/src/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../POO_Aula20_Mesa/src/Vazio.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BGrkptAHUJEwobIeMIIwcpTglP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Mesao2_POO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea76653f-a2b6-464a-826a-5346b7890326" name="Changes" comment="" />
+      <created>1656543409198</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656543409198</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
