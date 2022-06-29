@@ -17,6 +17,6 @@ public class Bola extends Produto{
 
     @Override
     public double calcularEspaco() {
-        return (getRaio()/2) * 3.14;
+        return  Math.pow(getRaio(),2)*3.14;
     }
 }

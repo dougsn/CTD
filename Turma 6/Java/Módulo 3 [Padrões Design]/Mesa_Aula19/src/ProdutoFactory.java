@@ -6,7 +6,7 @@ public class ProdutoFactory {
     private ProdutoFactory(){};
 
 
-    public Produto Produto (String tipo){
+    public Produto criarProduto (String tipo){
         switch (tipo) {
             case "CAIXA10X10":
                 return new Caixa(5.0, 10.0, 10.0, 10.0);

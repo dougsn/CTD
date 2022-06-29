@@ -12,10 +12,10 @@ public class Paciente {
         this.nome=nome;
         this.sobrenome=sobrenome;
         dataAlta=null;
-        if (dataInternacao.isBefore(hoje)){
-            throw new IllegalStateException("Data de internação inferior ao dia atual.");
-        } else {
+        if (dataInternacao.isBefore(hoje))
             this.dataInternacao=dataInternacao;
+        else {
+            throw new InternacaoException();
         }
 
     }
