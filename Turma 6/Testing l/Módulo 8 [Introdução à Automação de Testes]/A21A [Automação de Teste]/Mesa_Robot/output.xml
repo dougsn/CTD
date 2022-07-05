@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220705 11:59:16.226" rpa="false" schemaversion="3">
+<suite id="s1" name="Jouse" source="C:\Users\dnascimento\Desktop\Mesa_Robot\jouse.robot">
+<test id="s1-t1" name="Processo de compra de uma carteira Jouse" line="8">
+<kw name="Acessar a loja da Jouse" library="jouse">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SITE}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220705 11:59:16.608" level="INFO">Opening browser 'Chrome' to base url 'https://www.jouse.com.br'.</msg>
+<status status="PASS" starttime="20220705 11:59:16.607" endtime="20220705 11:59:20.951"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220705 11:59:20.951" endtime="20220705 11:59:21.079"/>
+</kw>
+<status status="PASS" starttime="20220705 11:59:16.607" endtime="20220705 11:59:21.079"/>
+</kw>
+<kw name="Clicar em Compre agora" library="jouse">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_COMPRE_AGORA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220705 11:59:21.085" level="INFO">Clicking element 'css=#__next &gt; main &gt; div &gt; section:nth-child(2) &gt; div.jss43 &gt; div:nth-child(2) &gt; a'.</msg>
+<status status="PASS" starttime="20220705 11:59:21.083" endtime="20220705 11:59:21.457"/>
+</kw>
+<status status="PASS" starttime="20220705 11:59:21.082" endtime="20220705 11:59:21.457"/>
+</kw>
+<kw name="Selecionar uma cor e acabamento" library="jouse">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_COR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220705 11:59:21.480" level="INFO">Clicking element 'css=#__next &gt; main &gt; div &gt; div.jss77 &gt; div.jss65 &gt; div:nth-child(2) &gt; div.jss82.jss84'.</msg>
+<status status="PASS" starttime="20220705 11:59:21.476" endtime="20220705 11:59:21.619"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_ACABAMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220705 11:59:21.620" level="INFO">Clicking element 'css=#__next &gt; main &gt; div &gt; div.jss77 &gt; div.jss65 &gt; div:nth-child(3) &gt; div.jss82.jss84'.</msg>
+<status status="PASS" starttime="20220705 11:59:21.619" endtime="20220705 11:59:21.684"/>
+</kw>
+<status status="PASS" starttime="20220705 11:59:21.475" endtime="20220705 11:59:21.685"/>
+</kw>
+<kw name="Escolher um modelo, clicar em Selecionar e Confirmar pedido" library="jouse">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_MODELO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220705 11:59:21.687" level="INFO">Clicking element 'css=#__next &gt; main &gt; div &gt; div.jss77 &gt; div.jss65 &gt; div:nth-child(4) &gt; div.jss75 &gt; button:nth-child(2)'.</msg>
+<status status="PASS" starttime="20220705 11:59:21.686" endtime="20220705 11:59:21.860"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_SELECIONAR_PEDIDO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220705 11:59:21.861" level="INFO">Clicking element 'css=#__next &gt; main &gt; div &gt; div.jss77 &gt; div.jss65 &gt; div.jss76 &gt; div.jss79 &gt; button'.</msg>
+<status status="PASS" starttime="20220705 11:59:21.860" endtime="20220705 11:59:21.960"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_CONFIRMAR_PEDIDO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220705 11:59:21.961" level="INFO">Clicking element 'css=#__next &gt; main &gt; div &gt; div &gt; div.jss162 &gt; div &gt; div.jss159 &gt; a &gt; button'.</msg>
+<msg timestamp="20220705 11:59:22.349" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220705 11:59:22.350" level="FAIL">Element with locator 'css=#__next &gt; main &gt; div &gt; div &gt; div.jss162 &gt; div &gt; div.jss159 &gt; a &gt; button' not found.</msg>
+<status status="FAIL" starttime="20220705 11:59:21.960" endtime="20220705 11:59:22.356"/>
+</kw>
+<status status="FAIL" starttime="20220705 11:59:21.685" endtime="20220705 11:59:22.358"/>
+</kw>
+<kw name="Preencher os dados para entrega e clicar em Continuar" library="jouse">
+<status status="NOT RUN" starttime="20220705 11:59:22.359" endtime="20220705 11:59:22.359"/>
+</kw>
+<kw name="Selecionar uma forma de envio e clicar em Continuar" library="jouse">
+<status status="NOT RUN" starttime="20220705 11:59:22.360" endtime="20220705 11:59:22.360"/>
+</kw>
+<kw name="Selecionar a opção de Cartão de Crédito e preencher os dados" library="jouse">
+<status status="NOT RUN" starttime="20220705 11:59:22.360" endtime="20220705 11:59:22.360"/>
+</kw>
+<kw name="Finalizar a compra clicando em Confirmar" library="jouse">
+<status status="NOT RUN" starttime="20220705 11:59:22.360" endtime="20220705 11:59:22.360"/>
+</kw>
+<status status="FAIL" starttime="20220705 11:59:16.605" endtime="20220705 11:59:22.361">Element with locator 'css=#__next &gt; main &gt; div &gt; div &gt; div.jss162 &gt; div &gt; div.jss159 &gt; a &gt; button' not found.</status>
+</test>
+<status status="FAIL" starttime="20220705 11:59:16.229" endtime="20220705 11:59:22.363"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Jouse">Jouse</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
