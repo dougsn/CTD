@@ -1,6 +1,6 @@
 *** Settings ***
 Library             SeleniumLibrary
-Resource            ./douglas.resource
+Resource            ./tiago.resource
 Test Teardown       Close Browser
 
 *** Test Case ***
