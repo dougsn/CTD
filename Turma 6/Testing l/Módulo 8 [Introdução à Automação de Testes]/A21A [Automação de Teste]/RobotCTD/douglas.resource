@@ -3,8 +3,10 @@ ${SITE}                     https://www.saucedemo.com
 ${NAVEGADOR}                Chrome
 ${CAMPO_USUARIO}            css=#user-name
 ${USUARIO}                  standard_user
+${USUARIO_INCORRETO}        incorreto
 ${CAMPO_SENHA}              css=#password
 ${SENHA}                    secret_sauce
+${SENHA_INCORRETA}          error
 ${BOTAO_LOGIN}              css=#login-button
 ${ADICIONAR_CARRINHO}       css=#add-to-cart-sauce-labs-backpack
 ${CARRINHO}                 css=#shopping_cart_container > a
@@ -16,29 +18,57 @@ ${SOBRENOME}                Gomes
 ${CAMPO_CEP}                css=#postal-code
 ${CEP}                      123456
 ${BOTAO_CONTINUE}           css=#continue
+${BOTAO_FINISH}             css=#finish
+${MENSAGEM_AGRADECIMETO}    THANK YOU FOR YOUR ORDER
 
 
 *** Keywords ***
 Acessar o site
-  Open Browser      ${SITE}                 ${NAVEGADOR}
+  Open Browser              ${SITE}                 ${NAVEGADOR}
   Maximize Browser Window
 
 Fazer login
-  Input Text        ${CAMPO_USUARIO}        ${USUARIO}
-  Input Text        ${CAMPO_SENHA}          ${SENHA}
-  Click Element     ${BOTAO_LOGIN}
+  Wait and Input Text       ${CAMPO_USUARIO}        ${USUARIO}
+  Wait and Input Text       ${CAMPO_SENHA}          ${SENHA}
+  Wait and Click            ${BOTAO_LOGIN}
+
+Fazer login com usuário incorretos
+  Wait and Input Text       ${CAMPO_USUARIO}        ${USUARIO_INCORRETO}
+  Wait and Input Text       ${CAMPO_SENHA}          ${SENHA_INCORRETA}
+  Wait and Click            ${BOTAO_LOGIN}
 
 Adicionar um produto ao carrinho
-  Click Element     ${ADICIONAR_CARRINHO}
+  Wait and Click             ${ADICIONAR_CARRINHO}
 
 Acessar o carrinho
-  Click Element     ${CARRINHO}
+  Wait and Click             ${CARRINHO}
 
 Clicar em 'Checkout'
-  Click Element     ${BOTAO_CHECKOUT}
+  Wait and Click             ${BOTAO_CHECKOUT}
 
 Preencher informações do usuário
-  Input Text        ${CAMPO_NOME}           ${NOME}
-  Input Text        ${CAMPO_SOBRENOME}      ${SOBRENOME}
-  Input Text        ${CAMPO_CEP}            ${CEP}
-  Click Element     ${BOTAO_CONTINUE}
+  Wait and Input Text         ${CAMPO_NOME}           ${NOME}
+  Wait and Input Text         ${CAMPO_SOBRENOME}      ${SOBRENOME}
+  Wait and Input Text         ${CAMPO_CEP}            ${CEP}
+  Wait and Click              ${BOTAO_CONTINUE}
+
+Clicar em 'Finish'
+  Wait and Click              ${BOTAO_FINISH}
+  Page Should Contain         ${MENSAGEM_AGRADECIMETO}
+
+
+# KEYWORDS Personalizadass
+
+
+# Fazendo com que todos os elementos clicaveis esperem a sua visibilidade por 5s, antes de clicar
+
+Wait and Click 
+  [Arguments]                     ${ELEMENTO}
+  Wait Until Element is Visible   ${ELEMENTO}
+  Click Element                   ${ELEMENTO}
+
+
+Wait and Input Text
+  [Arguments]                     ${CAMPO}    ${TEXTO}
+  Wait Until Element is Visible   ${CAMPO}
+  Input Text                      ${CAMPO}    ${TEXTO}
