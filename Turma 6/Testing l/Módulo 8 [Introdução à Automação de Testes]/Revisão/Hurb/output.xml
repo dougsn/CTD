@@ -1,193 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220713 07:48:42.708" rpa="false" schemaversion="3">
-<suite id="s1" name="Hurb" source="C:\Users\Douglas\Desktop\Hurb\hurb.robot">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220713 07:53:34.323" rpa="false" schemaversion="3">
+<suite id="s1" name="Hurb" source="C:\Users\dnascimento\Desktop\CTD\Turma 6\Testing l\Módulo 8 [Introdução à Automação de Testes]\Revisão\Hurb\hurb.robot">
 <test id="s1-t1" name="Processo de reserva de pacote de viagens" line="11">
 <kw name="Abrir o site do Hurb" library="hurb" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${SITE}</arg>
 <arg>${NAVEGADOR}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220713 07:48:42.977" level="INFO">Opening browser 'Chrome' to base url 'https://hurb.com/br'.</msg>
-<status status="PASS" starttime="20220713 07:48:42.977" endtime="20220713 07:48:46.847"/>
+<msg timestamp="20220713 07:53:35.195" level="INFO">Opening browser 'Chrome' to base url 'https://hurb.com/br'.</msg>
+<msg timestamp="20220713 07:53:48.093" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220713 07:53:48.095" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x002F6463+2188387]
+	Ordinal0 [0x0028E461+1762401]
+	Ordinal0 [0x001A3D78+802168]
+	Ordinal0 [0x00197210+750096]
+	Ordinal0 [0x0019675A+747354]
+	Ordinal0 [0x00195D3F+744767]
+	Ordinal0 [0x00194C28+740392]
+	Ordinal0 [0x00195228+741928]
+	Ordinal0 [0x0019F153+782675]
+	Ordinal0 [0x001A9FBB+827323]
+	Ordinal0 [0x001AD310+840464]
+	Ordinal0 [0x001954F6+742646]
+	Ordinal0 [0x001A9BF3+826355]
+	Ordinal0 [0x001FCF6D+1167213]
+	Ordinal0 [0x001EC5F6+1099254]
+	Ordinal0 [0x001C6BE0+945120]
+	Ordinal0 [0x001C7AD6+948950]
+	GetHandleVerifier [0x005971F2+2712546]
+	GetHandleVerifier [0x0058886D+2652765]
+	GetHandleVerifier [0x0038002A+520730]
+	GetHandleVerifier [0x0037EE06+516086]
+	Ordinal0 [0x0029468B+1787531]
+	Ordinal0 [0x00298E88+1805960]
+	Ordinal0 [0x00298F75+1806197]
+	Ordinal0 [0x002A1DF1+1842673]
+	BaseThreadInitThunk [0x75576739+25]
+	RtlGetFullPathName_UEx [0x77168FEF+1215]
+	RtlGetFullPathName_UEx [0x77168FBD+1165]
+	(No symbol) [0x00000000]
+</msg>
+<status status="FAIL" starttime="20220713 07:53:35.194" endtime="20220713 07:53:48.437"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220713 07:48:46.847" endtime="20220713 07:48:47.033"/>
+<status status="NOT RUN" starttime="20220713 07:53:48.438" endtime="20220713 07:53:48.438"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220713 07:48:50.049" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220713 07:48:47.033" endtime="20220713 07:48:50.049"/>
+<status status="NOT RUN" starttime="20220713 07:53:48.438" endtime="20220713 07:53:48.439"/>
 </kw>
-<status status="PASS" starttime="20220713 07:48:42.976" endtime="20220713 07:48:50.049"/>
+<status status="FAIL" starttime="20220713 07:53:35.194" endtime="20220713 07:53:48.440"/>
 </kw>
-<kw name="Clicar em “Permitir todos os cookies”" library="hurb">
-<kw name="Wait and Click" library="hurb">
-<arg>${BOTAO_COOKIES}</arg>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${ELEMENTO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220713 07:48:50.054" level="INFO">Clicking element 'xpath=//*[@id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"]'.</msg>
-<status status="PASS" starttime="20220713 07:48:50.053" endtime="20220713 07:48:50.142"/>
-</kw>
-<status status="PASS" starttime="20220713 07:48:50.051" endtime="20220713 07:48:50.143"/>
-</kw>
-<status status="PASS" starttime="20220713 07:48:50.050" endtime="20220713 07:48:50.143"/>
-</kw>
-<kw name="Selecionar a opção “Pacotes”" library="hurb">
-<kw name="Wait and Click" library="hurb">
-<arg>${BOTAO_PACOTES}</arg>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${ELEMENTO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220713 07:48:50.144" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div[1]/div[2]/div/div/div[1]/div/div/button[2]'.</msg>
-<status status="PASS" starttime="20220713 07:48:50.144" endtime="20220713 07:48:50.201"/>
-</kw>
-<status status="PASS" starttime="20220713 07:48:50.144" endtime="20220713 07:48:50.201"/>
-</kw>
-<status status="PASS" starttime="20220713 07:48:50.143" endtime="20220713 07:48:50.201"/>
-</kw>
-<kw name="Buscar por alguma cidade turística (Ex: Buenos Aires, Florença, Orlando) e clicar em “Pesquisar”" library="hurb">
-<kw name="Wait and Input Text" library="hurb">
-<arg>${CAMPO_PACOTES}</arg>
-<arg>${TEXTO_PACOTES}</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${CAMPO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220713 07:48:50.202" endtime="20220713 07:48:50.228"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${CAMPO}</arg>
-<arg>${TEXTO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220713 07:48:50.229" level="INFO">Typing text 'Buenos Aires' into text field 'xpath=//*[@id="destination-input"]'.</msg>
-<status status="PASS" starttime="20220713 07:48:50.228" endtime="20220713 07:48:50.435"/>
-</kw>
-<status status="PASS" starttime="20220713 07:48:50.202" endtime="20220713 07:48:50.436"/>
-</kw>
-<kw name="Wait and Click" library="hurb">
-<arg>${BOTAO_PESQUISAR}</arg>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${ELEMENTO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220713 07:48:50.436" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div[1]/div[2]/div/div/div[2]/button'.</msg>
-<msg timestamp="20220713 07:48:52.671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220713 07:48:52.672" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
-from unknown error: cannot determine loading status
+<status status="FAIL" starttime="20220713 07:53:35.192" endtime="20220713 07:53:48.456">Setup failed:
+WebDriverException: Message: unknown error: cannot determine loading status
 from unknown error: unexpected command response
   (Session info: chrome=103.0.5060.114)
 Stacktrace:
 Backtrace:
-	Ordinal0 [0x00546463+2188387]
-	Ordinal0 [0x004DE461+1762401]
-	Ordinal0 [0x003F3D78+802168]
-	Ordinal0 [0x003E7210+750096]
-	Ordinal0 [0x003E675A+747354]
-	Ordinal0 [0x003E5D3F+744767]
-	Ordinal0 [0x003E4C28+740392]
-	Ordinal0 [0x003E5228+741928]
-	Ordinal0 [0x003FCB22+838434]
-	Ordinal0 [0x003F625B+811611]
-	Ordinal0 [0x003F5DD5+810453]
-	Ordinal0 [0x003F64B3+812211]
-	Ordinal0 [0x003EF635+783925]
-	Ordinal0 [0x003EF2BD+783037]
-	Ordinal0 [0x003F9FBB+827323]
-	Ordinal0 [0x003FD310+840464]
-	Ordinal0 [0x003E54F6+742646]
-	Ordinal0 [0x003F9BF3+826355]
-	Ordinal0 [0x0044CF6D+1167213]
-	Ordinal0 [0x0043C5F6+1099254]
-	Ordinal0 [0x00416BE0+945120]
-	Ordinal0 [0x00417AD6+948950]
-	GetHandleVerifier [0x007E71F2+2712546]
-	GetHandleVerifier [0x007D886D+2652765]
-	GetHandleVerifier [0x005D002A+520730]
-	GetHandleVerifier [0x005CEE06+516086]
-	Ordinal0 [0x004E468B+1787531]
-	Ordinal0 [0x004E8E88+1805960]
-	Ordinal0 [0x004E8F75+1806197]
-	Ordinal0 [0x004F1DF1+1842673]
-	BaseThreadInitThunk [0x76BAFA29+25]
-	RtlGetAppContainerNamedObjectPath [0x77007A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x77007A6E+238]
-</msg>
-<status status="FAIL" starttime="20220713 07:48:50.436" endtime="20220713 07:48:52.675"/>
-</kw>
-<status status="FAIL" starttime="20220713 07:48:50.436" endtime="20220713 07:48:52.675"/>
-</kw>
-<status status="FAIL" starttime="20220713 07:48:50.202" endtime="20220713 07:48:52.676"/>
-</kw>
-<kw name="Selecionar um pacote de viagem" library="hurb">
-<status status="NOT RUN" starttime="20220713 07:48:52.677" endtime="20220713 07:48:52.677"/>
-</kw>
-<kw name="Clicar em “Escolher pacote”" library="hurb">
-<status status="NOT RUN" starttime="20220713 07:48:52.677" endtime="20220713 07:48:52.677"/>
-</kw>
-<kw name="Selecionar as opções do pacote e clicar em “Ir para pagamento”" library="hurb">
-<status status="NOT RUN" starttime="20220713 07:48:52.677" endtime="20220713 07:48:52.678"/>
-</kw>
-<kw name="Validar as informações da “Configuração” da viagem" library="hurb">
-<status status="NOT RUN" starttime="20220713 07:48:52.678" endtime="20220713 07:48:52.678"/>
-</kw>
-<kw name="Validar as informações do período da viagem" library="hurb">
-<status status="NOT RUN" starttime="20220713 07:48:52.678" endtime="20220713 07:48:52.678"/>
-</kw>
-<kw name="Selecionar a opção “Boleto parcelado” (se não estiver disponível, escolha qualquer outro)" library="hurb">
-<status status="NOT RUN" starttime="20220713 07:48:52.678" endtime="20220713 07:48:52.679"/>
-</kw>
-<kw name="Preencher os dados de pagamento" library="hurb">
-<status status="NOT RUN" starttime="20220713 07:48:52.679" endtime="20220713 07:48:52.679"/>
-</kw>
-<kw name="Marcar o checkbox “Li e aceito as condições de termos de uso e política de privacidade”" library="hurb">
-<status status="NOT RUN" starttime="20220713 07:48:52.679" endtime="20220713 07:48:52.679"/>
-</kw>
-<kw name="Validar a informação sobre cancelamento grátis" library="hurb">
-<status status="NOT RUN" starttime="20220713 07:48:52.679" endtime="20220713 07:48:52.679"/>
-</kw>
-<status status="FAIL" starttime="20220713 07:48:42.975" endtime="20220713 07:48:52.680">WebDriverException: Message: unknown error: cannot determine loading status
-from unknown error: cannot determine loading status
-from unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.114)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00546463+2188387]
-	Ordinal0 [0x004DE461+1762401]
-	Ordinal0 [0x003F3D78+802168]
-	Ordinal0 [0x003E7210+750096]
-	Ordinal0 [0x003E675A+747354]
-	Ordinal0 [0x003E5D3F+744767]
-	Ordinal0 [0x003E4C28+740392]
-	Ordinal0 [0x003E5228+741928]
-	Ordinal0 [0x003FCB22+838434]
-	Ordinal0 [0x003F625B+811611]
-	Ordinal0 [0x003F5DD5+810453]
-	Ordinal0 [0x003F64B3+812211]
-	Ordinal0 [0x003EF635+783925]
-	Ordinal0 [0x003EF2BD+783037]
-	Ordinal0 [0x003F9FBB+827323]
-	Ordinal0 [0x003FD310+840464]
-	Ordinal0 [0x003E54F6+742646]
-	Ordinal0 [0x003F9BF3+826355]
-	Ordinal0 [0x0044CF6D+1167213]
-	Ordinal0 [0x0043C5F6+1099254]
-	Ordinal0 [0x00416BE0+945120]
-	Ordinal0 [0x00417AD6+948950]
-	GetHandleVerifier [0x007E71F2+2712546]
-	GetHandleVerifier [0x007D886D+2652765]
-	GetHandleVerifier [0x005D002A+520730]
-	GetHandleVerifier [0x005CEE06+516086]
-	Ordinal0 [0x004E468B+1787531]
-	Ordinal0 [0x004E8E88+1805960]
-	Ordinal0 [0x004E8F75+1806197]
-	Ordinal0 [0x004F1DF1+1842673]
-	BaseThreadInitThunk [0x76BAFA29+25]
-	RtlGetAppContainerNamedObjectPath [0x77007A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x77007A6E+238]
+	Ordinal0 [0x002F6463+2188387]
+	Ordinal0 [0x0028E461+1762401]
+	Ordinal0 [0x001A3D78+802168]
+	Ordinal0 [0x00197210+750096]
+	Ordinal0 [0x0019675A+747354]
+	Ordinal0 [0x00195D3F+744767]
+	Ordinal0 [0x00194C28+740392]
+	Ordinal0 [0x00195228+741928]
+	Ordinal0 [0x0019F153+782675]
+	Ordinal0 [0x001A9FBB+827323]
+	Ordinal0 [0x001AD310+840464]
+	Ordinal0 [0x001954F6+742646]
+	Ordinal0 [0x001A9BF3+826355]
+	Ordinal0 [0x001FCF6D+1167213]
+	Ordinal0 [0x001EC5F6+1099254]
+	Ordinal0 [0x001C6BE0+945120]
+	Ordinal0 [0x001C7AD6+948950]
+	GetHandleVerifier [0x005971F2+2712546]
+	GetHandleVerifier [0x0058886D+2652765]
+	GetHandleVerifier [0x0038002A+520730]
+	GetHandleVerifier [0x0037EE06+516086]
+	Ordinal0 [0x0029468B+1787531]
+	Ordinal0 [0x00298E88+1805960]
+	Ordinal0 [0x00298F75+1806197]
+	Ordinal0 [0x002A1DF1+1842673]
+	BaseThreadInitThunk [0x75576739+25]
+	RtlGetFullPathName_UEx [0x77168FEF+1215]
+	RtlGetFullPathName_UEx [0x77168FBD+1165]
+	(No symbol) [0x00000000]
 </status>
 </test>
-<status status="FAIL" starttime="20220713 07:48:42.710" endtime="20220713 07:48:52.685"/>
+<status status="FAIL" starttime="20220713 07:53:34.327" endtime="20220713 07:53:48.501"/>
 </suite>
 <statistics>
 <total>
