@@ -20,7 +20,7 @@ class FuncionarioTest {
 
     @Test
     void testarFunc(){
-        f1.setAntiguidade(LocalDate.of(2022,5,1));
+        f1.setAntiguidade(LocalDate.of(2010,5,1));
         f2.setAntiguidade(LocalDate.of(2017,9,11));
 
 

@@ -11,24 +11,12 @@ public class Afiliado extends Vendedor {
 
     @Override
     public String mostrarCategoria() {
-
-        if(getPontuacao() < 20){
-            return "Novato";
-        } else if(getPontuacao() >= 20 && getPontuacao() <= 30 ){
-            return "Aprendiz";
-        } else if(getPontuacao() >= 31 && getPontuacao() <= 40 ){
-            return "Bom";
-        } else {
-            return "Mestre";
-        }
+        return super.mostrarCategoria();
     }
 
     @Override
     public String toString() {
-        return "Funcionario{" +
-                "Nome: " + getNome() +
-                ", Pontuacao: " + getPontuacao() +
-                ", Categoria: " + mostrarCategoria() +
-                '}';
+        return super.toString() +
+                ", Categoria: " + mostrarCategoria();
     }
 }

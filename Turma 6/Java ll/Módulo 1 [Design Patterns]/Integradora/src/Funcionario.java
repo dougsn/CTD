@@ -7,17 +7,13 @@ public class Funcionario extends Vendedor {
 
     LocalDate antiguidade;
 
-    List<Afiliado> afiliados = new ArrayList<Afiliado>();
+    List<Afiliado> afiliados = new ArrayList<>();
 
 
     public Funcionario(String nome, int pontuacao) {
         super(nome, pontuacao);
     }
 
-
-    public LocalDate getAntiguidade() {
-        return antiguidade;
-    }
 
     public void setAntiguidade(LocalDate antiguidade) {
         this.antiguidade = antiguidade;
@@ -42,24 +38,12 @@ public class Funcionario extends Vendedor {
 
     @Override
     public String mostrarCategoria() {
-
-            if(getPontuacao() < 20){
-                return "Novato";
-            } else if(getPontuacao() >= 20 && getPontuacao() <= 30 ){
-                return "Aprendiz";
-            } else if(getPontuacao() >= 31 && getPontuacao() <= 40 ){
-                return "Bom";
-            } else {
-                return "Mestre";
-            }
+        return super.mostrarCategoria();
     }
 
     @Override
     public String toString() {
-        return "Funcionario{" +
-                "Nome: " + getNome() +
-                ", Pontuacao: " + getPontuacao() +
-                ", Categoria: " + mostrarCategoria() +
-                '}';
+        return super.toString() +
+                ", Categoria: " + mostrarCategoria();
     }
 }
