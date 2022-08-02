@@ -1,21 +1,24 @@
 
 
-public class Circulo {
+public class Circulo extends Figura {
 
 
-    private final int raio;
 
-    public Circulo(int raio){
-        this.raio = raio;
+    public Circulo(double comprimento) {
+        super(comprimento);
     }
 
-    public int getRaio() {
-        return raio;
-    }
+
 
     public double calcularPerimetro(){
-        return 2 * 3.14 * raio;
+        return 2 * 3.14 * getComprimento();
     }
 
-
+    @Override
+    public String toString() {
+        return "Circulo{" +
+                "comprimento=" + getComprimento() +
+                ", Perimetro=" + this.calcularPerimetro() +
+                '}';
+    }
 }

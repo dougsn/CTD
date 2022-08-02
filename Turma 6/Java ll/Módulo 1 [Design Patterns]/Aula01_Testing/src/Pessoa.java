@@ -1,40 +1,70 @@
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
 public class Pessoa {
 
-    private final String nome;
-    private final int idade;
-    List<Pessoa> pessoaList = new ArrayList<>();
+    private String nome;
+    private String sobrenome;
+    LocalDate idade;
+    List<String> pessoaList = new ArrayList<String>();
 
-    public Pessoa(String nome, int idade){
-        this.nome = nome;
-        this.idade = idade;
+    public Pessoa(){
+
     }
+
+    public Pessoa(String nome, String sobrenome) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
+
 
     public String getNome() {
         return nome;
     }
 
-    public int getIdade() {
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public LocalDate getIdade() {
         return idade;
     }
 
-    public void addPessoa(Pessoa pessoa){
-        pessoaList.add(pessoa);
+    public void setIdade(LocalDate idade) {
+        this.idade = idade;
     }
 
-    public Supplier<String> verificarIdade(){
-        if(getNome().length() >= 5 && getIdade() > 18){
-            addPessoa(this);
+    public List<String> addNome(Pessoa p){
+        int contador = p.getNome().length();
+        int idade = p.Idade();
+        if(contador >= 5 && idade >= 18){
+            pessoaList.add(p.getNome());
+            System.out.println(pessoaList);
         }
         return null;
+    }
+
+    public int Idade(){
+        // Aqui compara a data atual (que foi criada na mão) com a data de nascimento da pessoa instanciada.
+        int idade = Period.between(this.idade, LocalDate.of(2022,8,1)).getYears(); // Fazendo o calculo para retornar a idade. Está pegando pelo ao .getYears();
+        return idade;
     }
 
     @Override
     public String toString() {
         return  "nome:'" + nome + '\'' +
+                ", sobrenome:'" + sobrenome + '\'' +
                 ", idade:" + idade;
     }
 }

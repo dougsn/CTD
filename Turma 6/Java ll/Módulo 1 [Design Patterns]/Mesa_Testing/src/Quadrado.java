@@ -1,16 +1,20 @@
-public class Quadrado {
+public class Quadrado extends Figura{
 
-    private final int lado;
 
-    public Quadrado(int lado){
-        this.lado = lado;
+    public Quadrado(double comprimento) {
+        super(comprimento);
     }
 
-    public int getLado() {
-        return lado;
-    }
 
     public double calcularPerimetro(){
-        return 4 * lado;
+        return 4 * getComprimento();
+    }
+
+    @Override
+    public String toString() {
+        return "Quadrado{" +
+                "comprimento=" + getComprimento() +
+                ", Perimetro=" + this.calcularPerimetro() +
+                '}';
     }
 }
