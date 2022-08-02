@@ -3,7 +3,7 @@ import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Funcionario extends Vendedores {
+public class Funcionario extends Vendedor {
 
     LocalDate antiguidade;
 

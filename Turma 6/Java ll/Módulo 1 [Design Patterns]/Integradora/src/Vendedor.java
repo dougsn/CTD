@@ -1,14 +1,14 @@
-public abstract class Vendedores {
+public abstract class Vendedor {
 
     private String nome;
 
     private int pontuacao;
 
-    public Vendedores(){
+    public Vendedor(){
 
     }
 
-    public Vendedores(String nome, int pontuacao) {
+    public Vendedor(String nome, int pontuacao) {
         this.nome = nome;
         this.pontuacao = pontuacao;
     }

@@ -1,4 +1,4 @@
-public class Afiliado extends Vendedores{
+public class Afiliado extends Vendedor {
 
 
     public Afiliado(String nome, int pontuacao) {
