@@ -1,3 +1,5 @@
+package Aula01.Mesa;
+
 public class Figura {
 
     private double comprimento;
