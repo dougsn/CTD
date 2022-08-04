@@ -9,3 +9,7 @@ Na camada de serviço, sempre haverá o terá um Output das informações do Usu
 
 Mas antes de sair este Output, tem que passar pelo Proxy,
 o Proxy é responsável por *VERIFICAR SE O USUÁRIO PODE OU NÃO REALIZAR A TAREFA* com base na regra de negócio.
+
+
+Para testar a lógica da aplicação é instânciado o Usuario com os seus atributos e posteriormente é instânciado o Proxy com o tipo da Interface (Donwload)
+Com isso, é realizado o teste utilizando a variável do Proxy utilizando o método da Interface com os atributos do Usuário.
