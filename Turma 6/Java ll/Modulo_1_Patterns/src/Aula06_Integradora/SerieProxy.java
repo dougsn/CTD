@@ -1,27 +1,27 @@
 package Aula06_Integradora;
 
 public class SerieProxy implements ISeries{
-    private int qtdViews = 1;
+    private int qtdViews = 0;
 
     public int getQtdViews() {
         return qtdViews;
     }
 
-    public void setQtdViews(int qtdViews) {
-        this.qtdViews = qtdViews;
-    }
 
 
     @Override
     public String getSerie(String nome) {
-        if(nome.equals(nome) && (getQtdViews() < 6)){
 
 
-            Serie serie = new Serie(nome);
-            System.out.println(serie);
+        if(nome.equalsIgnoreCase(nome)){
             qtdViews += 1;
-        } else  {
-           throw new SerieNaoHabilitadaException();
+            if(getQtdViews() < 6){
+
+                Serie serie = new Serie(nome);
+                System.out.println(serie);
+            }else  {
+                throw new SerieNaoHabilitadaException();
+            }
         }
 
         return null;

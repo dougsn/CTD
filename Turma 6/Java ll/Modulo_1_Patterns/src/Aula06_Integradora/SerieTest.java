@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SerieTest {
 
     Serie serie1 = new Serie("asd");
+
     ISeries iSeries = new SerieProxy();
 
     @Test
@@ -18,7 +19,7 @@ class SerieTest {
         iSeries.getSerie(serie1.getNome());
         iSeries.getSerie(serie1.getNome());
         iSeries.getSerie(serie1.getNome());
-        iSeries.getSerie(serie1.getNome());
+
     }
 
 }
