@@ -16,7 +16,7 @@ class UsuarioTest {
     @BeforeEach
     void cadastroUsuario(){
         a1 = new Usuario("dougsn","Premium");
-        a2 = new Usuario("Guerreiro","Basic");
+        a2 = new Usuario("Guerreiro","Free");
         a3 = new Usuario("Arthur","premium");
     }
 

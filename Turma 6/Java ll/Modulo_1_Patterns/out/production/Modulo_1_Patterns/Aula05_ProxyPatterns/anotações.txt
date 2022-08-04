@@ -1,0 +1,11 @@
+O ProxyPattern consiste em criar uma camada extra de verificação a determinada funcionalidade. No caso do exemplo da mesa
+trabalho, foi necessário criar o ProxyPattern para verificar se o Usuário poderia utilizar o serviço de Donwload (interface)
+ou não, dependendo da sua assinatura ("Free" ou "Premium").
+
+Sempre haverá uma interface para ser implementado, na interface terá o método responsável pela ação (que no caso foi baixar a música)
+a interface terá como parâmetro os atributos do objeto, que no caso foi Usuario.
+
+Na camada de serviço, sempre haverá o terá um Output das informações do Usuário.
+
+Mas antes de sair este Output, tem que passar pelo Proxy,
+o Proxy é responsável por *VERIFICAR SE O USUÁRIO PODE OU NÃO REALIZAR A TAREFA* com base na regra de negócio.
