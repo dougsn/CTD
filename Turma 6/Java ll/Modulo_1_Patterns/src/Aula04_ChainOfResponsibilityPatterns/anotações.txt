@@ -1,0 +1,7 @@
+O ChainOfResponsibility consiste em uma corrente de responsabilidade, que é passado a tarefa em todos os Handlers,
+para a verificação se a tarefa está relacionada a sua classe ou não, caso esteja relacionado, realiza a operação necessária,
+caso não esteja, é passado para o próxima Handler, que faz a mesma verificação, até que acabe o "Loop" de verificação
+em todos os Handlers.
+
+Na maioria das vezes é criado uma Classe para realizar a checagem dos Handlers. Sendo instânciada e utilizada para a criação
+do produto em si.

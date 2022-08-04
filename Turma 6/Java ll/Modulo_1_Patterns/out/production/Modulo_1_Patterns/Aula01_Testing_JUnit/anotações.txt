@@ -1,0 +1,5 @@
+O Test em Java é realizado via JUnit, que é um framework de testes.
+
+É utilizado, normalmente o @BeforeEach para realizar algumas ações *antes dos testes em si*.
+Após montar o @BeforeEach, é criado os teste em si, com o @Test, que serve como uma classe Main.
+Caso queria realizar algo após os teste, é utilizado a TAG @AfterEach.
