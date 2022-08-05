@@ -1,0 +1,11 @@
+O padrão Flyweight consiste em criar uma fábrica de objetos (Factory Object) para validar se determinado
+objeto já foi instânciado com os mesmos atributos. Caso já esteja instânciado, ele reaproveita o objeto,
+pegando os seua atributos, mas se não estiver instânciado, ele cria um novo e atualiza a lista HashMap.
+
+
+Exemplo..:
+
+Circulo circulo =  FlyweightFactory.obterCirculo("Azul");
+
+
+Se o mesmo objeto for instânciado, o Flyweight se responsabiliza por reaproveitar o que já está criado.
