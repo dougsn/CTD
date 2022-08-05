@@ -2,7 +2,7 @@ package Aula06_Integradora.Aula;
 
 public class GradeDeFilmesProxy implements IGradeDeFilmes{
 
-    private int ip;
+    private final int ip;
 
     public GradeDeFilmesProxy(int ip) {
         this.ip = ip;
