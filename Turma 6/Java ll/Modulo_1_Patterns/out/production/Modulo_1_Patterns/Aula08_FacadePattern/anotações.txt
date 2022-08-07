@@ -1,0 +1,29 @@
+No padrão Facade, a camada se serviço é responsável por realizar a lógica de como a regra do negócio vai ocorrer. E nessa camada também terá uma classe
+que será responsável por atuar como a fachada, recebendo as solicitações (dando o @Override da Interface) e se comunicando com os subsistemas pra que em conjunto
+a compra seja concluída.
+
+Na camada de Modelo ficam as classes que são responsáveis por criar as informações necessários para serem utilizadas na camada de serviço. São classes comuns, que
+teram os atributos e getters/setters para serem utilizados na sua instanciação.
+
+
+Resumidamente, é criado as classes modelos, para serem instanciadas na Main, para preencher as informações necessárias. Já na camada de Serviços, é criada as classes
+que terão métodos responsáveis por processar, por exemplo, as compras, envios e armazenamentos. Com isso, a classe Facade fará esse processamento dos serviços,
+utilizando seus métodos.
+
+
+
+                                                    Exemplo da instanciação do Facade
+
+ICompraService compraService = new CompraService(new ArmazemService(Arrays.asList(produtoUm,produtoDois)),new PgtoService(),new EnvioService());
+
+                                                    Exemplo do Facade utilizando os serviços.
+
+compraService.processarCompra("1",3, cartao, endereco);
+
+
+
+*** Classe Facade ***
+
+
+A classe Facade terá como atributo os tipos de serviços, em seu construtor terá a criação dos tipos de serviços.
+A classe vai sobrescrever a o método da Interface, realizando a lógica necessário para validar o método.
