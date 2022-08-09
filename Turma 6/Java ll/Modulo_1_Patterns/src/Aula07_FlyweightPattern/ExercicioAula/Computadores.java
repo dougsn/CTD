@@ -2,47 +2,35 @@ package Aula07_FlyweightPattern.ExercicioAula;
 
 public class Computadores {
 
-    private String ram;
-    private String hd;
-    private String id;
-    private int contador = 0;
+    private int ram;
+    private int hd;
+    private static int contador;
 
-    public Computadores(String ram, String hd, String id) {
+
+    public Computadores(int ram, int hd){
+        super();
         this.ram = ram;
         this.hd = hd;
-        this.id = id;
+        contador++;
+        System.out.println("\nContador: " + contador );
+
+
     }
 
-    public String getRam() {
+    public int getRam() {
         return ram;
     }
 
-    public void setRam(String ram) {
+    public void setRam(int ram) {
         this.ram = ram;
     }
 
-    public String getHd() {
+    public int getHd() {
         return hd;
     }
 
-    public void setHd(String hd) {
+    public void setHd(int hd) {
         this.hd = hd;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public int getContador() {
-        return contador;
-    }
-
-    public void setContador(int contador) {
-        this.contador = contador;
     }
 
     @Override
@@ -50,8 +38,6 @@ public class Computadores {
         return "Computadores{" +
                 "ram='" + ram + '\'' +
                 ", hd='" + hd + '\'' +
-                ", id='" + id + '\'' +
-                ", contador=" + contador +
                 '}';
     }
 }

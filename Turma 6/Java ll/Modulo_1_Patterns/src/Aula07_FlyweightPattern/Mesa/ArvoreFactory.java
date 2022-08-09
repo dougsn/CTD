@@ -1,26 +1,35 @@
 package Aula07_FlyweightPattern.Mesa;
 
-import Aula07_FlyweightPattern.Circulo;
-
 import java.util.HashMap;
+import java.util.Map;
 
 public class ArvoreFactory {
 
-    private static final HashMap<String, Arvore> floresta = new HashMap<>();
+    private static final Map<String, Arvore> arvFlyWeight = new HashMap<>();
+    int i = 0;
 
+    public Arvore getArvore(int altura, int largura, String cor){
+        String id = "";
 
-
-    public static Arvore obterArvore(Double altura, Double largura, String cor, String tipo){
-
-        Arvore arvore = floresta.get(tipo);
-
-
-        if(arvore == null) {
-            arvore = new Arvore(altura, largura, cor, tipo);
-            floresta.put(tipo,arvore);
-            System.out.println("Criando uma nova arvore: " + arvore);
+        if (altura == 200 && largura == 400 && cor == "verde"){
+            id = "Ornamentais";
+        }
+        if (altura == 500 && largura == 300 && cor == "vermelho"){
+            id = "Frutíferas";
+        }
+        if (altura == 100 && largura == 200 && cor == "azul"){
+            id = "Florífera";
         }
 
-        return arvore;
+        if(!arvFlyWeight.containsKey(id)){
+            arvFlyWeight.put(id, new Arvore(altura, largura,cor));
+            System.out.println("Árvore criada e plantada. Cor= " +cor+ ". Árvore de número= " +i);
+            i++;
+            return arvFlyWeight.get(id);
+        }
+
+        System.out.println("Árvore plantada. Cor= " +cor+ ". Árvore de número= " +i);
+        i++;
+        return arvFlyWeight.get(id);
     }
 }

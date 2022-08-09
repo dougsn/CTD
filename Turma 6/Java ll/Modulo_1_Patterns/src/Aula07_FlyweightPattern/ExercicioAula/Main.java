@@ -3,22 +3,15 @@ package Aula07_FlyweightPattern.ExercicioAula;
 public class Main {
     public static void main(String[] args) {
 
-        Computadores computadores = ComputadorFactory.obterComputador("16","128","1");
-        System.out.println(computadores);
-        computadores = ComputadorFactory.obterComputador("16","128","1");
-        System.out.println(computadores);
+        ComputadorFactory computer = new ComputadorFactory();
 
-        computadores = ComputadorFactory.obterComputador("16","128","12");
-        System.out.println(computadores);
+        Computadores mac1 = computer.getComputador(16,500);
+        Computadores windows = computer.getComputador(2,256);
+        Computadores mac2 = computer.getComputador(16,500);
 
-        computadores = ComputadorFactory.obterComputador("8","500","2");
-        System.out.println(computadores);
-        computadores = ComputadorFactory.obterComputador("8","500","2");
-        System.out.println(computadores);
-        computadores = ComputadorFactory.obterComputador("8","500","2");
-        System.out.println(computadores);
-        computadores = ComputadorFactory.obterComputador("8","500","2");
-        System.out.println(computadores);
+        System.out.println(mac2);
+        System.out.println(mac1);
+        System.out.println(windows);
 
     }
 }

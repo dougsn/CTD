@@ -1,33 +1,34 @@
 package Aula07_FlyweightPattern.Mesa;
 
 public class Arvore {
-    private Double altura;
-    private Double largura;
+
+    private int altura;
+    private int largura;
     private String cor;
-    private String tipo;
 
+    private static int contador = 0;
 
-    public Arvore(Double altura, Double largura, String cor, String tipo) {
+    public Arvore(int altura, int largura, String cor) {
         this.altura = altura;
         this.largura = largura;
         this.cor = cor;
-        this.tipo = tipo;
+        contador++;
+        System.out.println("Contador= " +contador);
     }
 
-
-    public Double getAltura() {
+    public int getAltura() {
         return altura;
     }
 
-    public void setAltura(Double altura) {
+    public void setAltura(int altura) {
         this.altura = altura;
     }
 
-    public Double getLargura() {
+    public int getLargura() {
         return largura;
     }
 
-    public void setLargura(Double largura) {
+    public void setLargura(int largura) {
         this.largura = largura;
     }
 
@@ -39,20 +40,12 @@ public class Arvore {
         this.cor = cor;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
     @Override
     public String toString() {
-        return "[Arvore:  " +
-                "altura: " + altura +
-                ", largura: " + largura +
-                ", cor: '" + cor + '\'' +
-                ", tipo: '" + tipo +"]";
+        return "Arvore{" +
+                "altura=" + altura +
+                ", largura=" + largura +
+                ", cor='" + cor + '\'' +
+                '}';
     }
 }

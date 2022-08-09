@@ -1,25 +1,27 @@
 package Aula07_FlyweightPattern.ExercicioAula;
 
+
 import java.util.HashMap;
+import java.util.Map;
 
 public class ComputadorFactory {
 
-    public static final HashMap<String, Computadores> computadoresHashMap = new HashMap<>();
+    public static Map<String, Computadores> macFlyweight = new HashMap<>();
 
-    public static Computadores obterComputador(String ram, String hd, String id){
+    public  Computadores getComputador(int ram, int hd){
 
-        Computadores computadores = computadoresHashMap.get(id);
-
-        if(computadores == null){
-
-            computadores = new Computadores(ram, hd, id);
-            computadoresHashMap.put(id, computadores);
-            System.out.println("Criado um novo computador: " + computadores);
-            computadores.setContador(computadores.getContador() + 1);
+        String id = "id: " + ram + " : " + hd;
+        System.out.println(id);
 
 
+        if(!macFlyweight.containsKey(id)){ // Verifica se o ID não existe.
+
+            macFlyweight.put(id, new Computadores(ram, hd));
+            System.out.println("\nPC Criado com sucesso.");
+            return macFlyweight.get(id);
         }
-        return computadores;
+        System.out.println("\nPC obtido.");
+        return macFlyweight.get(id);
     }
 
 

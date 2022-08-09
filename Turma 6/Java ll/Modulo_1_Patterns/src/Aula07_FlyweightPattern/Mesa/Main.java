@@ -4,22 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Arvore arvore = ArvoreFactory.obterArvore(200.00,400.00,"verde","Ornamentais");
-        System.out.println(arvore);
-        arvore = ArvoreFactory.obterArvore(500.00,300.00,"vermelho","Frutíferas");
-        System.out.println(arvore);
-        arvore = ArvoreFactory.obterArvore(100.00,200.00,"azul","Florífera");
-        System.out.println(arvore);
-        arvore = ArvoreFactory.obterArvore(100.00,200.00,"azul","Florífera");
-        System.out.println(arvore);
-        arvore = ArvoreFactory.obterArvore(100.00,200.00,"verde","Florífera");
-        System.out.println(arvore);
-        arvore = ArvoreFactory.obterArvore(100.00,200.00,"verde","Florífera");
-        System.out.println(arvore);
-        arvore = ArvoreFactory.obterArvore(100.00,200.00,"verde","Florífera");
-        System.out.println(arvore);
 
+        ArvoreFactory arvore = new ArvoreFactory();
 
+        int i = 1;
+
+        Arvore a3 = arvore.getArvore(100,200,"azul");
+
+        while (i <= 500000){
+            Arvore a1 = arvore.getArvore(200,400,"verde");
+            Arvore a2 = arvore.getArvore(500,300,"vermelho");
+            i++;
+        }
+
+        Runtime runtime = Runtime.getRuntime();
+        System.out.println("Memória utilizada: " + (runtime.totalMemory() - runtime.freeMemory()) / (1024 * 1024));
 
     }
 
