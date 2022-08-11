@@ -9,6 +9,7 @@ public class Main {
     private static final org.apache.log4j.Logger logger = Logger.getLogger(Main.class);
 
 
+
     public static void main(String[] args) throws Exception {
         BasicConfigurator.configure();
 
@@ -38,11 +39,8 @@ public class Main {
 
         String deleteFunc = "DELETE FROM FUNCIONARIO WHERE ID = " + funcionario2.getId();
 
-        String func3 = "SELECT * FROM FUNCIONARIO WHERE ID = " + funcionario3.getId();
 
         statement.execute(sqlCreateTable);
-
-
 
 
         try{
@@ -53,7 +51,21 @@ public class Main {
             statement.execute(attFunc);
             statement.execute(deleteFunc);
 
+//            if((funcionario1.getId() == funcionario2.getId()) ||
+//                    (funcionario1.getId() == funcionario3.getId()) ||
+//                    funcionario2.getId() == funcionario3.getId() ) {
+//                logger.info("ID duplicada cadastrada. ");
+//                logger.debug("O funcionário " + funcionario3.getNome() + " foi atualizado com sucesso.");
+//                logger.info("O funcionário: " + funcionario2 + " foi removido(a) com sucesso.");
+
+
+        } catch (Exception e){
+            logger.info("ID duplicada cadastrada. ");
+            logger.error("Já existe um funcionário com a ID cadastrada.");
+                e.printStackTrace();
+            }finally {
             String sqlRead = "SELECT * FROM FUNCIONARIO";
+
 
             ResultSet resultSet = statement.executeQuery(sqlRead);
 
@@ -61,38 +73,9 @@ public class Main {
             while(resultSet.next()){
                 System.out.println(resultSet.getInt(1) + " - " + resultSet.getString(2) + " - " + resultSet.getString(3) + " - " + resultSet.getInt(4) + " ' " + resultSet.getString(5));
             }
-
-
-        } catch (SQLException e){
-            if((funcionario1.getId() == funcionario2.getId()) ||
-                    (funcionario1.getId() == funcionario3.getId()) ||
-                    funcionario2.getId() == funcionario3.getId() ){
-                logger.info("ID duplicada cadastrada. " + e);
-            }
-
-            ResultSet resultSet2 = statement.executeQuery(func3);
-            logger.debug("O funcionário " + funcionario3.getNome() + " foi atualizado com sucesso." );
-            logger.info("O funcionário: " + funcionario2 + " foi removido(a) com sucesso.");
         }
-//
-//
-//        try {
-//            statement.execute(attFunc);
-//        }catch (SQLException e){
-//             e.printStackTrace();
-//        } finally {
-//            logger.debug("O funcionário " + funcionario3.getNome() + " foi atualizado com sucesso. Agora ele é o: " + funcionario3);
-//        }
-
-
-//
-//
-//        statement.execute(deleteFunc);
-//        logger.info("O funcionário: " + funcionario2 + " foi removido(a) com sucesso.");
+        }
 
 
 
-
-
-    }
 }
