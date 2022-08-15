@@ -24,7 +24,7 @@ public class Main {
 
         try {
 
-            connection = getConnection();
+            connection = ConnectionJDBC.getConnection();
             Statement statement = connection.createStatement();
             statement.execute(sqlCreateTable); // Executando a query
 
@@ -67,10 +67,7 @@ public class Main {
 
     }
 
-    public static Connection getConnection() throws Exception{
-        Class.forName("org.h2.Driver").newInstance();
-        return DriverManager.getConnection("jdbc:h2:~/test","sa","");
-    }
+
 
 
 
