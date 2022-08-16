@@ -1,0 +1,1 @@
+create table if not exists paciente(id int auto_increment primary key, nome varchar(255), sobrenome varchar (255), rg varchar(255), dataCadastro varchar(255), endereco);

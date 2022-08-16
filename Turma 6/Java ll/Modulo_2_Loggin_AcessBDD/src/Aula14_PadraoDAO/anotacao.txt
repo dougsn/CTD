@@ -1,0 +1,16 @@
+
+O padrão DAO consiste em criar uma interface generica (<T>) que pode ser implementada nas classes de forma que o tipo da interface se adapte de acordo
+com o tipo da classe.
+
+
+Por padrão e boas práticas, criamos uma classe de é responsável por se conectar ao banco de dados (ConfiguracaoJDBC), nela é criado os atributos
+responsáveis por receber as informação para a conexão com o banco, como:
+
+jdbcDriver (org.h2.Driver),
+url (jdbc:h2:mem:medicamentos;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'create.sql'") que pega o arquivo externo create.sql e cria a tabela.
+nomeUsuario ("sa")
+senha ("")
+
+Essas informações são essenciais para a correta conexão com o banco de dados H2. Caso alguma credencia seja diferente, tem que ser att na classe.
+
+E também é criado o getConnection(); que é um método responsável por fazer efetivamente a conexão com o Banco de dados, utilizando o try, catch();
