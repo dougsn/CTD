@@ -19,7 +19,7 @@ class PacienteServiceTest {
 
         Endereco endereco = new Endereco("Rua teste",12,"Cidade teste","Bairro teste");
 
-        Paciente paciente = new Paciente("Douglas","Silva","24.565.212-01", "2022/08/16",endereco);
+        Paciente paciente = new Paciente("Douglas","Silva","24.565.212-01", "2022/08/16");
 
         pacienteService.cadastrar(paciente);
         pacienteService.buscar(paciente.getId());

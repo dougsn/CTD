@@ -26,8 +26,8 @@ public class PacienteDaoH2 implements IDao<Paciente>{
         Connection connection = configuracaoJDBC.getConnection();
         Statement statement = null;
 
-        String query = String.format("INSERT INTO PACIENTE (NOME,SOBRENOME,RG,DATACADASTRO,ENDERECO) " +
-                "VALUES ('%s','%s','%s','%s','%s')",paciente.getNome(), paciente.getSobrenome(),paciente.getRg(),paciente.getDataCadastro(),paciente.getEndereco());
+        String query = String.format("INSERT INTO PACIENTE (NOME,SOBRENOME,RG,DATACADASTRO) " +
+                "VALUES ('%s','%s','%s','%s')",paciente.getNome(), paciente.getSobrenome(),paciente.getRg(),paciente.getDataCadastro());
 
         try {
             statement = connection.createStatement();
@@ -54,7 +54,7 @@ public class PacienteDaoH2 implements IDao<Paciente>{
         Connection connection = configuracaoJDBC.getConnection();
         Statement statement = null;
 
-        String query = String.format("SELECT ID,NOME,SOBRENOME,RG,DATACADASTRO,ENDERECO FROM PACIENTE WHERE ID = '%s'" + id);
+        String query = String.format("SELECT ID,NOME,SOBRENOME,RG,DATACADASTRO FROM PACIENTE WHERE ID = " + id);
 
         Paciente paciente = null;
         Endereco endereco = null;
@@ -66,7 +66,7 @@ public class PacienteDaoH2 implements IDao<Paciente>{
             while(rs.next()){
                 endereco = new Endereco("asds",123,"cidade","bairro");
                 paciente = new Paciente(rs.getInt("id"),rs.getString("nome"),rs.getString("sobrenome")
-                        ,rs.getString("rg"),rs.getString("data"),endereco);
+                        ,rs.getString("rg"),rs.getString("data"));
             }
 
             statement.close();

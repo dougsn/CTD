@@ -11,23 +11,21 @@ public class Paciente {
     private String rg;
     private String dataCadastro;
 
-    private Endereco endereco;
+//    private Endereco endereco;
 
-    public Paciente(int id, String nome, String sobrenome, String rg, String dataCadastro, Endereco endereco) {
+    public Paciente(int id, String nome, String sobrenome, String rg, String dataCadastro) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.rg = rg;
         this.dataCadastro = dataCadastro;
-        this.endereco = endereco;
     }
 
-    public Paciente(String nome, String sobrenome, String rg, String dataCadastro, Endereco endereco) {
+    public Paciente(String nome, String sobrenome, String rg, String dataCadastro) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.rg = rg;
         this.dataCadastro = dataCadastro;
-        this.endereco = endereco;
     }
 
 
@@ -72,13 +70,6 @@ public class Paciente {
     }
 
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
 
     @Override
     public String toString() {
@@ -88,7 +79,6 @@ public class Paciente {
                 ", sobrenome='" + sobrenome + '\'' +
                 ", rg='" + rg + '\'' +
                 ", dataCadastro=" + dataCadastro +
-                ", endereco=" + endereco +
                 '}';
     }
 }
