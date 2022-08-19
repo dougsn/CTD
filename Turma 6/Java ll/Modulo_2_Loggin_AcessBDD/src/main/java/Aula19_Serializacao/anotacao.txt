@@ -1,0 +1,4 @@
+Para que um Objeto possa utilizar a leitura e escrita de arquivos externos, é necessário que ele implemente a
+interface Serializable.
+
+
