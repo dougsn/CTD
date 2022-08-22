@@ -1,8 +1,9 @@
 package Aula20_IntegradoraVI.Desafio1;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Empresa {
+public class Empresa implements Serializable {
 
     private String cnpj;
     private String razao_social;
@@ -33,4 +34,12 @@ public class Empresa {
         funcionarios.add(funcionario);
     }
 
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "cnpj='" + cnpj + '\'' +
+                ", razao_social='" + razao_social + '\'' +
+                ", funcionarios=" + funcionarios +
+                '}';
+    }
 }

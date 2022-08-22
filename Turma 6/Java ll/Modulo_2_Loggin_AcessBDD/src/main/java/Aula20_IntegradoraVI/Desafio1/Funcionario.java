@@ -1,6 +1,8 @@
 package Aula20_IntegradoraVI.Desafio1;
 
-public class Funcionario {
+import java.io.Serializable;
+
+public class Funcionario implements Serializable {
 
     private String nome;
     private String sobrenome;
@@ -52,8 +54,7 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario{" +
-                "nome='" + nome + '\'' +
+        return  "nome='" + nome + '\'' +
                 ", sobrenome='" + sobrenome + '\'' +
                 ", doc_identificacao='" + doc_identificacao + '\'' +
                 ", salario=" + salario +
