@@ -1,0 +1,7 @@
+A camada de modelo (Model) é aonde criamos o nosso objeto em si.
+
+A camada de Visualização (View) é a camada do front-end, onde são apresentadas as informações.
+
+A camada de controle (Control) é onde é realizado o controle entre o front (View) e o back (Model / Service).
+
+O Service é o serviço que será utilizado nessas camadas. Ele faz a comunicação entre o controller e o model.
