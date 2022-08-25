@@ -15,12 +15,12 @@ import java.util.List;
 public class TrainerController {
     private final TrainerService  trainerService;
 
-    @Autowired
+    @Autowired // Conexão da camada model com a controlller.
     public TrainerController(TrainerService trainerService) {
         this.trainerService = trainerService;
     }
 
-    @GetMapping
+    @GetMapping // Realiza o "parse" do retorno do método abaixo para JSON , que é o que aparece no navegador.
     public List<Trainer> getTrainer(){
         return trainerService.listTrainer();
     }

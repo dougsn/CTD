@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Aula22_PadraoMVC.iml" filepath="$PROJECT_DIR$/.idea/Aula22_PadraoMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dentista/Dentista.iml" filepath="$PROJECT_DIR$/Dentista/Dentista.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trainer/Trainer.iml" filepath="$PROJECT_DIR$/Trainer/Trainer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Usuario/Usuario.iml" filepath="$PROJECT_DIR$/Usuario/Usuario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Veiculos/Veiculos.iml" filepath="$PROJECT_DIR$/Veiculos/Veiculos.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Trainer/pom.xml" />
+        <option value="$PROJECT_DIR$/Usuario/pom.xml" />
+        <option value="$PROJECT_DIR$/Dentista/pom.xml" />
+        <option value="$PROJECT_DIR$/Veiculos/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK" />
+</project>
