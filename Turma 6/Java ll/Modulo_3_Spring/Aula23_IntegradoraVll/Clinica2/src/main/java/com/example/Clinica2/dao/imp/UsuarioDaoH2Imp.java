@@ -1,19 +1,19 @@
-package com.example.ClinicaFixacao.dao.imp;
+package com.example.Clinica2.dao.imp;
 
-import com.example.ClinicaFixacao.dao.ConfiguracaoJDBC;
-import com.example.ClinicaFixacao.dao.IDao;
-import com.example.ClinicaFixacao.model.UsuarioModel;
+import com.example.Clinica2.dao.ConfiguracaoJDBC;
+import com.example.Clinica2.dao.IDao;
+import com.example.Clinica2.model.UsuarioModel;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UsuarioIDaoH2Imp implements IDao<UsuarioModel> {
+public class UsuarioDaoH2Imp implements IDao<UsuarioModel> {
 
     private ConfiguracaoJDBC configuracaoJDBC;
 
-    public UsuarioIDaoH2Imp(ConfiguracaoJDBC configuracaoJDBC) {
+    public UsuarioDaoH2Imp(ConfiguracaoJDBC configuracaoJDBC) {
         this.configuracaoJDBC = configuracaoJDBC;
     }
 
@@ -23,7 +23,7 @@ public class UsuarioIDaoH2Imp implements IDao<UsuarioModel> {
         Statement statement = null;
 
         String query = String.format("INSERT INTO USUARIO(NOME,EMAIL,SENHA,NIVEL_ACESSO)" +
-                "VALUES('%s','%s','%s','%s')",usuarioModel.getNome(),usuarioModel.getEmail(), usuarioModel.getSenha(), usuarioModel.getNivel_acesso());
+                "VALUES('%s','%s','%s','%s')", usuarioModel.getNome(), usuarioModel.getEmail(), usuarioModel.getSenha(), usuarioModel.getNivel_acesso());
 
         try {
 
@@ -40,6 +40,7 @@ public class UsuarioIDaoH2Imp implements IDao<UsuarioModel> {
             e.printStackTrace();
         }
 
+
         return usuarioModel;
     }
 
@@ -48,7 +49,7 @@ public class UsuarioIDaoH2Imp implements IDao<UsuarioModel> {
         Connection connection = configuracaoJDBC.getConnection();
         Statement statement = null;
 
-        String query = String.format("SELECT * FROM USUARIO WHERE ID = " + id);
+        String query = "SELECT * FROM USUARIO WHERE ID = " + id;
 
         UsuarioModel usuarioModel = null;
 
@@ -67,5 +68,25 @@ public class UsuarioIDaoH2Imp implements IDao<UsuarioModel> {
         }
 
         return usuarioModel;
+    }
+
+    @Override
+    public String deletar(Integer id){
+        Connection connection = configuracaoJDBC.getConnection();
+        Statement statement = null;
+
+        String query = "DELETE FROM USUARIO WHERE ID = " + id;
+
+
+        try {
+            statement = connection.createStatement();
+            statement.execute(query);
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return "Usuário deletado com sucesso!";
     }
 }

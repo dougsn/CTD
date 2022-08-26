@@ -1,4 +1,4 @@
-package com.example.ClinicaFixacao.dao;
+package com.example.Clinica2.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

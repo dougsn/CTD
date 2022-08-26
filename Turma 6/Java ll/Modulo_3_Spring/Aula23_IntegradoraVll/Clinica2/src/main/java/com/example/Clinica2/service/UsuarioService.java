@@ -1,8 +1,7 @@
-package com.example.ClinicaFixacao.service;
+package com.example.Clinica2.service;
 
-import com.example.ClinicaFixacao.dao.IDao;
-import com.example.ClinicaFixacao.model.UsuarioModel;
-import org.springframework.stereotype.Service;
+import com.example.Clinica2.dao.IDao;
+import com.example.Clinica2.model.UsuarioModel;
 
 public class UsuarioService {
 
@@ -19,5 +18,10 @@ public class UsuarioService {
     public UsuarioModel buscar(Integer id){
         return usuarioModelIDao.buscar(id);
     }
+
+    public String deletar(Integer id){
+       return usuarioModelIDao.deletar(id);
+    }
+
 
 }

@@ -1,6 +1,7 @@
-package com.example.ClinicaFixacao.model;
+package com.example.Clinica2.model;
 
 public class UsuarioModel {
+
     private Integer id;
     private String nome;
     private String email;
@@ -66,3 +67,4 @@ public class UsuarioModel {
         this.nivel_acesso = nivel_acesso;
     }
 }
+
