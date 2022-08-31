@@ -21,5 +21,12 @@ public class MedicamentoService {
         return  medicamentoModelIDao.buscarPorId(id);
     }
 
+    public MedicamentoModel atualizar(MedicamentoModel medicamentoModel) {
+        return medicamentoModelIDao.atualizar(medicamentoModel);
+    }
+
+    public void apagar(Integer id) {
+        medicamentoModelIDao.apagar(id);
+    }
 
 }

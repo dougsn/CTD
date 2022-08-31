@@ -70,4 +70,44 @@ public class MedicamentoDaoImp implements IDao<MedicamentoModel> {
         return medicamento;
     }
 
+    @Override
+    public MedicamentoModel atualizar(MedicamentoModel medicamentoModel) {
+
+        Connection connection = configuracaoJDBC.getConnection();
+        Statement statement = null;
+
+        String query = String.format("UPDATE MEDICAMENTOS SET NOME = '%s', LABORATORIO = '%s', QUANTIDADE = '%s', PRECO = '%s'",
+                medicamentoModel.getNome(), medicamentoModel.getLaboratorio(), medicamentoModel.getQuantidade(), medicamentoModel.getPreco());
+
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate(query);
+            statement.close();
+            connection.close();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return medicamentoModel;
+    }
+
+    @Override
+    public void apagar(Integer id) {
+
+        Connection connection = configuracaoJDBC.getConnection();
+        Statement statement = null;
+
+        String query = "DELETE FROM MEDICAMENTOS WHERE ID = " + id;
+
+        try {
+            statement = connection.createStatement();
+            statement.execute(query);
+            statement.close();
+            connection.close();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+
+    }
+
 }
