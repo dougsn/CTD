@@ -6,6 +6,7 @@ import com.example.Ecommerc.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -28,19 +29,21 @@ public class ProdutoController {
         return service.buscarTodos();
     }
 
-    @RequestMapping(value = "/buscaId")
-    public Produto buscarPorId(@RequestParam("id") int id) throws SQLException{
+
+
+    @GetMapping("/{id}")
+    public Produto buscarPorId(@PathVariable int id) throws SQLException{
         return service.buscarPorId(id).isEmpty() ? new Produto() : service.buscarPorId(id).get();
     }
 
-    @PatchMapping
+    @PutMapping
     public void alterar(@RequestBody Produto produto) throws SQLException{
         System.out.println();
         service.alterar(produto);
     }
 
-    @DeleteMapping
-    public void excluir(@RequestParam("id") int id) throws SQLException{
+    @DeleteMapping("/{id}")
+    public void excluir(@PathVariable int id) throws SQLException{
         service.excluir(id);
     }
 
