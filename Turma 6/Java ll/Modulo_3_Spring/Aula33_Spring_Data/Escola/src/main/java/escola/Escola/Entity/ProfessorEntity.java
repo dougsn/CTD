@@ -9,8 +9,10 @@ import java.util.Set;
 public class ProfessorEntity {
 
     @Id
-    @SequenceGenerator(name = "professor_sequence", sequenceName = "professor_sequence")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_generator")
+    @SequenceGenerator(name = "professor_sequence", sequenceName = "professor_sequence", allocationSize = 1)
+    // Vai criar e controlar toda a criação dos nossos ID's
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "professor_sequence")
+    // Será a forma que essa sequencia será gerada.
     private Long id;
     private String nome;
     private String curso;
@@ -20,8 +22,9 @@ public class ProfessorEntity {
     public ProfessorEntity() {
     }
 
-    public ProfessorEntity(String nome) {
+    public ProfessorEntity(String nome, String curso) {
         this.nome = nome;
+        this.curso = curso;
     }
 
     public Long getId() {

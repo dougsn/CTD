@@ -23,4 +23,10 @@ public class EstudantesEntity {
     private String codigoEstudante;
     private String nome;
     private String sobrenome;
+
+    public EstudantesEntity(String codigoEstudante, String nome, String sobrenome) {
+        this.codigoEstudante = codigoEstudante;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
 }

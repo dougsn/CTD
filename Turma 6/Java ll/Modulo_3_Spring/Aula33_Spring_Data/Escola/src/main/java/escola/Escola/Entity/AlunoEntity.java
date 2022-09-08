@@ -7,13 +7,13 @@ import javax.persistence.*;
 public class AlunoEntity {
 
     @Id
-    @SequenceGenerator(name = "aluno_sequence", sequenceName = "aluno_sequence")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_generator")
+    @SequenceGenerator(name = "aluno_sequence", sequenceName = "aluno_sequence",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "aluno_sequence")
     private Long id;
     private String nome;
     private int idade;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "professor_id")
+    @JoinColumn(name = "professor_id") // é onde ele vai fazer a JOIN com a tabela professor.
     private ProfessorEntity professorEntity;
 
     public AlunoEntity() {
