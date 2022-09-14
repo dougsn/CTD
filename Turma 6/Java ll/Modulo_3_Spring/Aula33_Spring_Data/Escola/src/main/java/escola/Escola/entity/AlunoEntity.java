@@ -1,4 +1,4 @@
-package escola.Escola.Entity;
+package escola.Escola.entity;
 
 import javax.persistence.*;
 
