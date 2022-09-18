@@ -17,13 +17,14 @@ public class TorneioController {
     }
 
     @PostMapping()
-    public TorneioEntity salvar(@RequestBody TorneioEntity torneioEntity){
-        return torneioService.salvar(torneioEntity);
+    public TorneioEntity salvar(@RequestBody TorneioEntity torneio){
+        return torneioService.salvar(torneio);
     }
 
     @GetMapping()
     public List<TorneioEntity> buscarTodos(){
         return torneioService.buscarTodos();
     }
+
 
 }
