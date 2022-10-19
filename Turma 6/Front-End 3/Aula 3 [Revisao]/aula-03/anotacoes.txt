@@ -1,0 +1,16 @@
+Foi criado usando o Vite
+     - yarn create vite ou npm create vite@latest
+     - escolhe nome do projeto
+     - escolhe as tecnologias
+
+Depois tem que dar um yarn (para instalar o node_modules) ou npm install se fizer a instalação com o npm create vite@latest
+
+Após a instalação do node_modules, é so dar um yarn dev ou npm start para subir o projeto.
+
+===========================================================================================================================
+
+
+Para exportar 2 componentes é necessário exportar dessa forma ..:
+
+export {  App, App2 } // Exportando 2 Components
+
