@@ -1,0 +1,5 @@
+export const Title = ({text = "Texto padrão", numero}) => <h1>{text} {numero}</h1>
+
+Esse é o destrocture do React, serve para pegar as props do componente de forma mais elegante e simples.
+
+Também foi exportado a constante de forma direta, quando é realizado assim, temos que importar nomeado..:     import { Title } from "./Title"
