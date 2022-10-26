@@ -1,0 +1,9 @@
+Para passar um array de informações para o filho do componente pai, é necessário fazer o looping com com o map() no pai e passar para o componente filho, via prop.
+
+E no filho, seria necessário pegar via prop também. Com isso, para acessar os atributos do objeto, é necessário usar o "carro.item", pois o filho receber pelo "obj.item" e depois vem a propriedade.
+
+
+
+O styles.module.css é necessário, pois não permite conflito de className no react. 
+
+Quando separamos o Component por pastas, não é necessário colocar o nome do Componente no arquivo jsx, se colocarmos como index.jsx, na hora de importarmos, podemos "parar" no diretório que pegar o nome da pasta do componente, pois o React pega o arquivo, como padrão, o index.
