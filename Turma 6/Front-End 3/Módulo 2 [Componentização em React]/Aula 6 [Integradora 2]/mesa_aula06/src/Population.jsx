@@ -1,1 +1,0 @@
-export const Population = (props) => <p style={{color: props.color}}>{props.population}</p>

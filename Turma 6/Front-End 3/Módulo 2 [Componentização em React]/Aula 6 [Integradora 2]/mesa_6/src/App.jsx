@@ -15,7 +15,7 @@ const App = () => {
 
           if(content.country == "BRA"){
             return (
-                <Card item={content}/>
+                <Card key={content.id} item={content}/>
             )
           }
         })}
@@ -24,4 +24,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App; 
