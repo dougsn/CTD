@@ -1,0 +1,10 @@
+link: https://405378853534.signin.aws.amazon.com/console
+
+região: us-west1
+
+id: 405378853534
+
+usuario: pt6aluno16
+sennha nova: Salvador1!
+
+senha: Digital@house2022 (antiga)

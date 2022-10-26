@@ -1,0 +1,10 @@
+se eu precisar que várias coisas do componente seja dinâmica, é melhor utilizar o Children. Caso contrário, utilizar as props.
+
+Se utilizarmos o {props.children}, temos que colocar dentro do componente, alguma coisa para ser renderizado.
+
+<H1>{props.children}</H1>
+
+
+<H1>
+	<p>Esse texto será utilizado no {props.children} do componente H1</p>
+</H1>
