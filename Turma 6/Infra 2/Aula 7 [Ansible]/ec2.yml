@@ -1,0 +1,66 @@
+---
+- hosts: localhost
+
+  gather_facts: yes 
+  vars:
+   keipair_name: <seu-key-pair> 
+   my_vpc_id: vpc-099eb86cd1e65a367
+   subnet_id: subnet-01a6976025a14708c
+   my_ami_id: ami-04b3c23ec8efcc2d6
+   ansible_python_interpreter: /usr/bin/python3
+   AWS_access_key: "AKIAV4YTWNKPMU75OTUB"
+   AWS_secret_key: "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"
+  
+
+  tasks:
+  - name: Criar grupo de segurança com HTTPS, HTTP e SSH
+    ec2_group:
+      name: digitalhouse {{ abc }}
+      vpc_id: "{{ my_vpc_id }}"
+      description: "sg com as regras"
+      aws_access_key: "{{ AWS_access_key }}"
+      aws_secret_key: "{{ AWS_secret_key }}"
+      region: "sa-east-1"
+      rules:
+          - proto: tcp
+            from_port: 22
+            to_port: 22
+            cidr_ip: 0.0.0.0/0
+          - proto: tcp
+            from_port: 80
+            to_port: 80
+            cidr_ip: 0.0.0.0/0
+          - proto: tcp
+            from_port: 443
+            to_port: 443
+            cidr_ip: 0.0.0.0/0
+      rules_egress:
+          - proto: all
+            cidr_ip: 0.0.0.0/0
+
+  - name: Criamos nosso servidor
+    ec2:
+      region: "sa-east-1"
+      group: "digitalhouse"
+      instance_type: "t2.micro"
+      image: "{{ my_ami_id }}"
+      aws_access_key: "{{ AWS_access_key }}"
+      aws_secret_key: "{{ AWS_secret_key }}"      
+      wait: yes
+      wait_timeout: 500
+      volumes:
+        - device_name: "/dev/xvda"
+          volume_type: "gp2"
+          volume_size: 8
+      vpc_subnet_id: "{{ subnet_id }}"
+      assign_public_ip: yes
+      key_name: "{{ keipair_name }}"
+    register: info
+  
+  - name: IP público do nosso servidor
+    debug:
+      var: info.instances[0].public_ip
+
+  - name: DNS público de nosso servidor
+    debug:
+      var: info.instances[0].public_dns_name
