@@ -1,0 +1,1 @@
+export const Title = () => <h1>ADICIONAR NOVA COR</h1>
