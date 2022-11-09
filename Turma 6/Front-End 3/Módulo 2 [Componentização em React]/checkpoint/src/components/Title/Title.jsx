@@ -1,1 +1,1 @@
-export const Title = () => <h1>ADICIONAR NOVA COR</h1>
+export const Title = ({titulo}) => <div style={{display: "flex", width: "90%", marginTop: "30px"}}><h1>{titulo}</h1></div>

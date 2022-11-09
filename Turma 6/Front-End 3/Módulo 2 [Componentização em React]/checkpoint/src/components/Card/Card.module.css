@@ -1,0 +1,23 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 50px;
+    width: 50%;
+    justify-content: center;
+    
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 40px 31px 25px;
+    border-radius: 11px;
+}

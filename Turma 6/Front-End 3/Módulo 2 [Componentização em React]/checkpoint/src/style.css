@@ -12,8 +12,57 @@ body {
     background-color: #1E1E1E;   
 }
 
-button {
-    background-color: rgb(47, 255, 109);
-    padding: 10px 50px;
-    border-radius: 11px;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 50px;
+    flex-wrap: wrap;
 }
+
+.content {
+    background-color: #202020;
+    padding: 40px 50px;
+    border-radius: 12px;
+    width: 90%;
+}
+
+.content_form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.container_btn{
+    display: flex;
+    justify-content: flex-end
+}
+
+.container_btn input {
+    background-color: #36CE7C;
+    padding: 10px 50px;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: transparent;
+    cursor: pointer;
+}
+
+input {
+    background: #353535;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 10px;
+    width: 390px;
+    outline: 0;
+}
+
+.container_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 40px 50px;
+}
+
