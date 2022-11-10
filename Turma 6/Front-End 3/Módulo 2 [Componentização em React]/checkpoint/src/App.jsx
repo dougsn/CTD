@@ -8,26 +8,30 @@ import { Title } from "./components/Title/Title"
 
 function App() {
 
-  // const [formData, setFormData] = useState({
-  //   nome: "",
-  //   cor:""
-  // })
-
   const [nome, setNome] = useState("")
   const [cor, setCor] = useState("")
-
-   const [card, setCard] = useState([])
+  const [erro, setErro] = useState("")
+  const [card, setCard] = useState([])
    
-
+  function regex(cor) {
+    const validationRegex = /^#([A-Fa-f0-9]{6})|^([A-Fa-f0-9]{6})$/;
+    return !validationRegex.test(cor);
+  }
 
 
   const handleForm = (e) => {
     e.preventDefault();
 
-    if(nome.length < 3 || nome == ""){
-      alert("Minímo de 3 caracteres e não pode ter campo em branco")
+    
+
+    if(nome.length < 3 || nome == "" && cor.length < 6 || cor == "" || regex(cor)){
+      setErro("Por favor, verifique os dados inseridos no formulário")
       return;
     }
+
+    setErro("")
+    setNome("")
+    setCor("")
 
     setCard([...card, [nome, cor]])
   }
@@ -35,25 +39,25 @@ function App() {
   return (
     <>
     <div className="container">
-      <div className="content">
+      <div className={erro ? "content_erro" : "content"}>
       <Title titulo="ADICIONAR NOVA COR"/>
         <form onSubmit={handleForm}>
           <div className="content_form">
             <div>
               <label>Nome</label><br/>
-              <input value={nome} onChange={(e) => {setNome(e.target.value)}}/> 
+              <input className={erro ? "input_error" : "input"} value={nome} onChange={(e) => {setNome(e.target.value)}}/> 
             </div>
             <div>
               <label>Cor</label>  <br/>        
-              <input value={cor} onChange={(e) => {setCor(e.target.value)}} placeholder="Insira sua cor no formato Hexadecimal"/> 
+              <input className={erro ? "input_error" : "input"} value={cor} onChange={(e) => {setCor(e.target.value)}} placeholder="Insira sua cor no formato Hexadecimal"/> 
             </div>
           </div>
           <div className="container_btn">
-            <input type="submit" value="Adicionar"/>
+            <input className={erro ? "btn_erro" : "btn"} type="submit" value="Adicionar"/>
           </div>
         </form>
       </div>
-      <Title titulo="CORES FAVORITAS"/>
+      <Title titulo="CORES FAVORITAS" erro={erro ? erro : ""}/>
     </div>    
     
     <div className="container_card">
@@ -63,4 +67,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

@@ -27,6 +27,13 @@ body {
     width: 90%;
 }
 
+.content_erro{
+    background-color: #473434;
+    padding: 40px 50px;
+    border-radius: 12px;
+    width: 90%;
+}
+
 .content_form {
     display: flex;
     justify-content: space-between;
@@ -39,7 +46,7 @@ body {
     justify-content: flex-end
 }
 
-.container_btn input {
+.btn{
     background-color: #36CE7C;
     padding: 10px 50px;
     border-radius: 12px;
@@ -48,9 +55,29 @@ body {
     cursor: pointer;
 }
 
-input {
+.btn_erro {
+    background-color: rgba(54, 206, 125, 0.4);
+    padding: 10px 50px;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input {
     background: #353535;
     border: none;
+    border-radius: 7px;
+    padding: 10px 10px;
+    width: 390px;
+    outline: 0;
+}
+
+.input_error {
+    background: #473434;
+    border: 1px solid #FF7070;
     border-radius: 7px;
     padding: 10px 10px;
     width: 390px;
@@ -63,6 +90,6 @@ input {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 40px 50px;
+    padding: 40px 100px;
 }
 
