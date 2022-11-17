@@ -1,4 +1,5 @@
 import "./style.css"
+import ScrollReveal from "scrollreveal"
 
 import { useState } from 'react'
 
@@ -28,13 +29,24 @@ function App() {
       setErro("Por favor, verifique os dados inseridos no formulário")
       return;
     }
+    
 
     setErro("")
-    setNome("")
-    setCor("")
+    // setNome("")
+    // setCor("")
 
     setCard([...card, [nome, cor]])
+    
+    
   }
+
+  ScrollReveal().reveal(".container_card #card", { 
+    duration: 2000,
+    origin: 'left',
+    distance: '50px' 
+  });
+
+  console.log(card);
 
   return (
     <>
@@ -60,7 +72,7 @@ function App() {
       <Title titulo="CORES FAVORITAS" erro={erro ? erro : ""}/>
     </div>    
     
-    <div className="container_card">
+    <div className="container_card" >
       {card.map((item, index) => <Card key={index} nome={item[0]} cor={item[1]}/>)}
     </div>
     </>
