@@ -1,0 +1,19 @@
+.container {
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.container h1 {
+  margin-bottom: 10px;
+}
+
+.link {
+  cursor: pointer;
+  margin-top: 50px;
+  color: #f9ca24;
+  font-weight: 500;
+}

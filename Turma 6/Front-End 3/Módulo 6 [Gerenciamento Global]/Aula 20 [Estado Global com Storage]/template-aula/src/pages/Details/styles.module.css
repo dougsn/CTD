@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  padding: 30px;
+  flex-wrap: wrap;
+  height: calc(100vh - 30px - 170px);
+}
+
+.arrow_back {
+  width: 50px;
+  object-fit: contain;
+  position: absolute;
+  cursor: pointer;
+}
+
+.container img {
+  object-fit: contain;
+}
+
+.content {
+  max-width: 1100px;
+  min-width: 400px;
+  /* padding: 10px 40px; */
+  margin: auto 0;
+  padding-left: 30px;
+}
+
+.content h1 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.content .id {
+  margin-bottom: 30px;
+}
+
+.content .price {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.content .description {
+  text-align: justify;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}

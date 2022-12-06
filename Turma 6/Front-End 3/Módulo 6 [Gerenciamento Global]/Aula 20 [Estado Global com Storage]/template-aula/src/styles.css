@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #313131;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select {
+  height: 45px;
+  font-size: 1rem;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 0;
+  border: 1px solid #979797;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0;
+  border: 1px solid #979797;
+}
+
+button {
+  height: 45px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0;
+  border: 1px solid #313131;
+  background: #f9ca24;
+  transition: 0.3s ease all;
+}
+
+button:hover {
+  background: #d4ab14;
+}
