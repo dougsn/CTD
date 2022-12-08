@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ebebeb;
+  flex-direction: column;
+  align-items: center;
+
+  transition: 0.3s ease all;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.card h1 {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.card img {
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card .brand {
+  width: 100%;
+  font-size: 0.75rem;
+}
+
+.card .price {
+  width: 100%;
+  font-size: 1.75rem;
+}

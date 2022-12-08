@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  padding: 40px;
+  min-height: calc(100vh - 70px);
+  align-items: center;
+}
+
+.container_description {
+  flex: 1;
+}
+.container_description h1 {
+  margin-bottom: 40px;
+}
+
+.container_description p {
+  margin-bottom: 30px;
+}
+
+.container_form {
+  flex: 1;
+}
+
+.container_form form {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.input_row {
+  display: flex;
+  gap: 10px;
+}
+
+.input_row input {
+  flex: 1;
+}

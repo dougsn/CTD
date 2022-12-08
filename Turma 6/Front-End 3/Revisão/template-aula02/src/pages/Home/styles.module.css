@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+}
+
+.container_form {
+  padding: 20px;
+  flex: 1;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ebebeb;
+  margin-right: 30px;
+}
+
+.container_form form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.container_list h2 {
+  margin-bottom: 20px;
+}
+
+.line_inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.line_inputs input,
+select {
+  flex: 1;
+}
+
+.button {
+  margin-top: 30px;
+}
+
+.container_list {
+  overflow-y: scroll;
+  height: calc(100vh - 70px);
+  padding: 30px;
+  flex: 3;
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
