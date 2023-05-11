@@ -1,17 +1,12 @@
 # 1 - Listar todos os países que contêm a letra A, ordenados alfabeticamente.
 
 select * from dhtube.pais as pais
-where pais.nome like 'A%'
+where pais.nome like '%A%'
 order by pais.nome;
 
 # 2 - Gere uma lista de usuários, com detalhes de todos os seus dados, o avatar que possuem e a qual país pertencem.
 
-select  usuario.idUsuario as id,
-		usuario.nome,
-        usuario.email,
-        usuario.senha,
-        usuario.dataNascimento,
-        usuario.codigoPostal,
+select  usuario.*,
         avatar.nome,
         avatar.urlimagem,
         pais.nome
@@ -22,14 +17,12 @@ inner join dhtube.pais as pais on pais.idPais = usuario.Pais_idPais;
 
 # 3 - Faça uma lista com os usuários que possuem playlists, mostrando a quantidade que possuem.
 
-select  playlist.nome, 
-		playlist.dataCriacao,
-        playlist.privado,
+select  
         usuario.nome,
         count(playlist.idPlaylist) as qtd_playlist
 from dhtube.playlist as playlist
 inner join dhtube.usuario as usuario on usuario.idUsuario = playlist.usuario_idUsuario
-group by playlist.idPlaylist;
+group by usuario.nome;
 
 # 4 - Mostrar todos os canais criados entre 01/04/2021 e 01/06/2021.
 
@@ -39,12 +32,14 @@ where canal.dataCriacao between '2021-04-01' and '2021-06-01';
 
 # 5 - Mostre os 5 vídeos com a menor duração, listando o título do vídeo, a tag ou tags que possuem, o nome de usuário e o país ao qual correspondem.
 
-select  video.titulo as titulo_video,
+ # *Corrigir o problema de replicação do titulo_video* #
+ 
+select  video.titulo as titulo_video ,
 		video.duracao as duracao_video,
 		usuario.nome as nome_usuario,
         pais.nome as pais_usuario,
 		hashtag.nome as hashtag
-from dhtube.video as video
+from dhtube.video as video 
 inner join dhtube.usuario as usuario on usuario.idUsuario = video.usuario_idUsuario
 inner join dhtube.pais as pais on pais.idPais = usuario.Pais_idPais
 inner join dhtube.video_hashtag as video_hashtag on video_hashtag.video_idVideo = video.idVideo
@@ -95,14 +90,14 @@ values ('DH Hero 2', 'https://www.google.com/search?q=DH Hero 2'); # ID gerado -
 insert into dhtube.usuario (nome, email, senha, dataNascimento, codigoPostal, Pais_IdPais, Avatar_idAvatar)
 values ('DOUGLAS NASCIMENTO', 'DOUGLAS@gmail.com', 'ABC123!', '1999-03-09 00:00:00', '5569', 196, 87); # ID gerado - 22
 
-# 10 - Gere um relatório de todos os vídeos e suas hashtags, mas apenas aqueles cujos nomes de hashtags contêm menos de 10 caracteres, classificados em ordem crescente pelo número de caracteres na hashtag.
+# 10 - Gere um relatório de todos os vídeos e suas hashtags, mas apenas aqueles cujos nomes de hashtags contêm menos de 10 caracteres,  classificados em ordem crescente pelo número de caracteres na hashtag.
 
 select  video.descricao,
 		hashtag.nome as hashtag
 from dhtube.video as video
 inner join dhtube.video_hashtag as video_hashtag on video_hashtag.video_idVideo = video.idVideo
 inner join dhtube.hashtag as hashtag on hashtag.idHashtag = video_hashtag.hashtag_idHashtag
-where length(hashtag.nome) = 10
+where length(hashtag.nome) < 10
 order by hashtag;
 
 
