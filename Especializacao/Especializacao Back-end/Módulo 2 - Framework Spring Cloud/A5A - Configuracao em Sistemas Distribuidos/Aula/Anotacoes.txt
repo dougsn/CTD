@@ -1,0 +1,99 @@
+##### Eureka Server#####
+
+O nosso microsservico eureka precisa ter a dependência:
+
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId> ## Diz que é um servidor eureka
+</dependency>
+
+E na classe principal, precisa da Anotation: @EnableEurekaServer
+
+No seu application.properties, precisa especificar algumas informações, como:
+
+server.port = 8761
+
+spring.application.name = eureka-service
+
+eureka.client.register-with-eureka = false
+eureka.client.fetch-registry = false
+
+
+
+##### Cloud Config #####
+
+O nosso microsservico de config precisa ter a dependência:
+
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-config-server</artifactId> ## Diz que é um servidor de configuracao
+</dependency>
+
+E na classe principal, precisa da Anotation: @EnableConfigServer
+
+No arquivo application.yml precisa direcionar para onde as configurações estão disponiveis, que no caso é no github:
+server:
+  port: ${PORT:8888}
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dougsn/config-dh
+
+
+##### Client Config #####
+
+O nosso microsservico de client precisa ter as dependências padrões e o eureka client, mas no application.yml:
+
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-config</artifactId> # Pega as configs na nuvem
+</dependency>
+
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId> ## Diz que é um cliente eureka
+</dependency>
+
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+
+server:
+  port: ${PORT:8081}
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: ${PROFILE:dev} ## Pega do arquivo que tem -dev no final
+		
+  application:
+    name : client-service
+
+E também é configurado um CONTROLLER para expor o que você deseja do repositório, como por exemplo, a mensagem:
+
+
+@RestController
+@RequestMapping("/client")
+public class ClientResource {
+
+    @Value("${message}")
+    private String message;
+
+    @GetMapping
+    public ResponseEntity<String> getString(){
+        return ResponseEntity.ok("clientResource");
+    }
+
+    @GetMapping("/message")
+    public ResponseEntity<String> getMessage(){
+        return ResponseEntity.ok(this.message);
+    }
+}
+
+
