@@ -5,7 +5,7 @@ BEGIN
 	RETURN (SELECT SUM(valor_total) FROM faturas 
     WHERE id_cliente = id and data_fatura 
     BETWEEN de AND ate);
-END
+END;
 $$ ## Soma a fatura do cliente, com base no ID passado, e no intervalo das dadas passadas.
 
 DELIMITER $$
@@ -14,7 +14,7 @@ BEGIN
 	SELECT *, (CASE WHEN faturas_por_cliente(id, de, ate) = 0 OR 
     faturas_por_cliente(id, de, ate) IS NULL THEN 'Sem dados' 
     ELSE faturas_por_cliente(id, de, ate)END) as fatura_total FROM clientes;
-END 
+END; 
 $$
 
 CALL fatura_cliente('2010-02-01', '2010-02-11');
