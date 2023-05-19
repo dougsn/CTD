@@ -1,10 +1,17 @@
 ##### Eureka Server#####
 
 O nosso microsservico eureka precisa ter a dependência:
-
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
 <dependency>
 	<groupId>org.springframework.cloud</groupId>
-	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId> ## Diz que é um servidor eureka
+	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId> ## Diz que é um servidor eureka (Principal)
 </dependency>
 
 E na classe principal, precisa da Anotation: @EnableEurekaServer
@@ -15,18 +22,26 @@ server.port = 8761
 
 spring.application.name = eureka-service
 
-eureka.client.register-with-eureka = false
-eureka.client.fetch-registry = false
+eureka.client.register-with-eureka = false ## Desabilita como client
+eureka.client.fetch-registry = false ## Desabilita como client
 
 
 
-##### Cloud Config #####
+##### Cloud Config ##### Mas também é um client dentro do Eureka
 
 O nosso microsservico de config precisa ter a dependência:
 
 <dependency>
 	<groupId>org.springframework.cloud</groupId>
 	<artifactId>spring-cloud-config-server</artifactId> ## Diz que é um servidor de configuracao
+</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId> ## Para ser registrado no Eureka
 </dependency>
 
 E na classe principal, precisa da Anotation: @EnableConfigServer
@@ -50,12 +65,12 @@ O nosso microsservico de client precisa ter as dependências padrões e o eureka
 
 <dependency>
 	<groupId>org.springframework.cloud</groupId>
-	<artifactId>spring-cloud-starter-config</artifactId> # Pega as configs na nuvem
+	<artifactId>spring-cloud-starter-config</artifactId> # Pega as configs na nuvem, tem que ser informado no application.yml
 </dependency>
 
 <dependency>
 	<groupId>org.springframework.cloud</groupId>
-	<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId> ## Diz que é um cliente eureka
+	<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId> ## Diz que é um cliente eureka, para se registrar
 </dependency>
 
 <dependency>

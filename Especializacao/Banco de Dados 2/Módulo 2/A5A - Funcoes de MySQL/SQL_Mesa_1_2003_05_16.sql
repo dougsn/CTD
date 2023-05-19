@@ -43,7 +43,8 @@ select c.nome
         , ROW_NUMBER() OVER (
         PARTITION BY c.compositor
         ORDER BY c.compositor)
-   from musimundos.cancoes c;
+from musimundos.cancoes c
+where c.compositor != '';
 /*
 03. Utilizando a tabela faturas, crie uma consulta que traga o id da fatura, 
 o id do cliente, a data da compra e próxima data da compra do cliente. 
