@@ -63,12 +63,10 @@ begin
 end
 $$
 
-select fn_diaUtil('2022-01-04') as diaUtil;
-
-##
+select fn_diaUtil('2022-01-09') as diaUtil;
 
 
-CREATE TEMPORARY TABLE parcelas(valor DECIMAL(10,2), data_vencimento DATE);
+CREATE TEMPORARY TABLE  parcelas(valor DECIMAL(10,2), data_vencimento DATE);
 DROP TABLE parcelas;
 
 DELIMITER //
