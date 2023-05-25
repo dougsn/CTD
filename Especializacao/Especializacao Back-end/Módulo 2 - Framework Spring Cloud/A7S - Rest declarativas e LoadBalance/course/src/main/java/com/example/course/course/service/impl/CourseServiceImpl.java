@@ -20,7 +20,7 @@ public class CourseServiceImpl  implements CourseService {
     public String getSubscriptionPort() {
         String port = subscriptionService.getPort();
         log.info("COURSE-SERVICE consumindo o SUBSCRIPTION-SERVER na porta: " + port);
-        log.info("Quantidade de request: " + String.valueOf(COUNT_CALL_GATEWAY.getAndIncrement()));
+        log.info("Quantidade de request: " + COUNT_CALL_GATEWAY.getAndIncrement());
         return port;
     }
 }
