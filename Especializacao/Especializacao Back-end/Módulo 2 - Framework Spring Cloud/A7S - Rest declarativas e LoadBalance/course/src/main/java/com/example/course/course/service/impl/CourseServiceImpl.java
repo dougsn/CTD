@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @Slf4j
 @Service
 public class CourseServiceImpl  implements CourseService {
@@ -13,10 +15,12 @@ public class CourseServiceImpl  implements CourseService {
     @Autowired
     private SubscriptionClient subscriptionService;
 
+    private static AtomicInteger COUNT_CALL_GATEWAY = new AtomicInteger(0);
     @Override
     public String getSubscriptionPort() {
-        var port = subscriptionService.getPort();
+        String port = subscriptionService.getPort();
         log.info("COURSE-SERVICE consumindo o SUBSCRIPTION-SERVER na porta: " + port);
+        log.info("Quantidade de request: " + String.valueOf(COUNT_CALL_GATEWAY.getAndIncrement()));
         return port;
     }
 }
