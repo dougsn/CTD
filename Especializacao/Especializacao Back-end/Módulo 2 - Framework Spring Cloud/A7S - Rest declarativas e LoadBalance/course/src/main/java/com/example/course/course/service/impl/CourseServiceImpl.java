@@ -15,12 +15,12 @@ public class CourseServiceImpl  implements CourseService {
     @Autowired
     private SubscriptionClient subscriptionService;
 
-    private static AtomicInteger COUNT_CALL_GATEWAY = new AtomicInteger(0);
+    private static AtomicInteger COUNT_CALL_GATEWAY = new AtomicInteger();
     @Override
     public String getSubscriptionPort() {
         String port = subscriptionService.getPort();
         log.info("COURSE-SERVICE consumindo o SUBSCRIPTION-SERVER na porta: " + port);
-        log.info("Quantidade de request: " + COUNT_CALL_GATEWAY.getAndIncrement());
+        log.info("Quantidade de request: " + COUNT_CALL_GATEWAY.incrementAndGet());
         return port;
     }
 }
