@@ -1,0 +1,11 @@
+Porque estamos aqui:
+	- Para facilitar o pagamento de serviços e agendamento de turnos juntamente com os cronogramdas das aulas, proporcionando um sistema de premiação com base na presença na academia.
+
+Sim ou não:
+	- Aulas em vídeo: não.
+	- Acompanhamento de nutricionista: não.
+	- Venda de suplementos: não.
+	- Infomativos: sim.
+	- Premiações: sim.
+	- Agendamento: sim.
+	- Ficha de treino no app: sim.
