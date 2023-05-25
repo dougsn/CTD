@@ -1,0 +1,42 @@
+As dependências especificas para o microsserviço ser um gateway é são:
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+
+No github (repositório remoto) é configurado um arquivo para o gateway pegar as configurações do application.yml e utilizar, as configurações são:
+
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: subscriptionRoute
+          uri: lb://SUBSCRIPTION-SERVICE
+          predicates:
+            - Path=//subscription/**
+        - id: courseRoute
+          uri: lb://COURSE-SERVICE
+          predicates:
+            - Path=/course/**
+          filters:
+            - AddRequestHeader=course-request-header, custom-course-request-header
+            - AddResponseHeader=course-response-header, custom-course-response-header
+
+Basicamente, quando acessar a URI do endpoint do subscription/**, será redirecionado para a URI do microsserviço, sem precisar mudar a URL do navegador, pois o GATEWAY fará isso automanticamente. Exemplo:
+
+	localhost:8080 (porta do gateway)/subscriotion/port (acessará o endpoint para consumir os dados)

@@ -1,0 +1,18 @@
+Para consumir um outro microsserviço, é utilizado a dependêndia do FeignClient	
+
+	<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+	</dependency>
+
+Com ela, é configurado via Anotation uma interface que especifica qual microsserviço será consumido, exemplo:
+	
+	@FeignClient("SUBSCRIPTION-SERVICE") // Microsserviço que será consumido, pegando referência do EurekaServer
+	@LoadBalancerClient(value = "SUBSCRIPTION-SERVICE", configuration = CustomLoadBalancerConfiguration.class) - Configurando o LoadBalancer
+
+public interface SubscriptionClient {
+    @GetMapping("/subscription/port") // Método que será consumido.
+    String getPort();
+}
+
+E também é colocado na classe main a Anotation @EnableFeignClients e @EnableDiscoveryClient
