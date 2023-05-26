@@ -24,11 +24,15 @@ server:
 spring:
   cloud:
     gateway:
+	default-filters: (São filtros que são aplicados por padrão, de acordo com a classe LogFilter).
+        - name: LogFilter
       routes:
         - id: subscriptionRoute
           uri: lb://SUBSCRIPTION-SERVICE
           predicates:
             - Path=//subscription/**
+	  filters:
+            - name: SubscriptionFilter (Filtro específico do serviço de subscription, com base na classe SubscriptionFilter).
         - id: courseRoute
           uri: lb://COURSE-SERVICE
           predicates:
