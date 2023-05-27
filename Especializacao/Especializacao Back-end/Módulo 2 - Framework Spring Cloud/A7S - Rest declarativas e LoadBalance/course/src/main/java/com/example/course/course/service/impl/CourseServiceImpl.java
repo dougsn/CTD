@@ -16,7 +16,7 @@ public class CourseServiceImpl  implements CourseService {
     private SubscriptionClient subscriptionService;
 
     private static AtomicInteger COUNT_CALL_GATEWAY = new AtomicInteger();
-    @Override
+
     public String getSubscriptionPort() {
         String port = subscriptionService.getPort();
         log.info("COURSE-SERVICE consumindo o SUBSCRIPTION-SERVER na porta: " + port);
