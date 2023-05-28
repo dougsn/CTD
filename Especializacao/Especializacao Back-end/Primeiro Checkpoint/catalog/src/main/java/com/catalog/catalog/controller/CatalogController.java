@@ -1,6 +1,5 @@
 package com.catalog.catalog.controller;
 
-import com.catalog.catalog.service.CatalogService;
 import com.catalog.catalog.service.impl.CatalogServiceImpl;
 import com.movie.movie.entity.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,7 @@ import java.util.List;
 public class CatalogController {
 
     @Autowired
-    private CatalogService catalog;
+    private CatalogServiceImpl catalog;
 
     @GetMapping
     public String find() {

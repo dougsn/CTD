@@ -58,7 +58,7 @@ public class MovieController {
                 if (newMovie.isPresent()) return new ResponseEntity<>(newMovie, HttpStatus.CREATED);
             }
         } catch (Exception e){
-            return ResponseEntity.badRequest().build();
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
         return null;
     }

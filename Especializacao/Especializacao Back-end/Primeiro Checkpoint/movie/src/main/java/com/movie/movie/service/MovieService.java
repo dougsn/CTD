@@ -23,10 +23,10 @@ public class MovieService {
     }
 
     public List<Movie> findByGenero(String genero) {
+        log.info("Buscando filmes pelo genero: " + genero);
         List<Movie> movie;
         movie = movieRepository.findByGenero(genero);
         if (movie != null){
-            log.info("Buscando filmes pelo genero: " + genero);
             return movie;
         } else {
             log.info("Não foi possível buscar os filmes do genero: " + genero);
@@ -48,7 +48,7 @@ public class MovieService {
     }
 
     public Optional<Movie> addMovie(Movie movie) {
-        if (movie == null || movieRepository.findByName(movie.getName()).isPresent()) {
+        if (movie == null) {
             log.info("Não foi possível adicionar este filme.");
             return Optional.of(null);
         } else {
@@ -66,7 +66,7 @@ public class MovieService {
     }
 
     public Optional<Movie> updateMovie (Movie movie) {
-        if (movie == null || movieRepository.findByName(movie.getName()).isPresent()) {
+        if (movie == null) {
             log.info("Não foi possível atualizar este filme.");
             return Optional.of(null);
         } else {
