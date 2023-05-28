@@ -24,7 +24,7 @@ public class CatalogController {
         return "Hello World";
     }
 
-    @GetMapping("/movie/genero/{genero}")
+    @GetMapping("/{genero}")
     public ResponseEntity<List<Movie>> findByGenero(@PathVariable String genero) {
         List<Movie> list = catalog.findByGenero(genero);
         return ResponseEntity.ok(list);
