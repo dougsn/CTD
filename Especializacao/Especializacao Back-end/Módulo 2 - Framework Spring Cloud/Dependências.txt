@@ -1,0 +1,33 @@
+Configurção para projeto de micro serviço Eureka Server
+	Dependencies
+		Eureka Server
+		Spring Web
+
+Configurção para projeto de micro serviço Config Server
+	Dependencies
+		Config Server
+		Spring Web
+		Eureka Discovery Client
+
+Configurção para projeto de micro serviço API Gateway Server
+	Dependencies
+		Spring Reactive Web
+		Config Client
+		Cloud LoadBalancer
+		Eureka Discovery Client
+		Gateway
+		Spring Boot Actuator
+		OpenFeign
+		Lombok
+		Spring Boot DevTools
+
+Configurção para projeto de micro serviço clients
+	Dependencies
+		Eureka Discovery Client
+		Config Client
+		Spring Boot Actuator
+		Spring Web
+		Lombok
+		OpenFeign
+		Spring Data JPA (Se houver persistência de dados)
+		Spring Boot DevTools
