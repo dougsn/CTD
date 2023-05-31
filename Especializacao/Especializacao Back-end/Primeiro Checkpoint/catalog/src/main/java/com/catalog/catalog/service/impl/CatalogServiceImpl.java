@@ -17,6 +17,7 @@ public class CatalogServiceImpl implements CatalogService {
     @Autowired
     private MovieClient movieClient;
 
+    @Override
     public List<Movie> findByGenero(String genero) {
         List<Movie> movie;
         movie = movieClient.findByGenero(genero);
@@ -29,6 +30,7 @@ public class CatalogServiceImpl implements CatalogService {
         }
     }
 
+    @Override
     public List<Movie> findAll() {
         log.info("Buscando todos os filmes");
         List<Movie> movies;
