@@ -1,9 +1,9 @@
 package com.catalog.catalog.service.impl;
 
 
+import com.catalog.catalog.entity.MovieDTO;
 import com.catalog.catalog.service.CatalogService;
 import com.catalog.catalog.service.MovieClient;
-import com.movie.movie.entity.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +18,8 @@ public class CatalogServiceImpl implements CatalogService {
     private MovieClient movieClient;
 
     @Override
-    public List<Movie> findByGenero(String genero) {
-        List<Movie> movie;
+    public List<MovieDTO> findByGenero(String genero) {
+        List<MovieDTO> movie;
         movie = movieClient.findByGenero(genero);
         if (movie != null){
             log.info("Buscando filmes pelo genero: " + genero);
@@ -31,9 +31,9 @@ public class CatalogServiceImpl implements CatalogService {
     }
 
     @Override
-    public List<Movie> findAll() {
+    public List<MovieDTO> findAll() {
         log.info("Buscando todos os filmes");
-        List<Movie> movies;
+        List<MovieDTO> movies;
         return movies = movieClient.findAll();
     }
 

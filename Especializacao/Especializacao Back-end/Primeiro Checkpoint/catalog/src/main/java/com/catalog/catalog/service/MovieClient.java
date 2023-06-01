@@ -1,7 +1,7 @@
 package com.catalog.catalog.service;
 
 import com.catalog.catalog.custom.CustomLoadBalancerConfiguration;
-import com.movie.movie.entity.Movie;
+import com.catalog.catalog.entity.MovieDTO;
 import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +14,8 @@ import java.util.List;
 public interface MovieClient {
 
     @GetMapping("/movie/{genero}")
-    List<Movie> findByGenero(@PathVariable String genero);
+    List<MovieDTO> findByGenero(@PathVariable String genero);
 
     @GetMapping("/movie")
-    List<Movie> findAll();
+    List<MovieDTO> findAll();
 }
