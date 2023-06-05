@@ -59,3 +59,10 @@ against ('"Suitable for any type of riding, on or off-road"' in boolean mode);
 ## Justifique esse valor.
 	-- Indica o número de valores diferente contidos nessa coluna.
     
+## 8 - Exclua o indice criado
+
+alter table adventureworks.productdescription
+drop index indice_description;
+
+show index from adventureworks.productdescription;
+    
