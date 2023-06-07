@@ -6,3 +6,34 @@ spring:
   cloud:
     loadbalancer:
       selection-policy: random
+management:
+  endpoints:
+    web:
+      exposure:
+        include: circuitbreakers, circuitbreakerevents, health, info
+  health:
+    circuitbreakers:
+      enable: true
+  endpoint:
+    health:
+      show-details: always
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      student:
+        allowHealthIndicatorToFail: false
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 15000
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnable: true
+  retry:
+    instances:
+      student:
+        maxAttempts: 3
+        waitDuration: 1000
+        retryExceptions:
+          - feign.FeignException$InternalServerError
