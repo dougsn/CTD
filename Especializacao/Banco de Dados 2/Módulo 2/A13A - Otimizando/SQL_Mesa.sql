@@ -8,9 +8,12 @@ create fulltext index indice_description on adventureworks.productdescription (d
 -- 2 - Crie uma consulta que retorne o nome do modelo e a quantidade de vezes que a descrição 
 -- “Suitable for any type of riding, on or off-road” aparece em cada modelo.
 
-select * from adventureworks.productdescription
-where match (description)
-against ('"Suitable for any type of riding, on or off-road"' in boolean mode);
+select p.Description, 
+	   count(p.ProductDescriptionID) as contador 
+from adventureworks.productdescription as p
+where match (p.description)
+against ('"Suitable for any type of riding, on or off-road"' in boolean mode)
+group by p.Description;
 
 ## Quantos registros retornaram?
 	-- Retornou 1 registro.
@@ -24,6 +27,14 @@ against ('"Suitable for any type of riding, on or off-road"' in boolean mode);
 
 ## 3 - Crie uma consulta que retorne a porcentagem de relevância da descrição
 --  “Suitable for any type of riding, on or off-road.”  para todos os modelos envolvidos.
+ 
+ select  p.ProductDescriptionID,
+		 p.Description,
+         format(match(p.Description) against ('"Suitable for any type of riding, on or off-road"'), 2)
+from adventureworks.productdescription as p
+where match (p.Description)
+against ('"Suitable for any type of riding, on or off-road"' in boolean mode);
+ 
 
 
 ## 4 - Visualize todos os índices da tabela productdescription
