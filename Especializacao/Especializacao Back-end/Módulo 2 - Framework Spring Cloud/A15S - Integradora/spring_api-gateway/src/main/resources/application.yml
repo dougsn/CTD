@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: api-gateway
+    eureka:
+      client:
+        serverUrl:
+          defaultZone: http://localhost:8761/eureka
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: apigateway
+          uri: lb://DIGITAL-BANKING
+          predicates:
+            - Path=/digitalbank/v1/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: apigateway
+                fallbackUri: forward:/fallback/usuarioFallback
+            - name: PreFiltroUsuario
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      recordExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+        - java.util.concurrent.TimeoutException
+        - java.io.IOException
+  instances:
+    apigateway:
+      baseConfig: default
