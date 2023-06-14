@@ -1,0 +1,20 @@
+Liste todos os filmes,  ordenando o título por ordem decrescente e formatando a lista;
+	- db.filme.find().sort({titulo: -1}).pretty()
+
+Liste todos os filmes do gênero “Aventura”;
+	- db.filme.find({genero: "Aventura"})
+
+Liste todos os filmes com avaliação > 9.0 em ordem decrescente;
+	- db.filme.find({ avaliacao: { $gt: 9.0 } }).sort({ avaliacao: -1 })
+
+Conte quantos filmes existem na categoria “Ficção Científica”;
+	- db.filme.countDocuments({genero: {$eq:"Ficção Científica"}})
+
+Liste 5 registros que possuem a maior avaliação;
+	- db.filme.find().sort({avaliacao: -1}).limit(5)
+
+Liste os registros que tenham avaliação <= 5, em ordem decrescente;
+	- db.filme.find({ avaliacao: {$lte: 5.0 }}).sort({ avaliacao: -1})
+
+Liste todos os gêneros, mas não deve trazer gêneros repetidos.
+	- db.filme.distinct("genero")	
