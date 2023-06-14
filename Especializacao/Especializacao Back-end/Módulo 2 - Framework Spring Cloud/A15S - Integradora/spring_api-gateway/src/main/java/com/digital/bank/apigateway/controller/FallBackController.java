@@ -17,4 +17,18 @@ public class FallBackController {
 		return new ResponseEntity<>("Servidor instável. Por favor, contate o suporte.",
 				HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+
+	@CircuitBreaker (name = "estoque")
+	@GetMapping ("/estoqueFallback")
+	public ResponseEntity<String> estoqueServiceFallback () {
+		return new ResponseEntity<>("Servidor instável. Por favor, contate o suporte.",
+				HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+
+	@CircuitBreaker (name = "repositorio")
+	@GetMapping ("/repositorioFallback")
+	public ResponseEntity<String> repositorioServiceFallback () {
+		return new ResponseEntity<>("Servidor instável. Por favor, contate o suporte.",
+				HttpStatus.INTERNAL_SERVER_ERROR);
+	}
 }

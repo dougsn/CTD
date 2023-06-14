@@ -7,6 +7,8 @@ spring:
       client:
         serverUrl:
           defaultZone: http://localhost:8761/eureka
+  main:
+    web-application-type: reactive
   cloud:
     gateway:
       discovery:
@@ -18,11 +20,28 @@ spring:
           uri: lb://DIGITAL-BANKING
           predicates:
             - Path=/digitalbank/v1/**
+        - id: estoque
+          uri: lb://ESTOQUE-SERVICE
+          predicates:
+            - Path=/estoque/v1/**
+        - id: repositorio
+          uri: lb://REPOSITORIO-SERVICE
+          predicates:
+            - Path=/repositorio/v1/**
           filters:
             - name: CircuitBreaker
               args:
                 name: apigateway
                 fallbackUri: forward:/fallback/usuarioFallback
+            - name: CircuitBreaker
+              args:
+                name: estoque
+                fallbackUri: forward:/fallback/estoqueFallback
+            - name: CircuitBreaker
+              args:
+                name: repositorio
+                fallbackUri: forward:/fallback/repositorioFallback
+
             - name: PreFiltroUsuario
 
 resilience4j.circuitbreaker:
