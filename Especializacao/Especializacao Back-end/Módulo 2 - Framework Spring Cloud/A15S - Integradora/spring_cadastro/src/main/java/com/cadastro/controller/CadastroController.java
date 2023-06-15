@@ -24,6 +24,11 @@ public class CadastroController {
         return ResponseEntity.ok(service.findAllPessoas());
     }
 
+    @GetMapping("/pessoas/{pessoa}")
+    public ResponseEntity<String> getPessoa(@PathVariable String pessoa) {
+        return ResponseEntity.ok(service.findPessoas(pessoa));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Optional<PessoaDTO>> findById(@PathVariable Long id){
         try {

@@ -1,6 +1,11 @@
 spring:
   application:
     name: pessoa-service
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
   datasource:
     url: jdbc:h2:mem:testdb
     username: sa
@@ -13,6 +18,9 @@ spring:
     console:
       enabled: true
       path: /h2-console
+queue:
+  pessoa:
+    name: PessoaQueue
 server:
   port: 8006
   servlet:

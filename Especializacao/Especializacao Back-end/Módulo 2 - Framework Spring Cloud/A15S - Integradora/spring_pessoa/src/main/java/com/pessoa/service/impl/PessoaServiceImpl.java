@@ -3,7 +3,9 @@ package com.pessoa.service.impl;
 import com.pessoa.entity.Pessoa;
 import com.pessoa.repository.IPessoaRepository;
 import com.pessoa.service.IPessoaService;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +16,12 @@ public class PessoaServiceImpl implements IPessoaService {
 
     @Autowired
     private IPessoaRepository repository;
+
+    @Value("${queue.pessoa.name}")
+    private String queuePessoa;
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
 
     @Override
@@ -31,6 +39,12 @@ public class PessoaServiceImpl implements IPessoaService {
     @Override
     public List<Pessoa> findAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public String sendPessoas(String pessoa) {
+        rabbitTemplate.convertAndSend(queuePessoa,pessoa);
+        return "Enviando pessoa: " + pessoa;
     }
 
     @Override

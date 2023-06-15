@@ -19,6 +19,9 @@ public interface PessoaCliente {
     @GetMapping("pessoa/v1/pessoa")
     List<PessoaDTO> findAllPessoas();
 
+    @GetMapping("pessoa/v1/pessoa/pessoas/{pessoa}")
+    String findPessoas(@PathVariable String pessoa);
+
     @PostMapping("pessoa/v1/pessoa")
     Optional<PessoaDTO> addPessoa(@RequestBody PessoaDTO pessoaDTO);
 

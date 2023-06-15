@@ -3,6 +3,7 @@ package com.pessoa.controller;
 import com.pessoa.entity.Pessoa;
 import com.pessoa.service.impl.PessoaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@EnableDiscoveryClient
 @RequestMapping("/pessoa")
 @CrossOrigin("*")
 public class PessoaController {
@@ -28,6 +30,11 @@ public class PessoaController {
         }
     }
 
+    @GetMapping("/pessoas/{pessoa}")
+    public ResponseEntity<String> sendPessoas(@PathVariable String pessoa) {
+        return ResponseEntity.ok().body(service.sendPessoas(pessoa));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Pessoa>> findById(@PathVariable Long id) {
         try {
@@ -38,6 +45,8 @@ public class PessoaController {
         }
         return null;
     }
+
+
 
     @PostMapping
     public ResponseEntity<Optional<Pessoa>> add (@RequestBody Pessoa pessoa) {

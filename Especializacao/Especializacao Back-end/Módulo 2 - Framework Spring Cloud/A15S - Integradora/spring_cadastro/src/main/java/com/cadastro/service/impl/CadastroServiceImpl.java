@@ -31,6 +31,11 @@ public class CadastroServiceImpl implements ICadastroService {
     }
 
     @Override
+    public String findPessoas(String pessoa) {
+        return pessoaCliente.findPessoas(pessoa);
+    }
+
+    @Override
     public Optional<PessoaDTO> addPessoa(PessoaDTO pessoa) {
         Optional<PessoaDTO> p = pessoaCliente.addPessoa(
                 new PessoaDTO(
