@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 @FeignClient("MOVIE-SERVICE")
-@LoadBalancerClient(value = "MOVIE-SERVICE", configuration = CustomLoadBalancerConfiguration.class)
 public interface MovieClient {
 
-    @GetMapping("/movie/{genero}")
+    @GetMapping("/movie/v1/movie/{genero}")
     List<MovieDTO> findByGenero(@PathVariable String genero);
-
-    @GetMapping("/movie")
+    @GetMapping("/movie/v1/movie")
     List<MovieDTO> findAll();
+    @GetMapping("/movie/v1/movie/listener")
+    public List<MovieDTO> findListener();
 }

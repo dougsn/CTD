@@ -29,6 +29,16 @@ public class MovieController {
         }
     }
 
+    @GetMapping("/listener")
+    public ResponseEntity<List<Movie>> findListener() {
+        try {
+            List<Movie> list = movieService.findAllListener();
+            return ResponseEntity.ok(list);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @GetMapping("get/{id}")
     public ResponseEntity<Optional<Movie>> findById(@PathVariable Long id) {
         try {

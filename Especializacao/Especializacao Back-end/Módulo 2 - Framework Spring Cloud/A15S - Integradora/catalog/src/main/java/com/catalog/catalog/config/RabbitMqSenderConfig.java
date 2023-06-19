@@ -1,4 +1,4 @@
-package com.movie.movie.config;
+package com.catalog.catalog.config;
 
 
 import org.springframework.amqp.core.Queue;

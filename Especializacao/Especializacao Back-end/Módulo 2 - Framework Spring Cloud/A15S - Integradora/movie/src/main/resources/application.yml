@@ -1,17 +1,38 @@
 spring:
-  config:
-    import: optional:configserver:http://localhost:8888/
   application:
-    name : movie-service
+    name: movie-service
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
   datasource:
-    url: jdbc:mysql://${db_url}/movie
-    username: ${db_username}
-    password: ${db_password}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
   jpa:
-      hibernate:
-        ddl-auto: update
-      show-sql: true
-      properties:
-        hibernate:
-          format_sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+queue:
+  movie:
+    name: CatalogQueue
+
+server:
+  port: 8009
+  servlet:
+    context-path: /movie/v1/
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+

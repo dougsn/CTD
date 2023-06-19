@@ -1,7 +1,6 @@
 package com.catalog.catalog.controller;
 
 import com.catalog.catalog.entity.MovieDTO;
-import com.catalog.catalog.service.CatalogService;
 import com.catalog.catalog.service.impl.CatalogServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -34,6 +33,12 @@ public class CatalogController {
     @GetMapping("/movie")
     public ResponseEntity<List<MovieDTO>> findAll() {
         List<MovieDTO> list = catalog.findAll();
+        return ResponseEntity.ok(list);
+    }
+
+    @GetMapping("/movie/listener")
+    public ResponseEntity<List<MovieDTO>> findAllListener() {
+        List<MovieDTO> list = catalog.findAllListener();
         return ResponseEntity.ok(list);
     }
 

@@ -1,18 +1,18 @@
-package com.cadastro.queue;
+package com.catalog.catalog.queue;
 
-import com.cadastro.service.PessoaCliente;
+
+import com.catalog.catalog.service.MovieClient;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PathVariable;
 
 @Component
-public class CadastroListener {
+public class CatalogListener {
 
     @Autowired
-    private PessoaCliente cliente;
+    private MovieClient cliente;
 
-    @RabbitListener(queues = {"${queue.pessoa.name}"})
-    public void listen(@PathVariable String pessoa) {cliente.findPessoas(pessoa);}
+    @RabbitListener(queues = {"${queue.movie.name}"})
+    public void listen() {cliente.findListener();}
 
 }

@@ -3,9 +3,11 @@ package com.movie.movie.service;
 import com.movie.movie.entity.Movie;
 import com.movie.movie.repository.IMovieRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
@@ -16,11 +18,28 @@ public class MovieService {
     final static Logger log = Logger.getLogger(MovieService.class.getName());
     private final IMovieRepository movieRepository;
 
+    @Value("${queue.movie.name}")
+    private String queueMovie;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+//      rabbitTemplate.convertAndSend(queuePessoa,pessoa);
+//        return "Enviando pessoa: " + pessoa;
+
     public List<Movie> findAll() {
         log.info("Buscando todos os filmes");
         List<Movie> movies;
         return movies = movieRepository.findAll();
     }
+
+    public List<Movie> findAllListener() {
+
+        List<Movie> movies;
+        rabbitTemplate.convertAndSend(queueMovie, "Foi");
+        return movies = movieRepository.findAll();
+    }
+
+
 
     public List<Movie> findByGenero(String genero) {
         log.info("Buscando filmes pelo genero: " + genero);

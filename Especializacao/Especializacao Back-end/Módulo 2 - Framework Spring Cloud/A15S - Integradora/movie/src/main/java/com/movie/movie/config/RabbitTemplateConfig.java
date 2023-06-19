@@ -1,4 +1,4 @@
-package com.pessoa.config;
+package com.movie.movie.config;
 
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

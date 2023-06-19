@@ -40,6 +40,12 @@ public class CatalogServiceImpl implements CatalogService {
         return movies = movieClient.findAll();
     }
 
+    @Override
+    public List<MovieDTO> findAllListener() {
+        List<MovieDTO> movies;
+        return movies = movieClient.findListener();
+    }
+
     public MovieDTO getMovieFallback(String genero, CallNotPermittedException e) {
         var movie = new MovieDTO();
         movie.setGenero(genero);

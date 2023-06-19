@@ -1,4 +1,4 @@
-package com.pessoa.config;
+package com.movie.movie.config;
 
 
 import org.springframework.amqp.core.Queue;
@@ -10,13 +10,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMqSenderConfig {
 
-    @Value("${queue.pessoa.name}")
-    private String pessoaQueue;
+    @Value("${queue.movie.name}")
+    private String movieQueue;
 
 
     @Bean
     public Queue queue() {
-        return new Queue(this.pessoaQueue, false);
+        return new Queue(this.movieQueue, false);
     }
+
 
 }

@@ -8,4 +8,6 @@ public interface CatalogService {
     List<MovieDTO> findByGenero(String genero);
 
     List<MovieDTO> findAll();
+
+    List<MovieDTO> findAllListener();
 }

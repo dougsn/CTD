@@ -1,45 +1,38 @@
 spring:
-  config:
-    import: optional:configserver:http://localhost:8888/
   application:
-    name : catalog-service
-#configura��o circuit breaker
-resilience4j:
-  circuitbreaker:
-    instances:
-      movie-service:
-        allowHealthIndicatorToFail: false
-        registerHealthIndicator: true
-        slidingWindowType: COUNT_BASED
-        slidingWindowSize: 2
-        failueRateThreshold: 10
-        waitDurationInOpenState: 15000
-        permittedNumberOfCalssInHalfOpenState: 1
-        automaticTransitionFromOpenToHalfIfOpenEnabled: true
-
-  #Configura��o do mecanismo de novas tentativas
-  retry:
-    instances:
-      movie-service:
-        maxAttempts: 3
-        waitDuration: 100
-        #retryExceptions[0]: feign.FeignExceptions$InternalServerError
-        retryExceptions:
-          - feign.FeignException$ServiceUnavailable
-          - feign.FeignException$InternalServerError
-          - org.springframework.web.client.HttpServerErrorException
-          - java.util.concurrent.TimeoutException
-          - java.io.IOException
-
-#Configura��o Actuator
-management:
-  endpoints:
-    web:
-      exposure:
-        include: circuitbreakers,circuitbreakerevents,health,info
-  health:
-    circuitbreakers:
+    name: catalog-service
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
       enabled: true
-  endpoint:
-    health:
-      show-details: always
+      path: /h2-console
+
+queue:
+  movie:
+    name: CatalogQueue
+
+server:
+  port: 8008
+  servlet:
+    context-path: /catalog/v1/
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+

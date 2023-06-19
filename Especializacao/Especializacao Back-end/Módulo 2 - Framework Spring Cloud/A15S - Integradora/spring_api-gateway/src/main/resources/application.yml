@@ -20,6 +20,14 @@ spring:
           uri: lb://DIGITAL-BANKING
           predicates:
             - Path=/digitalbank/v1/**
+        - id: movie
+          uri: lb://MOVIE-SERVICE
+          predicates:
+            - Path=/movie/v1/**
+        - id: catalog
+          uri: lb://CATALOG-SERVICE
+          predicates:
+            - Path=/catalog/v1/**
         - id: estoque
           uri: lb://ESTOQUE-SERVICE
           predicates:
