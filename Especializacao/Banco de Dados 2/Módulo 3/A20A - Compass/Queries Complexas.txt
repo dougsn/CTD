@@ -1,0 +1,13 @@
+Group
+
+$group
+	- db.catalogo.aggregate([{$group: {_id: "$filme", Total: { $sum: 1 }, Ator: {$push: "$nome"}}}]) - Agrupando os filmes por gênero e vendo o total de vezes que ele aparece, o $push pega o valor dos itens somados.
+
+Exists
+	- db.catalogo.find( { filme: { $exists: true , $nin: ["Jurassic Park", "Harry Potter e a Câmara Secreta"]}}) - Lista todos os filmes que não pertençam aos filmes indicados. Vai listar apenas se existir.
+
+Like
+	- db.catalogo.find({"filme": /Harry/}) - Vai listar todos os filmes que tiverem a palavra Harry
+	- db.catalogo.find({"filme": /^H/}) - Lista todos que começam com a letra H
+
+	
