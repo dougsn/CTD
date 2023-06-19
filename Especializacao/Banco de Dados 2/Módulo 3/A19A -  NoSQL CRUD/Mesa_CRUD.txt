@@ -1,0 +1,27 @@
+1) 
+	1.1 - db.catalogo.distinct("filme")
+	1.2 - db.catalogo.find({}, { nome: 1, sobrenome: 1, _id: 0}).sort({ nome: 1, sobrenome: 1})
+	1.3 - db.catalogo.aggregate([
+  {
+    $group: {
+      _id: "$filme",
+      quantidadeAtores: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      filme: "$_id",
+      quantidadeAtores: 1
+    }
+  }
+])
+
+2)
+	2.1 - db.catalogo.insertMany( [{"_id": 44, "nome": "Jodl", "sobrenome": "Benson", "filme": "A Pequena Sereia"}, {"_id": 45, "nome": "Samuel", "sobrenome": "Wright", "filme": "A Pequena Sereia"}, {"_id": 46, "nome": "Paddi", "sobrenome": "Edwards", "filme": "A Pequena Sereia"}] )
+
+3)
+	3.1 - db.catalogo.updateOne({"_id": 15}, {$set: {"nome": "Samuel", "sobrenome":"Jackson"}}) - db.catalogo.find({"_id": 15})
+
+4)
+	4.1 - db.catalogo.deleteMany({ "filme": "Harry Potter e as Relíquias da Morte - Parte 2" })
