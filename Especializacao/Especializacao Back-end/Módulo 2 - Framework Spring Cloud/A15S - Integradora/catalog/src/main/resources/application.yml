@@ -1,0 +1,45 @@
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888/
+  application:
+    name : catalog-service
+#configura��o circuit breaker
+resilience4j:
+  circuitbreaker:
+    instances:
+      movie-service:
+        allowHealthIndicatorToFail: false
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 2
+        failueRateThreshold: 10
+        waitDurationInOpenState: 15000
+        permittedNumberOfCalssInHalfOpenState: 1
+        automaticTransitionFromOpenToHalfIfOpenEnabled: true
+
+  #Configura��o do mecanismo de novas tentativas
+  retry:
+    instances:
+      movie-service:
+        maxAttempts: 3
+        waitDuration: 100
+        #retryExceptions[0]: feign.FeignExceptions$InternalServerError
+        retryExceptions:
+          - feign.FeignException$ServiceUnavailable
+          - feign.FeignException$InternalServerError
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
+
+#Configura��o Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: circuitbreakers,circuitbreakerevents,health,info
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
