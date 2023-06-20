@@ -1,0 +1,4 @@
+Elasticsearch - Salva os index
+Logstash - Seu papel é agregar as informações e passa para o Elasticsearch
+	- Possui um arquivo de configuração que é colocado na pasta config.
+Kibana - É o view dos Logs.

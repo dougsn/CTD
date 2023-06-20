@@ -1,0 +1,20 @@
+_id;titulo;avaliacao;premios;data_lancamento;duracao;genero
+1;Avatar;7.9;3;2010-04-10T03:00:00.000Z;120;Ficção Científica
+2;Titanic;7.7;11;1997-04-09T03:00:00.000Z;320;Drama
+3;A Guerra das Galáxias: Episodio VI;9.1;7;2004-04-07T03:00:00.000Z;;Ficção Científica
+4;A Guerra das Galáxias: Episodio VII;4;6;2003-04-11T03:00:00.000Z;180;Ficção Científica
+5;Jurassic Park;8.3;5;1999-04-01T03:00:00.000Z;270;Ficção Científica
+6;Harry Potter e as Relíquias da Morte - Parte 2;9;2;2008-04-07T03:00:00.000Z;190;Suspense
+7;Transformers: o lado escuro da Lua;0.9;1;2005-04-07T03:00:00.000Z;;Ficção Científica
+8;Harry Potter e a Pedra Filosofal;10;1;2008-04-04T03:00:00.000Z;120;Aventura
+9;Harry Potter e a Câmara Secreta;3.5;2;2009-04-08T03:00:00.000Z;200;Aventura
+10;O Rei Leão;9.1;3;2000-04-02T03:00:00.000Z;;Infantil
+11;Procurando Nemo;8.3;2;2000-04-07T03:00:00.000Z;110;Animação
+12;Toy Story;6.1;0;2008-04-03T03:00:00.000Z;150;Animação
+13;Toy Story 2;3.2;2;2003-04-04T03:00:00.000Z;120;Animação
+14;A vida é bela;8.3;5;1994-04-10T03:00:00.000Z;;Drama
+15;Meu pobre anjinho;3.2;1;1989-04-01T03:00:00.000Z;120;Comédia
+16;Intensamente;9;2;2008-04-07T03:00:00.000Z;120;Animação
+17;Big;7.3;2;1988-04-02T03:00:00.000Z;130;Aventura
+18;I am Sam;9;4;1999-04-03T03:00:00.000Z;130;Drama
+19;Hotel Transylvania;7.1;1;2012-04-05T03:00:00.000Z;90;Infantil

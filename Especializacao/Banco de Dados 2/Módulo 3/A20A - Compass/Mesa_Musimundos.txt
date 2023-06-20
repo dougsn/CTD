@@ -1,0 +1,29 @@
+1 - Quantas músicas existem para o gênero Rock?
+  -  db.musimundos.aggregate([{$group: {_id: "$genero", quantidadeMusicas: {$sum:1}}}])
+	Rock: 1297
+
+2 - 
+
+3 - Onde fica gravado o pipeline?
+	- Fica na aba "Aggragations" - Pipeline
+
+4 - Em que lugar no Compass você consegue visualizar a view criada?
+	- Fica dentro do documento selecionado, junto com a collection
+
+5 - Qual o tamanho do índice criado?
+	- 155.6KB
+
+6 - Crie uma consulta que traga apenas 5 músicas do gênero Heavy Metal.
+	db.musimundos.find({genero: "Heavy Metal"}).limit(5)
+
+7 - Crie uma consulta que traga apenas 5 músicas do gênero Heavy Metal.
+	db.musimundos.find({musica: /^You/})
+
+8 - Visualize os índices da coleção musimundos.
+	db.musimundos.getIndexes()
+
+9 - Crie uma consulta utilizando o índice de texto, que retorne todas as músicas que possuam a palavra love.
+	db.musimundos.find({ $text: {$search: "love"}})
+
+10 - Liste todos os gêneros sem repetir.
+	db.musimundos.distinct("genero")
