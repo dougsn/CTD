@@ -1,0 +1,31 @@
+3 - Insira um novo registro na coleção relatorioDiario, com os seguintes dados:
+	_id: 222776
+	atividade: ‘Corrida’
+	medicao: ‘Distancia’
+	unidadeMedida: ‘metros’
+	dataRel: ‘2022-05-17’
+	valor: 1232
+	usuarioId: 16
+
+	R: db.relatorioDiario.insertOne({_id: 222776, atividade: "Corrida", medicao: "Distancia", unidadeMedida: "metros", dataRel: "22-05-17", valor: 1232, usuarioId: 16 })
+
+4 - Atualize todas as atividades cadastradas como Correr para Corrida
+
+	R: db.relatorioDiario.updateMany({atividade: "Correr"}, {$set: {atividade: "Corrida"}})
+
+5 - Liste todos os registros dos usuários que praticaram Ciclismo.
+
+	R: Liste todos os registros dos usuários que praticaram Ciclismo.
+
+6 -  Atualize todas as atividades cadastradas como Natacao para Natação
+
+	R: db.relatorioDiario.updateMany({atividade: "Natacao"}, {$set: {atividade: "Natação"}})
+
+7 - Liste todas as atividades, tomando o cuidado para não repetir nenhuma.
+
+	R: db.relatorioDiario.distinct("atividade")
+
+8 - Exclua  o  _id de número  222699.
+
+	R: db.relatorioDiario.deleteOne({_id: 222699})
+

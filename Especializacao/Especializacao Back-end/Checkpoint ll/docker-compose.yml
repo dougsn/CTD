@@ -1,0 +1,26 @@
+version: "3.2"
+
+services:
+  zipkin-service:
+    image: openzipkin/zipkin:2
+    container_name: zipkin-service
+    ports:
+      - 9411:9411
+  eureka-service:
+    build: server
+    container_name: eureka-server
+    depends_on:
+      - zipkin-service
+    ports:
+      - 8761:8761
+  config-service:
+    build: config
+    container_name: config-server
+    depends_on:
+      - eureka-service
+    ports:
+      - 8888:8888
+    mongodb:
+      image: mongodb:4.4.2
+      ports:
+      - "27017:27017"
