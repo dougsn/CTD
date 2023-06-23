@@ -3,7 +3,3 @@ spring:
     import: optional:configserver:http://localhost:8888/
   application:
     name : catalog-service
-  cloud:
-    config:
-      profile: integradora
-

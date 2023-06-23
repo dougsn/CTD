@@ -7,5 +7,4 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/tulioviglione/configs
-
+          uri: https://github.com/dougsn/configs

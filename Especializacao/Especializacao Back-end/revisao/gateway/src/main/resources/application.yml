@@ -1,0 +1,14 @@
+spring:
+  config:
+    import: optional:configserver:http://config-server:8888/
+  application:
+    name : gateway-server
+  cloud:
+    config:
+      profile: checkpointfinal
+  zipkin:
+    base-url: http://zipkin-service:9411/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/

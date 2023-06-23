@@ -1,5 +1,0 @@
-server:
-  port: 8010
-spring:
-  application:
-    name: dh-spring-elk
