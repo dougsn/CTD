@@ -12,10 +12,6 @@ services:
     ports:
       - 5672:5672
       - 15672:15672
-  mongodb:
-    image: mongo:4.4.2
-    ports:
-      - "27017:27017"
   eureka-server:
     build: eureka
     container_name: eureka-server
@@ -37,6 +33,27 @@ services:
       - config-server
     ports:
       - 8080:8080
+  movie-server:
+    build: movie
+    container_name: movie-server
+    depends_on:
+      - config-server
+    ports:
+      - 8001:8001
+  serie-server:
+    build: serie
+    container_name: serie-server
+    depends_on:
+      - config-server
+    ports:
+      - 8003:8003
+  catalog-server:
+    build: catalog
+    container_name: catalog-server
+    depends_on:
+      - config-server
+    ports:
+      - 8001:8001
 #    networks:
 #      - host
 
