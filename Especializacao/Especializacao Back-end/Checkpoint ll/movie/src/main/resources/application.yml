@@ -1,14 +1,12 @@
-server:
-  port: ${PORT:5599}
 spring:
   config:
     import: optional:configserver:http://localhost:8888/
   application:
     name : movie-service
   datasource:
-    url: jdbc:mysql://${db_url}/movie
-    username: ${db_username}
-    password: ${db_password}
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/movie
+    username: root
+    password: salvador1
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
       hibernate:

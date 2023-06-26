@@ -6,9 +6,9 @@ spring:
   application:
     name : serie-service
   datasource:
-    url: jdbc:mysql://${db_url}/serie
-    username: ${db_username}
-    password: ${db_password}
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/serie
+    username: root
+    password: salvador1
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
       hibernate:
