@@ -3,3 +3,10 @@ spring:
     import: optional:configserver:http://localhost:8888/
   application:
     name : catalog-service
+  data:
+    mongodb:
+      port: 27017
+      database: catalogo
+      host: localhost
+  main:
+    allow-bean-definition-overriding: true

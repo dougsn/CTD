@@ -3,6 +3,9 @@ package com.movie.movie.service;
 import com.movie.movie.entity.Movie;
 import com.movie.movie.repository.IMovieRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.swing.text.html.Option;
@@ -15,6 +18,12 @@ import java.util.logging.Logger;
 public class MovieService {
     final static Logger log = Logger.getLogger(MovieService.class.getName());
     private final IMovieRepository movieRepository;
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    @Value("${queue.catalog-movie-service}")
+    private String queue;
 
     public List<Movie> findAll() {
         log.info("Buscando todos os filmes");
@@ -61,6 +70,7 @@ public class MovieService {
                             movie.getUrlStream()
                     )
             );
+            rabbitTemplate.convertAndSend(queue, movie.getGenero());
             return Optional.of(newMovie);
         }
     }

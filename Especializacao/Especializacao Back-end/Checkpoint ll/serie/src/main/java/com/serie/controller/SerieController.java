@@ -28,13 +28,13 @@ public class SerieController {
         }
     }
 
-    @GetMapping("/serie/{genero}")
+    @GetMapping("/{genero}")
     public ResponseEntity<List<Serie>> findByGenero(@PathVariable String genero) {
         List<Serie> list = service.findByGenero(genero);
         return ResponseEntity.ok(list);
     }
     
-    @GetMapping("/{id}")
+    @GetMapping("byId/{id}")
     public ResponseEntity<Optional<Serie>> findById(@PathVariable Long id){
         Optional<Serie> serie = service.findById(id);
         if (serie.isPresent()) {
