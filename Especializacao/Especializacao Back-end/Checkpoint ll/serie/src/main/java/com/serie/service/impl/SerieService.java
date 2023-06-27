@@ -29,14 +29,10 @@ public class SerieService implements ISerieService<Serie> {
         return repository.findAll();
     }
 
-    @Override
-    public Optional<Serie> findById(Long id) {
-        return repository.findById(id);
-    }
 
     @Override
     public Optional<Serie> add(Serie serie) {
-        Serie s = repository.saveAndFlush(new Serie(null, serie.getName(), serie.getGenre(), serie.getSeasons()));
+        Serie s = repository.save(new Serie(null, serie.getName(), serie.getGenre(), serie.getSeasons()));
         rabbitTemplate.convertAndSend(queue, serie.getGenre());
         return Optional.of(s);
     }
@@ -44,14 +40,6 @@ public class SerieService implements ISerieService<Serie> {
     public List<Serie> findByGenero(String genero) {
         return repository.findByGenre(genero);
     }
-    @Override
-    public Boolean hardDelete(Long id) {
-        if (repository.existsById(id)){
-            repository.deleteById(id);
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 }
 

@@ -58,6 +58,10 @@ public class CatalogServiceImpl implements CatalogService {
         return repository.findAll();
     }
 
+    public List<Catalog> catalogByGenero(String genero) {
+        return repository.findGenre(genero);
+    }
+
     @Override
     public List<SerieDTO> allSeries() {
         List<SerieDTO> series = serieClient.findAll();

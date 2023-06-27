@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ChapterDTO {
-    private Long id;
+    private String id;
     private String name;
     private Integer number;
     private String urlStream;

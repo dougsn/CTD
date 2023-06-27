@@ -4,23 +4,24 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 
-import javax.persistence.*;
+
 import java.util.List;
 
-@Entity
+//@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class Season {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
     private Integer seasonNumber;
-    @OneToMany(mappedBy = "season")
+//    @OneToMany(mappedBy = "season")
     private List<Chapter> chapters;
-    @JsonBackReference
-    @ManyToOne
-    @JoinColumn(name = "serie_id")
-    private Serie serie;
+//    @JsonBackReference
+//    @ManyToOne
+//    @JoinColumn(name = "serie_id")
+//    private Serie serie;
 }

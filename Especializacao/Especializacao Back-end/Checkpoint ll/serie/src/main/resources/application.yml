@@ -1,19 +1,12 @@
-server:
-  port: ${PORT:8006}
 spring:
   config:
     import: optional:configserver:http://localhost:8888/
   application:
     name : serie-service
-  datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/serie
-    username: root
-    password: salvador1
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-      hibernate:
-        ddl-auto: update
-      show-sql: true
-      properties:
-        hibernate:
-          format_sql: true
+  data:
+    mongodb:
+      port: 27017
+      database: serie
+      host: localhost
+  main:
+    allow-bean-definition-overriding: true

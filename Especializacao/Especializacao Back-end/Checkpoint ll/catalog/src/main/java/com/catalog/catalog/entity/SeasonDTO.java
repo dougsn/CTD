@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SeasonDTO {
-    private Long id;
+    private String id;
     private Integer seasonNumber;
     private List<ChapterDTO> chapters;
 }

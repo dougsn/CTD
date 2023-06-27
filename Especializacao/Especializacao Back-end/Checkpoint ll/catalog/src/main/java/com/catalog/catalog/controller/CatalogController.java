@@ -55,6 +55,10 @@ public class CatalogController {
         catalog.sendCatalogo(genero);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+    @GetMapping("/{genero}")
+    public ResponseEntity<List<Catalog>> catalogByGenero(@PathVariable String genero) {
+        return ResponseEntity.ok(catalog.catalogByGenero(genero));
+    }
 
     @GetMapping("/all")
     public ResponseEntity<List<Catalog>> allCatalog() {

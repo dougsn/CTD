@@ -34,15 +34,15 @@ public class SerieController {
         return ResponseEntity.ok(list);
     }
     
-    @GetMapping("byId/{id}")
-    public ResponseEntity<Optional<Serie>> findById(@PathVariable Long id){
-        Optional<Serie> serie = service.findById(id);
-        if (serie.isPresent()) {
-            return ResponseEntity.ok(serie);
-        } else {
-            return ResponseEntity.notFound().build(); 
-        }
-    }
+//    @GetMapping("byId/{id}")
+//    public ResponseEntity<Optional<Serie>> findById(@PathVariable Long id){
+//        Optional<Serie> serie = service.findById(id);
+//        if (serie.isPresent()) {
+//            return ResponseEntity.ok(serie);
+//        } else {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
     
     @GetMapping
     public ResponseEntity<List<Serie>> findAll() {
@@ -50,14 +50,14 @@ public class SerieController {
         return ResponseEntity.ok(list);
     }
     
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Optional<Serie>> hardDelete(@PathVariable Long id) {
-        if (service.findById(id).isPresent() && service.hardDelete(id)) {
-            return ResponseEntity.noContent().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
+//    @DeleteMapping("/{id}")
+//    public ResponseEntity<Optional<Serie>> hardDelete(@PathVariable Long id) {
+//        if (service.findById(id).isPresent() && service.hardDelete(id)) {
+//            return ResponseEntity.noContent().build();
+//        } else {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
     
 
 }
